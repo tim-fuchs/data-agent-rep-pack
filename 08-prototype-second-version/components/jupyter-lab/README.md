@@ -2,7 +2,9 @@
 
 ## Purpose
 
-This project provides a reproducible Jupyter Lab environment that runs in Docker.
+EuXFEL members would work on the [remote Jupyter Lab server](https://max-jhub.desy.de) running on the HPC cluster.
+Non-members cannot access this server.
+Therefore, this project provides a reproducible Jupyter Lab environment that runs in Docker.
 
 It builds a container image with:
 
