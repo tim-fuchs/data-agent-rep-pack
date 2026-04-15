@@ -1,0 +1,18 @@
+services:
+  jupyter-mcp:
+    image: datalayer/jupyter-mcp-server:latest
+    container_name: jupyter-mcp
+    env_file:
+      - .env
+    environment:
+      JUPYTER_URL: ${JUPYTER_URL:?JUPYTER_URL must be set}
+      JUPYTER_TOKEN: ${JUPYTER_TOKEN:?JUPYTER_TOKEN must be set}
+      MCP_TOKEN: ${MCP_TOKEN:?MCP_TOKEN must be set}
+    command:
+      - --transport
+      - streamable-http
+    ports:
+      - ${MCP_PORT:?MCP_PORT must be set}:4040
+    extra_hosts:
+      - host.docker.internal:host-gateway
+    restart: unless-stopped

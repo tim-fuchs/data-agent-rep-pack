@@ -1,0 +1,6 @@
+data/articles/
+prompt_versions/v1/articles
+prompt_versions/v2/articles
+.env
+__pycache__
+.venv

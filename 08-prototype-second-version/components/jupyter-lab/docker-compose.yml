@@ -1,0 +1,18 @@
+services:
+  jupyter-lab:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: jupyter-lab
+    working_dir: /workspace
+    ports:
+      - "${JUPYTER_PORT:?JUPYTER_PORT must be set}:${JUPYTER_PORT:?JUPYTER_PORT must be set}"
+    command:
+      - --ip=${JUPYTER_IP:?JUPYTER_IP must be set}
+      - --port=${JUPYTER_PORT:?JUPYTER_PORT must be set}
+      - --IdentityProvider.token=${JUPYTER_TOKEN:?JUPYTER_TOKEN must be set}
+      - --no-browser
+      - --allow-root
+    volumes:
+      - ./:/workspace
+    restart: unless-stopped
