@@ -34,7 +34,7 @@ docker compose version
 
 1. Clone or copy this project locally.
 2. Enter the project directory.
-3. Create your runtime config from the example file.
+3. Create your environment config file from the example file.
 
    ```bash
    cp .env.example .env
