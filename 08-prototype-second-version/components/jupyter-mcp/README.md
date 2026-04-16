@@ -1,9 +1,12 @@
 # Jupyter MCP Server
 
-This folder runs the Jupyter MCP server (streamable HTTP transport) with one command, based on section 2 of the [official standalone provider docs](https://jupyter-mcp-server.datalayer.tech/providers/jupyter-streamable-http-standalone/).
+## Purpose
+
+This folder provides instructions to install a Jupyter MCP server and configure the corresponding MCP client in an AI agent tool.
 
 ## Prerequisites
 
+- AI agent tool that supports MCP, e.g., OpenCode or Kilo Code
 - Docker Desktop (or Docker Engine + Docker Compose plugin)
 - A free local port for Jupyter MCP (for example, 4040)
 - Basic terminal access
@@ -15,7 +18,7 @@ docker --version
 docker compose version
 ```
 
-## Installing and Running the MCP Server
+## Install and Run the MCP Server
 
 1. Configure environment variables
 
@@ -35,53 +38,40 @@ docker compose version
 
 5. Optionally, stop the server again with `docker compose down`.
 
-## Configuring the MCP Client
+## Configure the MCP Client
 
-### Config OpenCode
+1. Add the MCP client entry to the config file of your AI agent:
 
-File location:
+   **File location OpenCode:**
 
-- Global: `~/.config/opencode/opencode.json`
-- Project: `opencode.json` in project root
+   - Global: `~/.config/opencode/opencode.json`
+   - Project: `opencode.json` in project root
 
-File entry:
+   **File location Kilo Code:**
 
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-      "jupyter": {
-         "type": "remote",
-         "url": "http://127.0.0.1:4040/mcp",
-         "enabled": true,
-         "headers": {
-               "Authorization": "Bearer your-jupyter-mcp-token"
+   - Global: `~/.config/kilo/kilo.jsonc`
+   - Project: `.kilo/kilo.jsonc` in project root
+
+   **File entry:**
+
+   ```json
+   {
+   "mcp": {
+         "jupyter": {
+            "type": "remote",
+            "url": "http://127.0.0.1:4040/mcp",
+            "enabled": true,
+            "headers": {
+                  "Authorization": "Bearer your-jupyter-mcp-token"
+            }
          }
       }
    }
-}
-```
+   ```
 
-### Config Kilo Code
+2. Restart your AI agent
+3. Ready! Prompt your agent to connect to a Jupyter notebook.
 
-File location:
+## References
 
-- Global: `~/.config/kilo/kilo.jsonc`
-- Project: `.kilo/kilo.jsonc` in project root
-
-Entry:
-
-```json
-{
-  "mcp": {
-      "jupyter": {
-         "type": "remote",
-         "url": "http://127.0.0.1:4040/mcp",
-         "enabled": true,
-         "headers": {
-            "Authorization": "Bearer your-jupyter-mcp-token",
-         },
-      }
-   }
-}
-```
+- [Jupyter MCP](https://jupyter-mcp-server.datalayer.tech/providers/jupyter-streamable-http-standalone/) (see Section 2)

@@ -7,6 +7,7 @@
 
 ## Prerequisites
 
+- AI agent tool that supports MCP, e.g., OpenCode or Kilo Code
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine + Docker Compose plugin)
 - A free local port for Grounded Docs (ideally 6280)
 - [Node.js](https://nodejs.org) (for ingesting documents to Grounded Docs)
@@ -19,7 +20,7 @@ docker --version
 docker compose version
 ```
 
-## Installing and Running the MCP Server
+## Install and Run the MCP Server
 
 1. Create a `.env` file with: `cp .env.example .env`
 2. Optionally, set environment variables in `.env` to activate embedding process. If `OPENAI_API_KEY` and `DOCS_MCP_EMBEDDING_MODEL` are empty, Grounded Docs still starts and uses keyword/FTS search.
@@ -37,38 +38,19 @@ docker compose version
 
 Note: Telemetry of Grounded Docs is explicitly disabled in `docker-compose.yml` via `DOCS_MCP_TELEMETRY=false`.
 
-## Configuring the MCP Client
+## Configure the MCP Client
 
-### Config OpenCode
-
-File location:
+**File location Open Code:**
 
 - Global: `~/.config/opencode/opencode.json`
 - Project: `opencode.json` in project root
 
-File entry:
-
-```json
-{
-  "$schema": "https://opencode.ai/config.json",
-  "mcp": {
-    "grounded-docs": {
-      "type": "remote",
-      "url": "http://localhost:6280/mcp",
-      "enabled": true
-    }
-  }
-}
-```
-
-### Config Kilo Code
-
-File location:
+**File location Kilo Code:**
 
 - Global: `~/.config/kilo/kilo.jsonc`
 - Project: `.kilo/kilo.jsonc` in project root
 
-Entry:
+**File entry:**
 
 ```json
 {
@@ -82,7 +64,7 @@ Entry:
 }
 ```
 
-## Indexing Documents
+## Index EuXFEL Documentation
 
 - We prepared a list of resources that should be indexed by Grounded Docs.
 - Execute `sh index-docs.sh`.

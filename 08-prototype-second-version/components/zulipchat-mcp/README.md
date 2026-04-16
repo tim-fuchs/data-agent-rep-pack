@@ -21,7 +21,7 @@
    - Bot email: what email you like
 3. Download the `zuliprc` file of the bot (it contains the bot email, API key, and Zulip organization).
 
-## Configuring the MCP Client
+## Configure the MCP Client
 
 1. Store the zuliprc file wherever you like on your machine. I recommend the `.agents` folder in your user directory as this folder is used by many AI agents anyway.
 2. Add the MCP client entry to the config file of your AI agent:
