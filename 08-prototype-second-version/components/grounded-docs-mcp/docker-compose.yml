@@ -1,5 +1,5 @@
 services:
-  grounded-docs:
+  grounded-docs-mcp:
     image: ghcr.io/arabold/docs-mcp-server:latest
     environment:
       OPENAI_API_KEY: ${OPENAI_API_KEY:?Missing OPENAI_API_KEY. Set it in your environment before running docker compose.}
