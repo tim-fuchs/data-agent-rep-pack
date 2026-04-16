@@ -76,8 +76,7 @@ Entry:
     "grounded-docs": {
       "type": "remote",
       "url": "http://localhost:6280/mcp",
-      "enabled": true,
-      "timeout": 15000
+      "enabled": true
     }
   }
 }

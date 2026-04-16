@@ -15,7 +15,7 @@ docker --version
 docker compose version
 ```
 
-## Installation and Start
+## Installing and Running the MCP Server
 
 1. Configure environment variables
 
@@ -24,29 +24,64 @@ docker compose version
    - If any variable is missing, Docker Compose fails fast with an explicit error.
 
 2. Start JupyterLab from the sibling `jupyter-lab` project first.
-3. From this folder, execute: `docker compose up -d`
+3. From this folder, start the Jupyter MCP server with `docker compose up -d`.
 
-The MCP server is exposed at: `http://localhost:4040/mcp`
+   - The MCP server is exposed at: `http://localhost:4040/mcp`
 
-## Verify
+4. Optionally, verify the running server with `curl -i -H "Authorization: Bearer <your-mcp-token>" http://localhost:4040/mcp`.
 
-```bash
-curl -i -H "Authorization: Bearer <your-mcp-token>" http://localhost:4040/mcp
+   - Expected result for this plain HTTP probe is `406 Not Acceptable`.
+   - That means the endpoint is reachable and token-auth is accepted; full MCP clients then negotiate the streamable protocol.
+
+5. Optionally, stop the server again with `docker compose down`.
+
+## Configuring the MCP Client
+
+### Config OpenCode
+
+File location:
+
+- Global: `~/.config/opencode/opencode.json`
+- Project: `opencode.json` in project root
+
+File entry:
+
+```json
+{
+  "$schema": "https://opencode.ai/config.json",
+  "mcp": {
+      "jupyter": {
+         "type": "remote",
+         "url": "http://127.0.0.1:4040/mcp",
+         "enabled": true,
+         "headers": {
+               "Authorization": "Bearer your-jupyter-mcp-token"
+         }
+      }
+   }
+}
 ```
 
-Expected result for this plain HTTP probe is `406 Not Acceptable`.
-That means the endpoint is reachable and token-auth is accepted; full MCP clients then negotiate the streamable protocol.
+### Config Kilo Code
 
-## Optional overrides
+File location:
 
-You can still override values inline when starting:
+- Global: `~/.config/kilo/kilo.jsonc`
+- Project: `.kilo/kilo.jsonc` in project root
 
-```bash
-MCP_TOKEN=my-mcp-token MCP_PORT=4041 docker compose up -d
-```
+Entry:
 
-## Stop
-
-```bash
-docker compose down
+```json
+{
+  "mcp": {
+      "jupyter": {
+         "type": "remote",
+         "url": "http://127.0.0.1:4040/mcp",
+         "enabled": true,
+         "headers": {
+            "Authorization": "Bearer your-jupyter-mcp-token",
+         },
+      }
+   }
+}
 ```
