@@ -15,8 +15,6 @@ It builds a container image with:
 - ipykernel
 - datalayer_pycrdt pinned to 0.12.17
 
-The goal is to make local startup consistent across machines without requiring a local Python setup.
-
 ## Prerequisites
 
 - Docker Desktop (or Docker Engine + Docker Compose plugin)
@@ -32,71 +30,18 @@ docker compose version
 
 ## Installation
 
-1. Clone or copy this project locally.
-2. Enter the project directory.
-3. Create your environment config file from the example file.
+1. Create an `.env` file from the example file: `cp .env.example .env`
+2. Update the environment varialbes in `.env` if required (e.g., a strong `JUPYTER_TOKEN`).
+3. Build the container image: `docker compose build --no-cache`
 
-   ```bash
-   cp .env.example .env
-   ```
-
-4. Edit `.env` and set all required values:
-
-   ```env
-   JUPYTER_TOKEN=replace-with-a-strong-token
-   JUPYTER_IP=0.0.0.0
-   JUPYTER_PORT=8888
-   ```
-
-   If any of these variables are missing, `docker compose up` will fail fast with an explicit error.
-
-5. Build the container image:
-
-   ```bash
-   docker compose build --no-cache
-   ```
-
-Note: `--no-cache` is recommended for the first build to ensure a clean environment.
+   - Note: `--no-cache` is recommended for the first build to ensure a clean environment.
 
 ## Run
 
-Start Jupyter Lab:
+1. Start Jupyter Lab server: `docker compose up -d`
+2. Optionally, view logs: `docker compose logs -f jupyter-lab`
+3. Open Jupyter Lab in your browser: `http://localhost:<JUPYTER_PORT>`
+4. Enter your `JUPYTER_TOKEN` from `.env` when prompted in the Jupyter Lab UI.
+5. Optionally, stop the server again: `docker compose down`
 
-```bash
-docker compose up -d
-```
-
-View logs:
-
-```bash
-docker compose logs -f jupyter-lab
-```
-
-Open Jupyter Lab in your browser:
-
-```text
-http://localhost:<JUPYTER_PORT>
-```
-
-Use `JUPYTER_TOKEN` from `.env` when prompted.
-
-## Stop and Cleanup
-
-Stop containers:
-
-```bash
-docker compose down
-```
-
-Stop and remove associated volumes:
-
-```bash
-docker compose down -v
-```
-
-## Project Files
-
-- `Dockerfile`: Builds the Jupyter Lab image and installs dependencies.
-- `docker-compose.yml`: Defines service runtime, env wiring, ports, and volume mapping.
-- `.env.example`: Template for required runtime variables.
-- `.env`: Local runtime values used by Docker Compose.
+All Jupyter Lab server data (notebooks, checkpoints, etc.) will be stored in the new `workspace` folder.

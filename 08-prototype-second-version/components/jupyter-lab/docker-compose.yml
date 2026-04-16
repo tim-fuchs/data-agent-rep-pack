@@ -14,5 +14,5 @@ services:
       - --no-browser
       - --allow-root
     volumes:
-      - ./:/workspace
+      - ./workspace:/workspace
     restart: unless-stopped
