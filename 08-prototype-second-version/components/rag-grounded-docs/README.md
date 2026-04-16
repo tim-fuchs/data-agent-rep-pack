@@ -1,11 +1,15 @@
-# Grounded Docs MCP Server (Docker Compose)
+# Grounded Docs MCP Server
 
-This folder provides Grounded Docs via Docker Compose.
+## Purpose
+
+- This folder provides Grounded Docs via Docker Compose.
+- Following the instructions for installation and indexing documents
 
 ## Prerequisites
 
-- Docker Desktop (or Docker Engine + Docker Compose plugin)
-- A free local port for Grounded Docs (for example, 6280)
+- [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine + Docker Compose plugin)
+- A free local port for Grounded Docs (ideally 6280)
+- [Node.js](https://nodejs.org) (for ingesting documents to Grounded Docs)
 - Basic terminal access
 
 Verify Docker is available:
@@ -15,7 +19,7 @@ docker --version
 docker compose version
 ```
 
-## Installing and Running MCP Server
+## Installing and Running the MCP Server
 
 1. Create a `.env` file with: `cp .env.example .env`
 2. Optionally, set environment variables in `.env` to activate embedding process. If `OPENAI_API_KEY` and `DOCS_MCP_EMBEDDING_MODEL` are empty, Grounded Docs still starts and uses keyword/FTS search.
@@ -31,7 +35,9 @@ docker compose version
 4. Optionally, view logs: `docker compose logs -f`
 5. Optionally, stop container: `docker compose down`
 
-## Configuring MCP Client
+Note: Telemetry of Grounded Docs is explicitly disabled in `docker-compose.yml` via `DOCS_MCP_TELEMETRY=false`.
+
+## Configuring the MCP Client
 
 ### Config OpenCode
 
@@ -77,9 +83,11 @@ Entry:
 }
 ```
 
-## Notes
+## Indexing Documents
 
-- Telemetry of Grounded Docs is explicitly disabled in `docker-compose.yml` via `DOCS_MCP_TELEMETRY=false`.
+- We prepared a list of resources that should be indexed by Grounded Docs.
+- Execute `sh index-docs.sh`.
+- The resources with be stored in a database in `${HOME}/Library/Application Support/docs-mcp-server`.
 
 ## References
 

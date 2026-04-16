@@ -1,13 +1,10 @@
 services:
   grounded-docs:
     image: ghcr.io/arabold/docs-mcp-server:latest
-    container_name: grounded-docs
-    env_file:
-      - .env
     environment:
-      OPENAI_API_KEY: ${OPENAI_API_KEY:-}
-      DOCS_MCP_EMBEDDING_MODEL: ${DOCS_MCP_EMBEDDING_MODEL:-}
-      DOCS_MCP_APP_TELEMETRY_ENABLED: ${DOCS_MCP_APP_TELEMETRY_ENABLED:-}
+      OPENAI_API_KEY: ${OPENAI_API_KEY:?Missing OPENAI_API_KEY. Set it in your environment before running docker compose.}
+      DOCS_MCP_EMBEDDING_MODEL: ${DOCS_MCP_EMBEDDING_MODEL:?Missing DOCS_MCP_EMBEDDING_MODEL. Set it in your environment before running docker compose.}
+      DOCS_MCP_APP_TELEMETRY_ENABLED: ${DOCS_MCP_APP_TELEMETRY_ENABLED:?Missing DOCS_MCP_APP_TELEMETRY_ENABLED. Set it in your environment before running docker compose.}
     command:
       - --protocol
       - http
@@ -18,6 +15,5 @@ services:
     ports:
       - "6280:6280"
     volumes:
-      - ./data:/data
-      - ./config:/config
-    restart: unless-stopped
+      - "${HOME}/Library/Application Support/docs-mcp-server:/data"
+      - "${HOME}/Library/Preferences:/config"
