@@ -9,6 +9,7 @@
 ## Prerequisites
 
 - Access to a GitHub account
+- AI agent tool that supports MCP, e.g., OpenCode or Kilo Code
 - Basic terminal access
 
 ## Configure the MCP Client

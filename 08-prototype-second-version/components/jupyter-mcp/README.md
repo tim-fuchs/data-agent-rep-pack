@@ -69,7 +69,7 @@ docker compose version
    }
    ```
 
-2. Restart your AI agent
+2. Restart your AI agent.
 3. Ready! Prompt your agent to connect to a Jupyter notebook.
 
 ## References
