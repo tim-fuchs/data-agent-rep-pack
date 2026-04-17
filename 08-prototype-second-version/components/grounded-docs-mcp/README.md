@@ -2,8 +2,8 @@
 
 ## Purpose
 
-- This folder provides Grounded Docs via Docker Compose.
-- Following the instructions for installation and indexing documents
+- This folder provides the Grounded Docs MCP server via Docker Compose.
+- Follow the instructions below to install Grounded Docs and index documents to the vector database.
 
 ## Prerequisites
 
