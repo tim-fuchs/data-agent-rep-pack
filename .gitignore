@@ -2,3 +2,4 @@
 *.bkp
 **.env
 **/.mcp/zulipchat/
+**/.kilo/plans/
