@@ -46,7 +46,7 @@
        "mcp": {
          "github-mcp": {
             "type": "remote",
-            "url": "https://api.githubcopilot.com/mcp/",
+            "url": "https://api.githubcopilot.com/mcp/x/all/readonly",
             "enabled": true,
             "headers": {
                 "Authorization": "Bearer {file:~/.secrets/github-mcp-pat}"
@@ -56,6 +56,9 @@
      }
      ```
 
+   - **Note:** The `.../readonly` URL restricts the server to read-only access. Use `https://api.githubcopilot.com/mcp/` if you also require write access.
+
 ## References
 
 - [Tutorial for creating a PAT on GitHub](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/managing-your-personal-access-tokens#creating-a-fine-grained-personal-access-token)
+- [Configuration details for the GitHub MCP server](https://github.com/github/github-mcp-server/blob/main/docs/server-configuration.md)
