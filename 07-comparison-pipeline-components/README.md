@@ -19,7 +19,7 @@ The agentic AI system shall ...
 | Access the remote Jupyter Lab server                                       | X       | X     |       |     |               |        |
 | Interact with notebook content [^1]                                        | X       | X     |       |     |               |        |
 | Generate code optimized for high-performance computing                     |         | X     |       |     |               |        |
-| Test the code for correctness and safety risks                             |         | X     |       |     |               |        |
+| Test code for correctness and safety risks                                 |         | X     |       |     |               |        |
 | Work with up-to-date code-relevant information [^2]                        |         | X     |       | X   | X             |        |
 | Adapt code style and explanations to the user's expectations               |         | X     |       |     |               |        |
 | Generate code documentation on project- and code-level                     |         | X     |       |     |               |        |
@@ -74,10 +74,6 @@ The agentic AI system shall ...
 
 ... + MCP servers (Jupyter, Zulip, RAG, GitHub, GitLab) + nono (local machine and Jupyter Lab server)
 
-## Configuration of Components
-
-- Read [these instructions](comparison-guardrails.md).
-
 ## Workflow Automation as Alternative Approach to User-Installed Agentic AI System
 
 <details><summary>Details</summary>
@@ -111,18 +107,18 @@ The agentic AI system shall ...
 
 <details><summary>Details</summary>
 
-**Official docs of candidates:**
+## Official Docs of Candidates
 
-- [OpenCode]
+- [OpenCode](https://opencode.ai)
 - [Kilo Code](https://kilo.ai)
 - [goose](https://goose-docs.ai)
 - [DeepAgents](https://www.langchain.com/deep-agents)
 - [DeepAgents tutorial by LangChain Academy](https://academy.langchain.com/courses/deep-agents-with-langgraph)
-- [Jupyter MCP]
-- [ZulipChat MCP]
-- [Grounded Docs MCP]
+- [Jupyter MCP](https://jupyter-mcp-server.datalayer.tech)
+- [ZulipChat MCP](https://github.com/akougkas/zulipchat-mcp/tree/main)
+- [Grounded Docs MCP](https://grounded.tools)
 
-**Miscellaneous**
+### Miscellaneous
 
 - [Blog post](https://docs.bswen.com/blog/2026-03-14-kilo-roocode-opencode-comparison) comparing Roo Code, OpenCode, and Kilo Code
 - [Zulip](https://zulip.com)
