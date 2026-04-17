@@ -155,23 +155,6 @@
   - Weaknesses:
     - Tool is not optimized for HPC computing out of the box.
 
-### Work With Up-to-Date Code-Relevant Information
-
-- **Kilo Code, OpenCode, goose, Roo Code**
-  - Rating: ++
-  - Strengths:
-    - Tool can fetch internet data out of the box.
-    - User can configure MCP clients for more specialized information (e.g., RAG for private files).
-  - Weaknesses:
-    - None
-
-- **Jupyter AI**
-  - Rating: -
-  - Strengths:
-    - Tool can fetch internet data out of the box.
-  - Weaknesses:
-    - User cannot configure MCP clients on the remote server.
-
 ### Test Code for Correctness and Safety Risk
 
 - **Kilo Code**
@@ -219,6 +202,57 @@
     - User can prompt the agent for linting, testing, and safety scanning.
   - Weaknesses:
     - Tool has no linting, testing, or safety-scanning workflows out of the box.
+
+### Request User Feedback to Guide and Improve Solutions
+
+- **Kilo Code**
+  - Rating: ++
+  - Strengths:
+    - Tool asks clarification questions and supports iterative approval checkpoints.
+    - User can configure feedback behavior through task/todo controls and workflow settings.
+  - Weaknesses:
+    - Aggressive auto-approval settings can reduce human checkpoints.
+
+- **OpenCode**
+  - Rating: ++
+  - Strengths:
+    - Tool asks clarification questions and supports iterative approval checkpoints.
+    - User can configure feedback behavior via planning agents and `AGENT.md`.
+  - Weaknesses:
+    - None.
+
+- **goose**
+  - Rating: +
+  - Strengths:
+    - Tool can ask follow-up questions and support iterative feedback loops.
+    - User can configure feedback behavior through project guidance.
+  - Weaknesses:
+    - Tool provides fewer built-in planning and approval controls than top alternatives.
+
+- **Roo Code**
+  - Rating: ++
+  - Strengths:
+    - Tool asks clarification questions and supports iterative approval checkpoints.
+    - User can configure feedback behavior through modes and permission settings.
+  - Weaknesses:
+    - User must maintain permission settings carefully to preserve approval checkpoints.
+
+- **Deep Agents**
+  - Rating: +
+  - Strengths:
+    - User can implement explicit human-in-the-loop checkpoints in agent workflows.
+    - User can configure when feedback or approval is required before transitions.
+  - Weaknesses:
+    - Framework does not provide built-in feedback workflows out of the box.
+
+- **Jupyter AI**
+  - Rating: +
+  - Strengths:
+    - Tool supports iterative feedback through persistent chat threads.
+    - User can prompt the agent to request approval before sensitive actions.
+  - Weaknesses:
+    - Tool does not provide dedicated planning and approval workflows out of the box.
+    - Approval behavior can vary by selected persona and server policy.
 
 ### Adapt Code Style and Explanations to User's Expectations
 
@@ -327,7 +361,7 @@
 - **OpenCode**
   - Rating: +
   - Strengths:
-    - Tool can request human approval for sensitive actions through agent permission controls.
+    - User can configure approval levels for sensitive actions through agent permission controls.
     - Tool can check execution-environment assumptions through shell commands.
   - Weaknesses:
     - Tool is not sandboxed out of the box; host-level guardrails are recommended.
@@ -363,110 +397,6 @@
   - Weaknesses:
     - Approval behavior can vary by selected persona and server policy.
     - Some personas may not request permissions consistently.
-
-### Request User Feedback to Guide and Improve Solutions
-
-- **Kilo Code**
-  - Rating: ++
-  - Strengths:
-    - Tool asks clarification questions and supports iterative approval checkpoints.
-    - User can configure feedback behavior through task/todo controls and workflow settings.
-  - Weaknesses:
-    - Aggressive auto-approval settings can reduce human checkpoints.
-
-- **OpenCode**
-  - Rating: ++
-  - Strengths:
-    - Tool asks clarification questions and supports iterative approval checkpoints.
-    - User can configure feedback behavior via planning agents and `AGENT.md`.
-  - Weaknesses:
-    - None.
-
-- **goose**
-  - Rating: +
-  - Strengths:
-    - Tool can ask follow-up questions and support iterative feedback loops.
-    - User can configure feedback behavior through project guidance.
-  - Weaknesses:
-    - Tool provides fewer built-in planning and approval controls than top alternatives.
-
-- **Roo Code**
-  - Rating: ++
-  - Strengths:
-    - Tool asks clarification questions and supports iterative approval checkpoints.
-    - User can configure feedback behavior through modes and permission settings.
-  - Weaknesses:
-    - User must maintain permission settings carefully to preserve approval checkpoints.
-
-- **Deep Agents**
-  - Rating: +
-  - Strengths:
-    - User can implement explicit human-in-the-loop checkpoints in agent workflows.
-    - User can configure when feedback or approval is required before transitions.
-  - Weaknesses:
-    - Framework does not provide built-in feedback workflows out of the box.
-
-- **Jupyter AI**
-  - Rating: +
-  - Strengths:
-    - Tool supports iterative feedback through persistent chat threads.
-    - User can prompt the agent to request approval before sensitive actions.
-  - Weaknesses:
-    - Tool does not provide dedicated planning and approval workflows out of the box.
-    - Approval behavior can vary by selected persona and server policy.
-
-### Assist in Drafting Scientific Manuscripts
-
-- **Kilo Code**
-  - Rating: +
-  - Strengths:
-    - Tool can draft and revise scientific manuscript sections.
-    - User can configure structure, tone, and constraints through instruction layers.
-  - Weaknesses:
-    - Tool is not specialized for scientific-writing quality assurance out of the box.
-
-- **OpenCode**
-  - Rating: +
-  - Strengths:
-    - Tool can draft and revise scientific manuscript sections.
-    - User can configure manuscript workflows through commands, skills, and `AGENT.md`.
-  - Weaknesses:
-    - Tool is not specialized for scientific-writing quality assurance out of the box.
-    - User must verify citation quality and domain accuracy.
-
-- **goose**
-  - Rating: +
-  - Strengths:
-    - Tool can draft and revise scientific manuscript sections.
-    - User can configure writing constraints through project guidance.
-  - Weaknesses:
-    - Tool is not specialized for scientific-writing quality assurance out of the box.
-
-- **Roo Code**
-  - Rating: +
-  - Strengths:
-    - Tool can draft and revise scientific manuscript sections.
-    - User can configure writing format and structure through custom guidance.
-  - Weaknesses:
-    - Tool is not specialized for scientific-writing quality assurance out of the box.
-    - User must verify citation quality and domain accuracy.
-
-- **Deep Agents**
-  - Rating: +
-  - Strengths:
-    - User can implement agent workflows for scientific manuscript drafting and review.
-    - User can configure domain resources and validation stages.
-  - Weaknesses:
-    - Framework does not provide built-in scientific-writing workflows out of the box.
-
-- **Jupyter AI**
-  - Rating: +
-  - Strengths:
-    - Tool can draft and revise scientific manuscript sections in notebook workflows.
-    - User can prompt the agent to mix narrative text with equations, code, and outputs.
-  - Weaknesses:
-    - Tool is not specialized for scientific-writing quality assurance out of the box.
-    - User must verify citation quality and domain accuracy.
 
 ### Access Relevant Context Information Within a Project
 
@@ -568,6 +498,23 @@
   - Weaknesses:
     - Tool does not provide a dedicated planning mode with explicit verifiable task lists.
     - Managed EuXFEL setup limits persona extensibility for decomposition workflows.
+
+### Work With Up-to-Date Code-Relevant Information
+
+- **Kilo Code, OpenCode, goose, Roo Code**
+  - Rating: ++
+  - Strengths:
+    - Tool can fetch internet data out of the box.
+    - User can configure MCP clients for more specialized information (e.g., RAG for private files).
+  - Weaknesses:
+    - None
+
+- **Jupyter AI**
+  - Rating: -
+  - Strengths:
+    - Tool can fetch internet data out of the box.
+  - Weaknesses:
+    - User cannot configure MCP clients on the remote server.
 
 ### Close Tasks with Narrative Summaries and Recommended Next Steps
 
@@ -714,6 +661,59 @@
     - Tool supports shared review through collaborative chats in one Jupyter environment.
   - Weaknesses:
     - Tool does not provide built-in automated staff-reporting workflows out of the box.
+
+### Assist in Drafting Scientific Manuscripts
+
+- **Kilo Code**
+  - Rating: +
+  - Strengths:
+    - Tool can draft and revise scientific manuscript sections.
+    - User can configure structure, tone, and constraints through instruction layers.
+  - Weaknesses:
+    - Tool is not specialized for scientific-writing quality assurance out of the box.
+
+- **OpenCode**
+  - Rating: +
+  - Strengths:
+    - Tool can draft and revise scientific manuscript sections.
+    - User can configure manuscript workflows through commands, skills, and `AGENT.md`.
+  - Weaknesses:
+    - Tool is not specialized for scientific-writing quality assurance out of the box.
+    - User must verify citation quality and domain accuracy.
+
+- **goose**
+  - Rating: +
+  - Strengths:
+    - Tool can draft and revise scientific manuscript sections.
+    - User can configure writing constraints through project guidance.
+  - Weaknesses:
+    - Tool is not specialized for scientific-writing quality assurance out of the box.
+
+- **Roo Code**
+  - Rating: +
+  - Strengths:
+    - Tool can draft and revise scientific manuscript sections.
+    - User can configure writing format and structure through custom guidance.
+  - Weaknesses:
+    - Tool is not specialized for scientific-writing quality assurance out of the box.
+    - User must verify citation quality and domain accuracy.
+
+- **Deep Agents**
+  - Rating: +
+  - Strengths:
+    - User can implement agent workflows for scientific manuscript drafting and review.
+    - User can configure domain resources and validation stages.
+  - Weaknesses:
+    - Framework does not provide built-in scientific-writing workflows out of the box.
+
+- **Jupyter AI**
+  - Rating: +
+  - Strengths:
+    - Tool can draft and revise scientific manuscript sections in notebook workflows.
+    - User can prompt the agent to mix narrative text with equations, code, and outputs.
+  - Weaknesses:
+    - Tool is not specialized for scientific-writing quality assurance out of the box.
+    - User must verify citation quality and domain accuracy.
 
 ### Recommend Using a Version Control System
 

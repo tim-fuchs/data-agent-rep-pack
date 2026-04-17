@@ -20,17 +20,17 @@ The agentic AI system shall ...
 | Interact with notebook content [^1]                                        | X       | X     |       |     |               |        |
 | Generate code optimized for high-performance computing                     |         | X     |       |     |               |        |
 | Test code for correctness and safety risks                                 |         | X     |       |     |               |        |
-| Work with up-to-date code-relevant information [^2]                        |         | X     |       | X   | X             |        |
+| Request user feedback to guide and improve solutions                       |         | X     |       |     |               |        |
 | Adapt code style and explanations to the user's expectations               |         | X     |       |     |               |        |
 | Generate code documentation on project- and code-level                     |         | X     |       |     |               |        |
-| Request human approval for sensitive actions [^3]                          |         | X     |       |     |               | X      |
-| Request user feedback to guide and improve solutions                       |         | X     |       |     |               |        |
-| Assist in drafting scientific manuscripts                                  |         | X     |       |     |               |        |
-| Access relevant context information within a project [^4]                  |         | X     |       |     |               |        |
+| Request human approval for sensitive actions [^2]                          |         | X     |       |     |               | X      |
+| Access relevant context information within a project [^3]                  |         | X     |       |     |               |        |
 | Decompose a request into verifiable tasks                                  |         | X     |       |     |               |        |
+| Work with up-to-date code-relevant information [^4]                        |         | X     |       | X   | X             |        |
 | Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |        |
 | Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |        |
 | Report conversations between user and agent to EuXFEL staff [^5]           |         | X     | X     |     |               |        |
+| Assist in drafting scientific manuscripts                                  |         | X     |       |     |               |        |
 | Recommend using a version control system [^6]                              |         | X     |       |     |               |        |
 | Optimize latency [^7]                                                      | X       | X     | X     | X   | X             | X      |
 | Not share user data with third parties [^8]                                | X       | X     | X     | X   | X             | X      |
@@ -38,9 +38,9 @@ The agentic AI system shall ...
 | Minimize effort required to replace components [^9]                        | X       | X     | X     | X   | X             | X      |
 
 - [^1] E.g. explain/insert/modify/delete cells, create entire notebooks
-- [^2] E.g., by retrieving external public and private resources
-- [^3] E.g., file deletion or code execution on HPC cluster
-- [^4] E.g., project files, previous messages, other agent conversation
+- [^2] E.g., file deletion or code execution on HPC cluster
+- [^3] E.g., project files, previous messages, other agent conversation
+- [^4] E.g., by retrieving external public and private resources
 - [^5] Only on user demand
 - [^6] To ensure code availability and reproducibility of results
 - [^7] E.g., streamed responses, sub-agents executed in parallel, reasoning depth adjusted to task complexity, caching of prompts and responses, token minimization, threads for multiple users
