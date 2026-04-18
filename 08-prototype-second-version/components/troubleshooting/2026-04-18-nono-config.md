@@ -1,6 +1,6 @@
 # Applicability of nono
 
-- Running OpenCode CLI with the connected MCP servers was not possible via this nono command:
+- Running OpenCode with the connected MCP servers was not possible via this nono command:
 
   ```bash
    nono run --profile opencode --allow-cwd --allow ~/.local/bin -- opencode
