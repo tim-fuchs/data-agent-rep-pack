@@ -10,26 +10,46 @@
 
 ## Install and Configure
 
-### OpenCode (Desktop App)
+### OpenCode (Desktop App, CLI App, VS Code Extension)
+
+- **Installation:**
+  - Choose your favorite installation option from the [OpenCode website](https://opencode.ai/download).
+  - We recommend installing OpenCode Desktop.
+  - We recommend installing OpenCode Terminal as well, as it is practical for quick checks. Also, it is (currently) required for any OAuth processes for MCP servers (but this is not required in our setup).
+  - You can also install the OpenCode VS Code extension. It looks like OpenCode Terminal, but within VS Code. The other options offer a better UX (in our opinion).
+
+- **Configure LLM provider:**
+  1. Click on the app symbol (OpenCode Desktop) or enter `opencode` in the CLI (OpenCode Terminal) to start the app.
+  2. Click on setting symbol (OpenCode Desktop) or use `/connect` command (OpenCode Terminal).
+  3. Connect to your prefered provider (e.g., Ollama via `Custom provider` or OpenAI via API key).
+     - Note: API keys of providers are stored in `~/.local/share/opencode/auth.json`.
+
+- **Notes on configuration:**
+  - The global configuration file for OpenCode is stored in your user directory on your machine (`~/.config/opencode/opencode.json`).
+  - You can also override global settings with a project-specific config (`.opencode/opencode.json` in project root).
 
 ### Kilo Code (VS Code Extension)
 
-- **Notes:**
-  - Kilo Code settings are available by opening the Kilo Code window in VS Code and clicking on the wheel symbol on the top of the window.
-  - The VS Code settings edit the global configuration file for Kilo Code (`~/.config/kilo/kilo.jsonc`).
-  - You can also override global settings with a project-specific config (`.kilo/kilo.jsonc` in project root).
+- **Installation:**
+  1. Install the [Kilo Code extension](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code) within VS Code via the extension marketplace.
+  2. Tip for a more GitHub Copilot-like UX: Open the chat window by clicking the chat symbol in the search bar at the top of VS Code. Then, drag the Kilo Code symbol into the chat window.
   
-- Configure LLM provider:
+- **Configure LLM provider:**
 
-  1. Go to settings > `Providers`.
-  2. Connect to your prefered provider via your (e.g., Ollama via `Custom provider` or OpenAI via API key).
-  3. Click `Save`.
+  1. In VS Code, click on the Kilo Code symbol in the left bar.
+  2. In the VS Code extension, go to settings > `Providers`.
+  3. Connect to your prefered provider (e.g., Ollama via `Custom provider` or OpenAI via API key).
+  4. Click `Save`.
 
-- Configure directory for skills:
+- **Configure directory for skills:**
 
    1. Go to settings > `Agent Behavior` > `Skills` tab.
    2. Add the skills folder path `~/.agents/skills/`.
    3. Click `Save`.
+
+- **Notes on configuration:**
+  - The VS Code settings edit the global configuration file for Kilo Code (`~/.config/kilo/kilo.jsonc`).
+  - You can also override global settings with a project-specific config (`.kilo/kilo.jsonc` in project root).
 
 ## Template Project
 
@@ -40,118 +60,44 @@
 - These features only differ in their execution triggers.
 - In this template project, we make use of an `AGENTS.md` file and, additionally, multiple skills to adapt the agent behavior to the data analysis use case at EuXFEL.
 
+- Note about the [caveman](https://github.com/JuliusBrussee/caveman) skill:
+  - It can drastically reduce the length of output prompts and, therefore, also the token consumption.
+  - We preconfigured it in the template project, but, in principle, you can also download it via the Skills CLI tool: `npx skills add JuliusBrussee/caveman`
+    - During the process, you can select between global (recommended) or project-specific install.
+    - Location of global install: `~/.agents/skills/`
+    - Location of project-specific install: `<project>/.opencode/skills/`
+  - Usage:
+    - `/caveman lite|full|ultra` (We recommend `lite` for the EuXFEL use case.)
+    - Skill must be manually activated every session.
+      - Small downside of OpenCode and Kilo Code in comparison to Claude Code, which can activate it automatically.
+      - To automate this, we added the skill activation to the `AGENTS.md`.
+
+### Preconfiguration
+
+- The configuration files `.opencode/opencode.json` and `.kilo/kilo.jsonc` contain the configuration of the MCP clients, as well as other settings, such as additional plugins, like the [websearch-cited tool](https://github.com/ghoulr/opencode-websearch-cited).
+- Hence, the tools are ready to use. You just have to start the MCP servers first (see instructions in the subdirectories `grounded-docs-mcp`, etc.).
+
 ### Run the Project
 
-### Access Remote Jupyter Lab Server
+#### OpenCode
 
-- OpenCode and Kilo Code support the MCP protocol. Therefore, it is possible to create a connection to Jupyter Lab via Jupyter MCP Server.
--
+1. Open the `template-project` folder in OpenCode Desktop.
+2. Check that the MCP servers are available (green or red indicator on the top right).
+3. Prompt, "Which notebooks are available on Jupyter Lab?" with the Plan or Build agent.
 
-### Interact with Notebook Content
+#### Kilo Code
 
-- Instruct to use Jupyter MCP in AGENTS.md
-
-### Generate HPC-Optimized Code
-
-- Instruct code conventions in AGENTS.md
-
-### Test Code for Correctness and Safety Risk
-
-- Instruct testing process in AGENTS.md
-
-### Request User Feedback to Guide and Improve Solutions
-
-- Instruct feedback behavior via AGENTS.md
-
-### Adapt Code Style and Explanations to User's Expectations
-
-- Instruct style adaption in AGENTS.md and via a CODE_STYLE directory
-- Create an example project, add a CODE_STYLE directory, add a notebook file as example
-- Instruct expected explanations in AGENTS.md
-
-### Generate Code Documentation on Project- and Code-Level
-
-- Instruct expected documentation in AGENTS.md
-  - Agent should prompt the user for documentation preferences.
-  - The prompt should include an option for the CODE_STYLE directory.
-
-### Request Human Approval for Sensitive Actions
-
-- Describe recommended approval configuration via tool settings.
-- (Eventually,) instruct use-case-specific instructions for execution environment in AGENTS.md, e.g.:
-  - Do not automatically execute heavy-load commands in local environment
-  - Do not automatically execute batch jobs
-
-### Access Relevant Context Information Within a Project
-
-- OpenCode and Kilo Code do not require further configuration.
-- Both can, in principle, read every file on the local machine (but will request human approval first).
-- Both have session-level memory.
-- Both auto-compact session information if the context windows is full.
-- **Unsure if they have session-overlapping memory** (like GitHub Copilot).
-
-### Decompose a Request into Verifiable Tasks
-
-- Depending on the agent (plan vs. build), LLM (GPT Codex vs. GPT nano), and reasoning level (none vs. high), the tool creates a set of tasks itself.
-- Nevertheless, instruct task planning in AGENTS.md to enforce this behavior.
-
-### Work With Up-to-Date Code-Relevant Information
-
-- Instruct to use MCP servers for Grounded Docs, GitHub, GitLab in AGENTS.md
-
-### Close Tasks with Narrative Summaries and Recommended Next Steps
-
-- Instruct closing behavior in AGENTS.md
-
-### Support Responses with Citations, Confidence Levels, or Verification Steps
-
-- Instruct citation and verification behavior in AGENTS.md
-
-### Report Conversations to EuXFEL Staff
-
-- Instruct reporting process in a SKILL.md
-- Instruct behavior in AGENTS.md:
-  - When task completed, ask user if task summary should be reported.
-  - If yes, execute skill.
-
-### Assist in Drafting Scientific Manuscripts
-
-- Instruct drafting process in a SKILL.md
-
-### Recommend Using a Version Control System
-
-- Instruct Git versioning in a SKILL.md:
-  - Skill 1: git:init
-  - Skill 2: git:commit
-- Instruct behavior in AGENTS.md:
-  - When user wants to connect to a notebook via Jupyter MCP:
-    - Check if Git environment is available on the server (**check if this is possible via Jupyter MCP**).
-    - If not, ask user if agent should execute git:init skill.
-  - When agent completed a task, ask if agent should execute git:commit skill.
-    - If yes and Git environment not available, execute git:init skill beforehand.
-
-### Optimize Latency
-
-- Install the [caveman](https://github.com/JuliusBrussee/caveman) skill.
-- Instruct using the caveman skills in lite mode in AGENTS.md.
-
-### Not Share User Data
-
-- Describe configuring local/self-hosted models to avoid third-party data transfer.
-- Telemetry:
-  - OpenCode does not use telemetry, according to the documents
-  - Kilo Code does not provide explicit statements about telemetry.
-
-### Implementation Effort
-
-- This requirement is met by installing a ready-to-use AI agent tool and now only have to configure its behavior via tool settings and prompt engineering.
-
-### Component Replacement Effort
-
-- This requirements is met by installing a popular open-source AI agent tool (e.g., OpenCode, Kilo Code) modeled after another popular (eventually proprietary) tool (e.g., Claude Code, Cursor, Codex), including its architecture, configuration, and extension options.
+1. Open the `templace-project` folder VS Code.
+2. Check that the MCP servers are available (Kilo Code settings > `Agent Behavior` > `MCP Servers`).
+3. Prompt, "Which notebooks are available on Jupyter Lab?" with the Ask, Plan, or Code agent.
 
 ## Further Reads
 
-- [Leaderboard of popular skills](https://skills.sh)
+- [OpenCode docs with instructions for custom agents, skills, commands, tools](https://opencode.ai/docs)
+- [Kilo Code docs with instructions for custom agents, skills, commands, tools](https://kilo.ai/docs/customize)
+- "Find Skills" Skill:
+  - Install [Skills CLI tool](https://github.com/vercel-labs/skills) with `npx skills` to streamline finding and installing external skills.
+  - Check out the [skills leaderboard](https://skills.sh).
+  - Update installed skills: `npx skills update`
 - [Agent Skills website](https://agentskills.io/skill-creation/best-practices)
 - [AGENTS.md with Karpathy-inspired Claude Code guidelines](https://github.com/forrestchang/andrej-karpathy-skills)
