@@ -11,6 +11,10 @@ services:
     command:
       - --transport
       - streamable-http
+      - --jupyter-token
+      - ${JUPYTER_TOKEN}
+      - --mcp-token 
+      - ${MCP_TOKEN}
     ports:
       - ${MCP_PORT:?MCP_PORT must be set}:4040
     extra_hosts:
