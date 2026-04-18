@@ -3,12 +3,12 @@
 ## Purpose
 
 - This folder provides installation and configuration instructions for the AI agent tools.
-- The installation steps focus on the desktop and CLI apps of OpenCode, and the VS Code extension Kilo Code.
+  - We focus on the desktop and CLI apps of OpenCode, and the VS Code extension Kilo Code.
   - There are also many other open-source agents such as Roo Code and goose.
   - Most of them have very similar installation and configuration options.
-- The configuration steps implement the agent-specific requirements.
+- This folder also provides a template project with multiple prompt engineering artifacts to implement the requirements of the agent.
 
-## Install
+## Install and Configure
 
 ### OpenCode (Desktop App)
 
@@ -31,18 +31,21 @@
    2. Add the skills folder path `~/.agents/skills/`.
    3. Click `Save`.
 
-## Configure
+## Template Project
 
-### Notes
+### Prompt Engineering Artifacts
 
 - Most features of AI agent tools to tweak the agent behavior boil down to prompt engineering.
-- This concerns the `AGENTS.md` file, the skills (`SKILL.md` file), custom commands, and custom (sub-)agents.
+- This concerns the `AGENTS.md` file, the skills (`.skills` folder), custom commands, and custom (sub-)agents.
 - These features only differ in their execution triggers.
-- We use all of these prompt engineering possibilities to enable the requirements listed below.
+- In this template project, we make use of an `AGENTS.md` file and, additionally, multiple skills to adapt the agent behavior to the data analysis use case at EuXFEL.
+
+### Run the Project
 
 ### Access Remote Jupyter Lab Server
 
-- Follow instructions in [Jupyter MCP config](../jupyter-mcp/README.md).
+- OpenCode and Kilo Code support the MCP protocol. Therefore, it is possible to create a connection to Jupyter Lab via Jupyter MCP Server.
+-
 
 ### Interact with Notebook Content
 
