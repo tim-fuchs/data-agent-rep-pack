@@ -36,7 +36,7 @@
 ### Prompt Engineering Artifacts
 
 - Most features of AI agent tools to tweak the agent behavior boil down to prompt engineering.
-- This concerns the `AGENTS.md` file, the skills (`.skills` folder), custom commands, and custom (sub-)agents.
+- This concerns the `AGENTS.md` file, the skills (`./agents/skills` folder), custom commands, and custom (sub-)agents.
 - These features only differ in their execution triggers.
 - In this template project, we make use of an `AGENTS.md` file and, additionally, multiple skills to adapt the agent behavior to the data analysis use case at EuXFEL.
 
