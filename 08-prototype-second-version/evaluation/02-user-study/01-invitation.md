@@ -40,7 +40,7 @@ Thank you very much for wanting to participate in the evaluation study of my AI 
 
 **Procedure:**
 
-- I have prepared an AI agent that is connected to Jupyter Lab on the Maxwell cluster as well as to various knowledge sources (EuXFEL GitLab, GitHub, a RAG database, and the internet).
+- I have prepared an AI agent that is connected to Jupyter Lab on the Maxwell cluster as well as to multiple knowledge sources (EuXFEL GitLab, GitHub, a RAG database, and the internet).
 - You will explore the different ways of interacting with the agent, learn about its features, and test its limits.
 - The study will take place on-site at EuXFEL on my computer. You do not need to bring your own device.
 
