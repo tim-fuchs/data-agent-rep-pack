@@ -1,7 +1,7 @@
 services:
-  jupyter-mcp:
+  jupyter-mcp-hpc:
     image: datalayer/jupyter-mcp-server:latest
-    container_name: jupyter-mcp
+    container_name: jupyter-mcp-hpc
     env_file:
       - .env
     environment:

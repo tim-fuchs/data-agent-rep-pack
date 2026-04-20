@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This folder provides instructions to install a Jupyter MCP server and configure the corresponding MCP client in an AI agent tool.
+This folder provides instructions to install a Jupyter MCP server (connected to a local Jupyter Lab server) and configure the corresponding MCP client in an AI agent tool.
 
 ## Prerequisites
 
@@ -23,7 +23,7 @@ docker compose version
 1. Configure environment variables
 
    - Create a local environment file for this folder: `cp .env.example .env`
-   - Set all required values in `.env`.
+   - Set all required values in `.env` (i.e., the Jupyter URL and token).
    - If any variable is missing, Docker Compose fails fast with an explicit error.
 
 2. Start JupyterLab from the sibling `jupyter-lab` project first.
@@ -57,7 +57,7 @@ docker compose version
    ```json
    {
    "mcp": {
-         "jupyter": {
+         "jupyter-mcp-local": {
             "type": "remote",
             "url": "http://127.0.0.1:4040/mcp",
             "enabled": true,
