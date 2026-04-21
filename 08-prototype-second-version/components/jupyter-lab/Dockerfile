@@ -1,29 +1,27 @@
-FROM debian:bookworm-slim
+FROM python:3.14.4-slim-bookworm
 
 RUN apt-get update \
     && apt-get install -y --no-install-recommends \
-    curl \
-    ca-certificates \
     build-essential \
     pkg-config \
     && rm -rf /var/lib/apt/lists/*
 
-RUN curl -LsSf https://astral.sh/uv/install.sh | sh
-
-ENV PATH="/root/.local/bin:${PATH}"
-
 RUN set -eux; \
-    uv python install 3.14.4; \
-    uv venv --python 3.14.4 /opt/venv; \
-    uv pip install --python /opt/venv/bin/python \
+    python -m venv /opt/venv; \
+    /opt/venv/bin/pip install --upgrade pip; \
+    /opt/venv/bin/pip install \
     "jupyterlab==4.4.1" \
     "jupyter-collaboration==4.0.2" \
     "jupyter-mcp-tools>=0.1.4" \
     ipykernel; \
-    uv pip uninstall --python /opt/venv/bin/python -y pycrdt datalayer_pycrdt || true; \
-    uv pip install --python /opt/venv/bin/python "datalayer_pycrdt==0.12.17"
+    /opt/venv/bin/pip uninstall -y pycrdt datalayer_pycrdt || true; \
+    /opt/venv/bin/pip install "datalayer_pycrdt==0.12.17"; \
+    /opt/venv/bin/pip install \
+    "EXtra-data==1.24.0" \
+    "h5glance==0.9.0" \
+    "pyFAI==2026.3.0";
 
-ENV PATH="/opt/venv/bin:/root/.local/bin:${PATH}"
+ENV PATH="/opt/venv/bin:${PATH}"
 WORKDIR /workspace
 
 ENTRYPOINT ["jupyter", "lab"]
