@@ -25,7 +25,7 @@ The agentic AI system shall ...
 | Generate code documentation on project- and code-level                     |         | X     |       |     |               |        |
 | Request human approval for sensitive actions [^2]                          |         | X     |       |     |               | X      |
 | Access relevant context information within a project [^3]                  |         | X     |       |     |               |        |
-| Decompose a request into verifiable tasks                                  |         | X     |       |     |               |        |
+| Decompose a request into verifiable goals                                  |         | X     |       |     |               |        |
 | Work with up-to-date code-relevant information [^4]                        |         | X     |       | X   | X             |        |
 | Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |        |
 | Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |        |

@@ -266,7 +266,7 @@
   - Weaknesses:
     - None
 
-### Decompose a Request into Verifiable Tasks
+### Decompose a Request into Verifiable Goals
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: ++

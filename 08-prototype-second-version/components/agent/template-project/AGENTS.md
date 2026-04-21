@@ -4,8 +4,8 @@
 
 - This project is focused on the [offline data analysis process](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html) at [European XFEL (EuXFEL)](https://xfel.eu).
 - The user works in this project with one of two workflows:
-  1. To use the `jupyter-mcp` server to connect to a Jupyter notebook stored on a remote Jupyter Lab server.
-  2. To work on a Jupyter notebook that is stored in this project but is using a kernel stored on a remote Jupyter Lab server.
+  1. To work on a Jupyter notebook that is stored locally in this project but is using a kernel stored on a remote Jupyter Lab server.
+  2. To use the `jupyter-mcp` server to connect to a Jupyter notebook stored on a remote Jupyter Lab server.
 - This Jupyter Lab server executes its processes on the high-performance computing (HPC) cluster [Maxwell](https://docs.desy.de/maxwell/) to enable resource-demanding data analysis processes.
 - Your task: Support the user in data analysis by generating, improving, or explaining code in the notebook.
 
@@ -15,33 +15,65 @@ Always follow the steps in the sections below.
 
 ### Interact with Notebook Content
 
-- Instruct to use Jupyter MCP in AGENTS.md
-- You can read everything available to you via `jupyter-mcp`.
+- If you are asked to list available Jupyter notebooks, connect a notebook, or interact with a notebook check the following locations (in this order):
+  1. The currently open workspace
+  2. The MCP server `jupyter-mcp-hpc`
+  3. The MCP server `jupyter-mcp-local`
 - Never edit files other than Jupyter notebooks and Python files (data types `.ipynb` and `.py`).
 
 ### Generate HPC-Optimized Code
 
-- Instruct code conventions in AGENTS.md
+**EXtra-data library**
+
+- If you read and transform data from European XFEL, always use the features of the `extra-data` library.
+
+**Minimum code that solves the problem. Nothing speculative.**
+
+- No features beyond what was asked.
+- No abstractions for single-use code.
+- No "flexibility" or "configurability" that wasn't requested.
+- No error handling for impossible scenarios.
+- If you write 200 lines and it could be 50, rewrite it.
+- Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
+
+**Touch only what you must. Clean up only your own mess.**
+
+When editing existing code:
+
+- Don't "improve" adjacent code, comments, or formatting.
+- Don't refactor things that aren't broken.
+- Match existing style, even if you'd do it differently.
+- If you notice unrelated dead code, mention it - don't delete it.
+- When your changes create orphans:
+  - Remove imports/variables/functions that YOUR changes made unused.
+  - Don't remove pre-existing dead code unless asked.
+  - The test: Every changed line should trace directly to the user's request.
 
 ### Test Code for Correctness and Safety Risk
 
-- Instruct testing process in AGENTS.md
+- After adding or editing code, always execute the code, check for flaws, and correct the flaws.
 
 ### Request User Feedback to Guide and Improve Solutions
 
-- Instruct feedback behavior via AGENTS.md
+**Don't assume. Don't hide confusion. Surface tradeoffs.**
+
+Before implementing:
+
+- State your assumptions explicitly. If uncertain, ask.
+- If multiple interpretations exist, present them - don't pick silently.
+- If a simpler approach exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what's confusing. Ask.
 
 ### Adapt Code Style and Explanations to User's Expectations
 
-- Instruct style adaption in AGENTS.md and via a CODE_STYLE directory
-- Create an example project, add a CODE_STYLE directory, add a notebook file as example
-- Instruct expected explanations in AGENTS.md
+1. Check if the directory `CODE_STYLE` contains files.
+2. If yes, reuse the coding style within these files as model for your edits. Particularly regarding the code design and documentation.
 
 ### Generate Code Documentation on Project- and Code-Level
 
-- Instruct expected documentation in AGENTS.md
-  - Agent should prompt the user for documentation preferences.
-  - The prompt should include an option for the CODE_STYLE directory.
+- When you work with a Jupyter notebook, always create Markdown cells that describe the purpose of the code cells below.
+- When you create a class, function, or method, always add a documentation comment.
+- Ask if you should document the project with a README.md. Include the sections "What is this project about", "Prerequisites", "Install", "Start".
 
 ### Request Human Approval for Sensitive Actions
 
@@ -56,24 +88,34 @@ Always follow the steps in the sections below.
   - Dependency upgrades
   - Irreversible changes
 
-### Decompose a Request into Verifiable Tasks
+### Decompose a Request into Verifiable Goals
 
-- For every task:
-  1. Understand the request.
-  2. Inspect relevant files.
-  3. Propose a minimal plan.
-  4. Make changes.
-  5. Validate.
-  6. Summarize results.
+**Define success criteria. Loop until verified.**
+
+Transform tasks into verifiable goals:
+
+- "Add validation" → "Write tests for invalid inputs, then make them pass"
+- "Fix the bug" → "Write a test that reproduces it, then make it pass"
+- "Refactor X" → "Ensure tests pass before and after"
+- For multi-step tasks, state a brief plan:
+
+  ```bash
+  1. [Step] → verify: [check]
+  2. [Step] → verify: [check]
+  3. [Step] → verify: [check]
+  ```
+
+Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
 
 ## Work With Up-to-Date Code-Relevant Information
 
 - For answering user requests focused on software development, data analysis, or European XFEL, follow this order until you received relevant information:
 
-  1. Use the MCP server `grounded-docs` to retrieve docs.
-  2. Use the MCP server `github-mcp` to retrieve information from repositories. Focus particularly on repos of the organization `European-XFEL`.
-  3. Use the plugin `opencode-websearch-cited`.
-  4. Use the tool `webfetch`.
+  1. Use the MCP server `grounded-docs` to retrieve relevant docs.
+  2. Use the MCP server `github-mcp` to retrieve information from public code repositories. Focus particularly on repos of the organization `European-XFEL`.
+  3. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
+  4. Use the plugin `opencode-websearch-cited`.
+  5. Use the tool `webfetch`.
 
 - For answering all other request, follow this order until you received relevant information:
 
@@ -82,16 +124,15 @@ Always follow the steps in the sections below.
 
 ### Close Tasks with Narrative Summaries and Recommended Next Steps
 
-- When task complete, provide:
+- When you completed an edit, always summarize:
   - What changed
   - Why it changed
   - Files touched
-  - Remaining risks
   - Next steps
 
 ### Support Responses with Citations, Confidence Levels, or Verification Steps
 
-- Instruct citation and verification behavior in AGENTS.md
+- ALWAYS provide a full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, `opencode-websearch-cited`, or `webfetch`.
 
 ### Report Conversations to EuXFEL Staff
 
@@ -102,21 +143,12 @@ Always follow the steps in the sections below.
 
 ### Recommend Using a Version Control System
 
-- Instruct Git versioning in a SKILL.md:
-  - Skill 1: git:init
-  - Skill 2: git:commit
-- Instruct behavior in AGENTS.md:
-  - When user wants to connect to a notebook via Jupyter MCP:
-    - Check if Git environment is available on the server (**check if this is possible via Jupyter MCP**).
-    - If not, ask user if agent should execute git:init skill.
-  - When agent completed a task, ask if agent should execute git:commit skill.
-    - If yes and Git environment not available, execute git:init skill beforehand.
+Always do after each edit:
+
+1. Check if your edited files are recognized by a Git environment.
+2. If Git environment is not available, ask if you should create a Git environment (Answer options: Yes, No).
+3. Ask if you should commit your edits to Git.
 
 ### Optimize Latency
-
-- Install the [caveman](https://github.com/JuliusBrussee/caveman) skill.
-- Instruct using the caveman skills in lite mode in AGENTS.md.
-
-## Improve Latency
 
 - At the beginning of the session, use the skill `/caveman lite` to reduce the length of your responses.
