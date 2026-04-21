@@ -13,13 +13,17 @@
 
 Always follow the steps in the sections below.
 
+### Optimize Latency
+
+- At the beginning of the session, activate the skill `/caveman lite` to reduce the length of your responses.
+
 ### Interact with Notebook Content
 
 - If you are asked to list available Jupyter notebooks, connect a notebook, or interact with a notebook check the following locations (in this order):
   1. The currently open workspace
   2. The MCP server `jupyter-mcp-hpc`
   3. The MCP server `jupyter-mcp-local`
-- Never edit files other than Jupyter notebooks and Python files (data types `.ipynb` and `.py`).
+- Never edit files other than Jupyter notebooks, Python files, and Markdown files (data types `.ipynb`, `.py`, and `.md`).
 
 ### Generate HPC-Optimized Code
 
@@ -51,7 +55,7 @@ When editing existing code:
 
 ### Test Code for Correctness and Safety Risk
 
-- After adding or editing code, always execute the code, check for flaws, and correct the flaws.
+- Request user to execute the code and report any flaws.
 
 ### Request User Feedback to Guide and Improve Solutions
 
@@ -75,52 +79,30 @@ Before implementing:
 - When you create a class, function, or method, always add a documentation comment.
 - Ask if you should document the project with a README.md. Include the sections "What is this project about", "Prerequisites", "Install", "Start".
 
-### Request Human Approval for Sensitive Actions
-
-- Describe recommended approval configuration via tool settings.
-- (Eventually,) instruct use-case-specific instructions for execution environment in AGENTS.md, e.g.:
-  - Do not automatically execute heavy-load commands in local environment
-  - Do not automatically execute batch jobs
-
-- Stop and ask for permission before:
-  - File edits
-  - Code execution
-  - Dependency upgrades
-  - Irreversible changes
-
 ### Decompose a Request into Verifiable Goals
 
-**Define success criteria. Loop until verified.**
+Examples:
 
-Transform tasks into verifiable goals:
-
-- "Add validation" → "Write tests for invalid inputs, then make them pass"
-- "Fix the bug" → "Write a test that reproduces it, then make it pass"
-- "Refactor X" → "Ensure tests pass before and after"
+- From "Add validation" to "Write tests for invalid inputs, then make them pass"
+- From "Fix the bug" to "Write a test that reproduces it, then make it pass"
+- From "Refactor X" to "Ensure tests pass before and after"
 - For multi-step tasks, state a brief plan:
 
   ```bash
-  1. [Step] → verify: [check]
-  2. [Step] → verify: [check]
-  3. [Step] → verify: [check]
+  1. [Step] > verify: [check]
+  2. [Step] > verify: [check]
+  3. [Step] > verify: [check]
   ```
 
-Strong success criteria let you loop independently. Weak criteria ("make it work") require constant clarification.
+## Work With Up-to-Date Information
 
-## Work With Up-to-Date Code-Relevant Information
+- For answering user requests, follow this order until you received relevant information:
 
-- For answering user requests focused on software development, data analysis, or European XFEL, follow this order until you received relevant information:
-
-  1. Use the MCP server `grounded-docs` to retrieve relevant docs.
-  2. Use the MCP server `github-mcp` to retrieve information from public code repositories. Focus particularly on repos of the organization `European-XFEL`.
-  3. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
-  4. Use the plugin `opencode-websearch-cited`.
+  1. Use information from the project context.
+  2. Use the MCP server `grounded-docs` to retrieve relevant docs from the available libraries.
+  3. Use the MCP server `github-mcp` to retrieve information from public code repositories. Focus particularly on repos of the organization `European-XFEL`.
+  4. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
   5. Use the tool `webfetch`.
-
-- For answering all other request, follow this order until you received relevant information:
-
-  1. Use the plugin `opencode-websearch-cited`.
-  2. Use the tool `webfetch`.
 
 ### Close Tasks with Narrative Summaries and Recommended Next Steps
 
@@ -132,7 +114,7 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ### Support Responses with Citations, Confidence Levels, or Verification Steps
 
-- ALWAYS provide a full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, `opencode-websearch-cited`, or `webfetch`.
+- ALWAYS provide at least one full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, or `webfetch`.
 
 ### Report Conversations to EuXFEL Staff
 
@@ -143,12 +125,8 @@ Strong success criteria let you loop independently. Weak criteria ("make it work
 
 ### Recommend Using a Version Control System
 
-Always do after each edit:
+Always do after each logical task chunk:
 
 1. Check if your edited files are recognized by a Git environment.
-2. If Git environment is not available, ask if you should create a Git environment (Answer options: Yes, No).
+2. If Git environment is not available, ask once per session if you should create a Git environment (Answer options: Yes, No).
 3. Ask if you should commit your edits to Git.
-
-### Optimize Latency
-
-- At the beginning of the session, use the skill `/caveman lite` to reduce the length of your responses.

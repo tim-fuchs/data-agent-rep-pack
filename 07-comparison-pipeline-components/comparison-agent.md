@@ -284,7 +284,7 @@
     - Tool does not provide a dedicated planning mode.
     - User must instruct the agent every session.
 
-### Work With Up-to-Date Code-Relevant Information
+### Work With Up-to-Date Information
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: ++

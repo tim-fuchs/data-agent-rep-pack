@@ -8,7 +8,7 @@
 
 ## Requirements Analysis
 
-### Work With Up-to-Date Code-Relevant Information
+### Work With Up-to-Date Information
 
 ### Latency Optimization
 

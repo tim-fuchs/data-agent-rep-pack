@@ -26,7 +26,7 @@ The agentic AI system shall ...
 | Request human approval for sensitive actions [^2]                          |         | X     |       |     |               | X      |
 | Access relevant context information within a project [^3]                  |         | X     |       |     |               |        |
 | Decompose a request into verifiable goals                                  |         | X     |       |     |               |        |
-| Work with up-to-date code-relevant information [^4]                        |         | X     |       | X   | X             |        |
+| Work with up-to-date information [^4]                                      |         | X     |       | X   | X             |        |
 | Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |        |
 | Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |        |
 | Report conversations between user and agent to EuXFEL staff [^5]           |         | X     | X     |     |               |        |

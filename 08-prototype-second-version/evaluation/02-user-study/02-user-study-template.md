@@ -1,21 +1,36 @@
 # User Study Template
 
+## Focus of This Session
+
+Have you brought your own use case or Jupyter notebook?
+
 ## Demographics
 
-1. What is your job position?
+What is your job position?
 
-2. How often do you use generative AI (e.g., ChatGPT, Claude Code)?
-   - Every day
-   - Multiple days per week
-   - Once per week
-   - Less than once per week
-   - Never
+How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 
-3. With what AI assistants have you worked before?
+- Every day
+- Multiple days per week
+- Once per week
+- Less than once per week
+- Never
 
-4. What features do you find most important for an AI assistant that supports offline data analysis?
+With what AI assistants have you worked before?
 
-5. What documentation does the agent require to understand your regular use case (papers, websites, software docs, etc.)?
+## Knowledge Sources
+
+Ask questions about instruments or specific experiments you are interesting in.
+
+## Code Generation/Explanation/Improvement
+
+## Reporting
+
+## Drafting Manuscript
+
+What features do you find most important for an AI assistant that supports offline data analysis?
+
+What documentation does the agent require to understand your regular use case (papers, websites, software docs, etc.)?
 
 What was unexpected?
 
