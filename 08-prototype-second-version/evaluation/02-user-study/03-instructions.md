@@ -18,22 +18,25 @@
      - Your opinion about the entire agentic concept for offline data analysis
      - This will help to improve the tool iteratively
 
-2. System overview
+## Demographics
+
+- Ask demographic questions
+
+## System Overview
+
+1. System overview
    - Remote Jupyter Lab + local agent
    - Remote Jupyter kernel + local VS Code (+ local notebook + local agent)
    - -> Today, focus on option 2
 
-3. Repo overview
+2. Repo overview
+   - Have 
    - Notebook
    - Explain agent features (modes Ask/Plan/Code, new sessions)
    - AGENTS.md (purpose)
    - Skills (purpose)
    - What is a bit limiting:
      - Only open notebook in read mode, not write mode (otherwise, close notebook to see edits from the agent).
-
-## Demographics
-
-- Ask demographic questions
 
 ## Knowledge Sources
 
