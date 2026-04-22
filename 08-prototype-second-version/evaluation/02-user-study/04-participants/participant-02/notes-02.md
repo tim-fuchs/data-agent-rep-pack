@@ -79,5 +79,5 @@ What features do you miss:
 
 ## Internal: Improvement Notes
 
-- Added SQS technique-oriented docs to Grounded Docs
+- Add [SQS technique-oriented docs](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/) to Grounded Docs
 - AGENTS.md: Steer it towards important GitLab groups and repository (e.g., SCS Toolbox)
