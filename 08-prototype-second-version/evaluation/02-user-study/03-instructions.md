@@ -38,6 +38,10 @@
    - What is a bit limiting:
      - Only open notebook in read mode, not write mode (otherwise, close notebook to see edits from the agent).
 
+## Focus of This Session
+
+- Have you brought your own use case or Jupyter notebook?
+
 ## Knowledge Sources
 
 1. RAG
