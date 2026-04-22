@@ -129,4 +129,4 @@ Always do after each logical task chunk:
 
 1. Check if your edited files are recognized by a Git environment.
 2. If Git environment is not available, ask once per session if you should create a Git environment (Answer options: Yes, No).
-3. Ask if you should commit your edits to Git.
+3. If Git environment is available, ALWAYS ask if you should commit your edits to Git.
