@@ -18,20 +18,38 @@ How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 
 With what AI assistants have you worked before?
 
+How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
+
 ## Knowledge Sources
 
-Ask questions about instruments or specific experiments you are interesting in.
+RAG interaction (via Grounded Docs UI):
+
+RAG interaction (via agent):
+
+GitLab interaction (via agent):
+
+GitHub interaction (via agent):
 
 ## Code Generation/Explanation/Improvement
 
+What was the plan:
+
+What were the results:
+
 ## Reporting
+
+Impression of the feature and report structure:
 
 ## Drafting Manuscript
 
-What features do you find most important for an AI assistant that supports offline data analysis?
+Impression of the feature:
 
-What documentation does the agent require to understand your regular use case (papers, websites, software docs, etc.)?
+## Verdict
 
-What was unexpected?
+Positive:
 
-What features do you miss?
+Negative:
+
+What was unexpected:
+
+What features do you miss:
