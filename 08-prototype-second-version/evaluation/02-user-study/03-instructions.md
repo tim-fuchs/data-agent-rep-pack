@@ -30,7 +30,7 @@
    - -> Today, focus on option 2
 
 2. Repo overview
-   - Have 
+   - Have you brought your own notebook or use case?
    - Notebook
    - Explain agent features (modes Ask/Plan/Code, new sessions)
    - AGENTS.md (purpose)
