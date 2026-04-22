@@ -95,5 +95,6 @@ What features do you miss:
 
 ## Internal: Improvement Notes
 
-- Always git commit after edit!
-- Preconfigure permission (auto-accept read actions).
+- Added docs of EXtra library (read-the-docs website)
+- Update AGENTS.md: Always git commit after edit!
+- Update kilo.jsonc: Preconfigure permission (auto-accept read actions).
