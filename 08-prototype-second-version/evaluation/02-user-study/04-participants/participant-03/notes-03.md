@@ -1,16 +1,15 @@
 # Participant 03
 
-Timestamp: 2026-04-22-16:00
-
 ## Demographics
 
 What is your job position?
+
 - Software engineer / project coordinator
 
 How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 
 - Every day
-- -> Multiple days per week
+- **Multiple days per week**
 - Once per week
 - Less than once per week
 - Never
@@ -24,55 +23,89 @@ With what AI assistants have you worked before?
 
 How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 
-- Few days per month
+- Every day
+- Multiple days per week
+- Once per week
+- **Less than once per week**
+- Never
 
 ## Focus of This Session
 
 Have you brought your own use case or Jupyter notebook?
 
-## Knowledge Sources
+- Yes, displaying geometry of AGIPD-1M and LPD detectors.
 
-RAG interaction (via Grounded Docs UI):
-- Added EXtra-Geom docs
-- Question: Example to display geometry of AGIPD-1M detector
-- Answer: Correct chunks. But was sensitive to the "-".
+## RAG Interaction (via Grounded Docs UI)
 
-RAG interaction (via agent):
+- Participant added [EXtra-Geom docs](https://extra-geom.readthedocs.io/en/latest/index.html)
+- Question: **Can you provide an example of how to display the geometry of the AGIPD-1M detector?**
+- Response: Correct chunks. But order of chunks was sensitive to the "-".
 
-GitLab interaction (via agent):
-
-GitHub interaction (via agent):
-
-## Code Generation/Explanation/Improvement
+## Code Generation/Explanation/Improvement (via AI agent)
 
 What was the plan:
-- Same as before (AGIPD-1M) + second version for LPD detector
+
+- Same question as before (AGIPD-1M) + second version for LPD detector
 
 What were the results:
-- For AGIPD, it entered a placeholder path to a geom file. That is why we did a second version with a LPD geom file available in the workspace.
-- Worked! Just a problem with the SSH connection.
+
+- For the AGIPD version, it entered a placeholder path to a geom file.
+- Since participant brought a geom file for LPD, they created a second version with a LPD geom file.
+- Fully correct solution!
+
+Further observations:
+
+- SSH connection sometimes brakes. Eventually, when closing the laptop.
 
 ## Reporting
 
 Impression of the feature and report structure:
+
 - Positive: Would be helpful. Can be helpful later on (even in months).
 
 ## Drafting Manuscript
 
 Impression of the feature:
 
+- Not tested due to lacking time
+
 ## Verdict
 
 Positive:
+
 - Got the correct answers for the questions
 
 Negative:
+
 - Permission prompts were a bit annoying.
 
 What was unexpected:
 
+- None
+
 What features do you miss:
 
-## Internal: Improvement Notes
+- None
 
-- Permit Read options 
+## Internal
+
+### Implemented Improvements Before Starting the Session
+
+- Kilo Code read permissions: Previous user auto-permitted many read actions. We kept them.
+- Added SQS technique-oriented docs to RAG system
+- Use 5.3-Codex instead of 5.4-mini
+
+### Technical Details
+
+- Timestamp: 2026-04-22-16:00
+- Setup:
+  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+- LLMs: GPT-5.3-Codex
+
+### Improvement Notes
+
+- Work on another SSH solution that enables agent to access the remote kernel.
+- Permit the agent to conduct all read options (clicking `Accept` is a bit annoying).
+- Add [EXtra-Geom docs](https://extra-geom.readthedocs.io/en/latest/index.html) to RAG ingestion script.
+- Be aware of a possible connection issue to SSH when closing the laptop.

@@ -1,11 +1,5 @@
 # User Study - Participant 01
 
-Timestamp: 2026-04-26-11:00
-
-## Focus of This Session
-
-Have you brought your own use case or Jupyter notebook?
-
 ## Demographics
 
 What is your job position?
@@ -14,7 +8,7 @@ What is your job position?
 
 How often do you use generative AI (e.g., ChatGPT, Claude Code, RAY)?
 
-- -> Every day
+- **Every day**
 - Multiple days per week
 - Once per week
 - Less than once per week
@@ -27,74 +21,99 @@ With what AI assistants have you worked before?
 
 How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 
-- Daily usage
+- **Every day**
+- Multiple days per week
+- Once per week
+- Less than once per week
+- Never
 
-## Knowledge Sources
+## Focus of This Session
 
-RAG interaction (via Grounded Docs UI):
+Have you brought your own use case or Jupyter notebook?
 
-- EXtra-data: what options to open a run are available for open_run?
-- added EXtra documentation (<https://extra.readthedocs.io/en/latest/>)
-- Extra-data: How to compute the summed intensity of all AGIPD datasets in a run in SPB?
+- Yes, own use case: analyzing AGIPD data for SPB instrument
 
-RAG interaction (via agent):
+## RAG Interaction (via Grounded Docs UI)
 
-- I am a new user at EuXFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?
+- Participant added [EXtra docs](https://extra.readthedocs.io/en/latest/).
+- EXtra-data question: **What options to open a run are available for open_run?**
+- Extra-data question: **How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
 
-GitLab interaction (via agent):
-
-GitHub interaction (via agent):
-
-## Code Generation/Explanation/Improvement
+## Code Generation/Explanation/Improvement (via AI agent)
 
 What was the plan:
 
-- Implement SPB use case above
+- Question: **I am a new user at EuXFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
 
 What were the results:
 
-- We could have just copy+paste the solution from the Ask mode.
-- Plan+Code mode took a while.
-- Result of first version: Okayish, but agent did not know about Pasha library at first. Used Pool instead
-- Result of second version: looked better. Did not work though.
-- Agent tried to fix the bug, but could not as participant could not switch from Ask to Code mode at first.
-- Agent seemed to fix the bug
-- Problem: Initial version was not git-committed. Could not check the diffs between v1 and v2.
+- First version of code: okayish. The agent did not know about Pasha library of EuXFEL at first. Used the more generic Pool library instead.
+- Second version: Looked better. Did not work though.
+- Third version: Agent fixed the bug. Solutions worked.
+
+Further observations:
+
+- UX bug:
+  - Ask mode was good. Plan+Code modes took a lot of time. Participant could have just copy-pasted the solutions from the Ask agent.
+  - Plan agent asked if it should implement code now (Yes/No/Else answer options). Participants clicked Yes. However, tool did not switch to Code mode, and asked the same question over and over again. Participant finally sent a new message to Code agent to start the implementation.
+- Flaw in agent workflow: Agent requested to create git environment (and created it). Afterward, it did not request to commit the changes (although instructed in AGENTS.md). Hence, user could not check the diffs between v1, 2, and 3.
 
 ## Reporting
 
 Impression of the feature and report structure:
 
-- Details of report were good
-- Agent-own steps at the end were unnecessary
+- Good level of detail.
+- Agent-own steps at the end were unnecessary (e.g., "Sending the report").
 
 ## Drafting Manuscript
 
 Impression of the feature:
 
+- Not tested due to lacking time
+
 ## Verdict
 
 Positive:
 
-- Finding information: good
-- Indexing of local data sources: good as this helps to retrieve the docs
+- Indexing local data sources: good as this helps to retrieve docs
+- Retrieving relevant information: good
 
 Negative:
 
-- Coding part: took too long
+- Code implementation part (Code agent): took too long
 
 What was unexpected:
 
-- Agent get stuck in loops when in wrong mode
-- The amount of Accept/Deny interactions
-- Did not do the git commit
+- Agent got stuck in loops when it requested to change agent modes.
+- High number of Accept/Deny interactions
+- Agent created git environment, but did not execute a git commit.
 
 What features do you miss:
 
 - None
 
-## Internal: Improvement Notes
+## Internal
 
-- Added docs of EXtra library (read-the-docs website)
-- Update AGENTS.md: Always git commit after edit!
-- Update kilo.jsonc: Preconfigure permission (auto-accept read actions).
+### Implemented Improvements Before Starting the Session
+
+- None (it was the first session)
+
+### Technical Details
+
+- Timestamp: 2026-04-26-11:00
+- Setup:
+  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+- LLMs: GPT-5.4-mini
+
+### Improvement Notes
+
+- Work on another SSH solution that enables agent to access the remote kernel.
+- Add [EXtra library](https://extra.readthedocs.io/en/latest/) to RAG indexing script.
+- Update AGENTS.md:
+  - Agent should **always** request to git-commit after completing an edit.
+  - Regarding reporting the conversation, agent should ignore its own final steps in the summary (i.e., preparing and sending the report).
+- Update kilo.jsonc: Preconfigure permissions by auto-accepting read actions for any MCP server tool.
+- Be aware of Kilo Code UX bug:
+  - Tool cannot switch agent modes when it asks user via a radio-button form if it should switch.
+  - Instead, user should ignore the form and send a normal message with the changed mode.
