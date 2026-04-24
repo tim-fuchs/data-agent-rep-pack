@@ -11,7 +11,7 @@
 
 ## Rules
 
-Always follow the steps in the sections below.
+ALWAYS follow the steps in the sections below.
 
 ### Optimize Latency
 
@@ -96,13 +96,16 @@ Examples:
 
 ## Work With Up-to-Date Information
 
-- For answering user requests, follow this order until you received relevant information:
+- For answering user requests, always follow this order until you received relevant information:
 
   1. Use information from the project context.
   2. Use the MCP server `grounded-docs` to retrieve relevant docs from the available libraries.
   3. Use the MCP server `github-mcp` to retrieve information from public code repositories. Focus particularly on repos of the organization `European-XFEL`.
   4. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
   5. Use the tool `webfetch`.
+  6. Use your internal knowledge.
+
+- If you use your internal knowledge, use `webfetch` to retrieve related sources that you can cite in your response.
 
 ### Close Tasks with Narrative Summaries and Recommended Next Steps
 

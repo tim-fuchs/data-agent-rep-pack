@@ -35,7 +35,7 @@ Have you brought your own use case or Jupyter notebook?
 
 - Yes, two use cases:
   - Testing a new EXtra component (Scan) and apply it to a motor component.
-  - (Time-series problem)
+  - Time-series problem (not tested due to lacking time)
 
 ## RAG Interaction (via Grounded Docs UI)
 
@@ -79,7 +79,7 @@ Potential value of a problem report:
 
 Impression of the feature:
 
-- 
+- Not tested due to lacking time
 
 ## Verdict
 
@@ -114,7 +114,7 @@ Other:
 
 ### Technical Details
 
-- Timestamp: 2026-MM-DD-TT:00
+- Timestamp: 2026-04-24-10:00
 - Setup:
   - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
   - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
@@ -122,4 +122,4 @@ Other:
 
 ### Improvement Notes
 
-- 
+- Make 5.3-Codex always follow the AGENTS.md.
