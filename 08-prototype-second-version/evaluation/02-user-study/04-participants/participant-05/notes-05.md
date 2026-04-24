@@ -116,4 +116,7 @@ What features do you miss:
 
 ### Improvement Notes
 
--
+- Add further LSPs via MCP servers, e.g., Pylance, to improve the quality of the generated code (even without needing to execute it to test its correctness).
+- Research if Kilo Code provides hooks that enable a customizization of the agent behavior and that are stricter adhered to than AGENTS.md.
+  - Kilo Code's Markdown-based [rules](https://kilo.ai/docs/customize/custom-rules) seem to be the only option.
+  - OpenCode supports code-based [plugins](https://opencode.ai/docs/plugins/).
