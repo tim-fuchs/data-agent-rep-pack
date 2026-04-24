@@ -3,20 +3,23 @@
 ## Preparation
 
 1. Duplicate template project.
-2. Open new version in VS Code.
-3. Deactivate jupyter-mcp servers.
-4. Connect to Maxwell Jupyter Lab
+2. Edit name, e.g., template-project-06.
+3. Open new version in VS Code.
+4. Deactivate jupyter-mcp servers.
+5. Connect to Maxwell Jupyter Lab.
+6. Open `overview.pdf`.
 
 ## Intro
 
 1. Purpose
-   - Explore an AI system
+   - Explore an agentic AI system
    - You should act like a user during offline data analysis today.
    - Goals:
      - What works good
      - What must be improved
      - Your opinion about the entire agentic concept for offline data analysis
      - This will help to improve the tool iteratively
+     - Not: rating your performance
 
 ## Demographics
 
