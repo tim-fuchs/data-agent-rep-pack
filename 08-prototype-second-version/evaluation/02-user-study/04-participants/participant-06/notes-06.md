@@ -4,33 +4,35 @@
 
 What is your job position?
 
-- 
+- Group leader (physics background)
 
 How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 
 - Every day
-- Multiple days per week
+- **Multiple days per week**
 - Once per week
 - Less than once per week
 - Never
 
 With what AI assistants have you worked before?
 
-- 
+- Gemini
+- RAY
+- ChatGPT
 
 How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 
 - Every day
 - Multiple days per week
 - Once per week
-- Less than once per week
+- **Less than once per week**
 - Never
 
 ## Focus of This Session
 
 Have you brought your own use case or Jupyter notebook?
 
-- 
+- Yes: 
 
 ## RAG Interaction (via Grounded Docs UI)
 
