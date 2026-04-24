@@ -26,7 +26,7 @@ Now, however, I am running into error messages.
 **What does not work (anymore):**
 
 - VS Code: Execute notebook cells with a remote kernel. VS Code is running into an infinite loop trying to connect to the kernel.
-- MCP: I cannot read/write any data from/to a notebook (that I connected to in the previous step).
+- MCP: I cannot read/write any data from/to a notebook (that I connected to in the previous step) (see [screenshot](assets/cell-read-404.png)).
 
 ## Problem Investigation
 
@@ -39,5 +39,26 @@ Now, however, I am running into error messages.
 
 **What I think is the problem:**
 
-- Since I can connect to the server with both options but not execute any read/write/execute options within a notebook, I assume that the server admins adjusted the configuration.
-- I read in recent meeting minutes that Landlock was activated on RHEL. I do not know what RHEL is, but Landlock could certainly block commands from my local machine to the Jupyter Server.
+- Since I can connect to the server with both options but not execute any read/write/execute options within a notebook, I assume that the server admins adjusted the configuration of the Maxwell server.
+- There seems to be a problem with the `jupyter-collaboration` package, which is required on the Jupyter Lab server to properly enable the communication with the Jupyter MCP server. The package is available on the Maxwell server, but outdated. Updating the package (and its corresponding Jupyter extension) is only possible by the Maxwell admins.
+
+## Workaround
+
+In the terminal:
+
+- SSH into Maxwell (including port forwarding from the Jupyter Lab port to a localhost port, e.g., `8888`).
+- Load the EuXFEL Python module.
+- Start Jupyter Lab server (ideally with a token).
+
+Now, I can access the remote Jupyter Lab via `http://localhost:8888/lab?token=...`
+
+In VS Code:
+
+- Open a local Jupyter notebook file.
+- Click `Select kernel`.
+- Add a new Jupyter kernel by entering the localhost address.
+
+Remaining problems:
+
+- OpenCode not really applicable anymore. Focus solely on Kilo Code.
+- While user can manually execute the notebook cells with the remote kernel, Kilo Code cannot access the remote kernel. Hence, it can only generate code but not test it.
