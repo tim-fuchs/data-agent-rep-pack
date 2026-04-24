@@ -38,10 +38,10 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Question: What version of python is used in the DA environments for 2024.
-- Response: Found the right information in the first chunk.
-- Question to maxwell docs: maxwell hardware
-- Response: Could not find it (located in a table apparently not accessible outside the internal network)
+- **Question to EuXFEL user docs:** What Python version is used in the DA environment of 2024?
+- **Response:** Found the right information in the first chunk.
+- **Question to Maxwell docs:** List specific maxwell hardware.
+- **Response:** Could not find the page as it is located on a page not accessible outside the internal network.
 - Participant updated the Maxwell docs to include the internal pages.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
@@ -82,14 +82,15 @@ Negative:
 
 What was unexpected:
 
--
+- Nothing
 
 What features do you miss:
 
-- Enforce actions from the AGENTS.md with Agent Hooks (if available for Kilo Code). It is available for Copilot.
-- More LSP-focused MCP server, e.g., Pylance MCP.
-- More specific agent workflow for the use case might be good. One that splits big task into multiple sub-agents.
-  - Check if Kilo Code and OpenCode also support a Chat Debug feature (like Copilot).
+- Enforce actions from the AGENTS.md with agent hooks (if available for Kilo Code).
+- More LSP-focused MCP servers, e.g., Pylance MCP.
+- More specific agent workflow for the use case could be beneficial.
+  - E.g., an orchestrator that splits big tasks into multiple sub-agents.
+  - Check if Kilo Code and OpenCode also supports a Chat Debug feature like Copilot those. Update: None of both provide such a feature.
 
 ## Internal
 
@@ -108,7 +109,7 @@ What features do you miss:
 
 ### Technical Details
 
-- Timestamp: 2026-MM-DD-TT:00
+- Timestamp: 2026-04-24-14:00
 - Setup:
   - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
   - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
@@ -117,6 +118,7 @@ What features do you miss:
 ### Improvement Notes
 
 - Add further LSPs via MCP servers, e.g., Pylance, to improve the quality of the generated code (even without needing to execute it to test its correctness).
-- Research if Kilo Code provides hooks that enable a customizization of the agent behavior and that are stricter adhered to than AGENTS.md.
+- Research if Kilo Code provides hooks that enable a customization of the agent behavior and that the agent adheres stricter to than AGENTS.md.
   - Kilo Code's Markdown-based [rules](https://kilo.ai/docs/customize/custom-rules) seem to be the only option.
-  - OpenCode supports code-based [plugins](https://opencode.ai/docs/plugins/).
+  - OpenCode supports code-based [plugins](https://opencode.ai/docs/plugins/) (not compatible with Kilo Code).
+- Be aware that indexing the complete Maxwell docs requires an internal network connection as some pages (e.g., for [hardware specs](https://docs.desy.de/maxwell/infrastructure/compute/hw_allcpu/)) are not available publicly.
