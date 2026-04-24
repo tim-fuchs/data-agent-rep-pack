@@ -34,7 +34,7 @@ How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 Have you brought your own use case or Jupyter notebook?
 
 - Yes, two use cases:
-  - Testing a new EXtra component (Scan) and apply it to a motor component.
+  - Testing a new EXtra component ([Scan](https://extra.readthedocs.io/en/latest/components/scans/#extra.components.Scan)) and apply it to a motor component.
   - Time-series problem (not tested due to lacking time)
 
 ## RAG Interaction (via Grounded Docs UI)
