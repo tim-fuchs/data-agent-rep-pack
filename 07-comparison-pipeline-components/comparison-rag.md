@@ -2,8 +2,11 @@
 
 ## Candidates
 
-- **Grounded Docs**
+- [Grounded Docs](https://grounded.tools)
   - What: open-source, free, ready-to-use MCP server with RAG features
+
+- [OpenRAG](https://www.openr.ag)
+  - Also provides an [MCP server](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp)
 
 - **Irrelevant candidates**
   - Context7
