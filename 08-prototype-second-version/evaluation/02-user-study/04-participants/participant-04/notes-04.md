@@ -50,10 +50,10 @@ Have you brought your own use case or Jupyter notebook?
 - **Response:** was good and in code. However, participant found it concerning that it did not provide additional information about the parameter values it chose as default. It should provide more information about replacing the default values.
 - **Question:** Generate a notebook based on this code. Open proposal 700005 run number 4. Look at motor source SXP_LAS_... .
 - **Response:**
-  - Generate notebook looks reasonable.
+  - Generated notebook looks reasonable.
   - Unnecessary `run.info` (but the info does not hurt).
-  - Could execute the notebook. But ran into a problem because of unavailability of specific motor data in the run.
-  - But it should not combine that many commands in one cell. Not more than one "edit" command in one cell.
+  - Participant could execute the generated notebook. But ran into a problem due to the unavailability of specific motor data in the run.
+  - Agent should not combine so many commands in one cell. Not more than one "edit" command in one cell.
 
 - **Potential further question (but not asked):** Find runs that include the required motor data.
 
@@ -66,7 +66,7 @@ Further observations:
 Impression of the feature and report structure:
 
 - Local+external report sent.
-- Important caviats should be highlighted better.
+- Important caveats should be highlighted better.
 - Content pretty good.
 - Report to myLog "is not bad".
 
@@ -122,4 +122,7 @@ Other:
 
 ### Improvement Notes
 
-- Make 5.3-Codex always follow the AGENTS.md.
+- Agent should further split the notebook cells, particularly when one command might be time-consuming or printing an information.
+- Agent should highlight critical caveats in the generated code (e.g., how to choose parameter values).
+- Agent (particularly when using GPT-5.3-Codex) must always follow the AGENTS.md.
+- Create a `report-problem` skill. Ensure that it only considers code-related problems (no conversational problems between user and agent).
