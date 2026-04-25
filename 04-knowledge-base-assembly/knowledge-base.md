@@ -40,23 +40,23 @@
 | Link   | <https://damnit.readthedocs.io/en/latest/> |
 | Origin | User Docs                                  |
 
-## EXtra-data GitHub
+## EuXFEL GitHub
 
-| Name   | Info                                          |
-| ------ | --------------------------------------------- |
-| Type   | Code                                          |
-| Link   | <https://github.com/European-XFEL/EXtra-data> |
-| Origin | Search engine                                 |
-| Notes  |                                               |
+| Name   | Info                               |
+| ------ | ---------------------------------- |
+| Type   | Code                               |
+| Link   | <https://github.com/European-XFEL> |
+| Origin | Search engine                      |
+| Notes  |                                    |
 
-## EXtra GitHub
+## EuXFEL GitLab
 
-| Name   | Info                                     |
-| ------ | ---------------------------------------- |
-| Type   | Code                                     |
-| Link   | <https://github.com/European-XFEL/EXtra> |
-| Origin | Search engine                            |
-| Notes  |                                          |
+| Name   | Info                  |
+| ------ | --------------------- |
+| Type   | Code                  |
+| Link   | <https://git.xfel.eu> |
+| Origin | Search engine         |
+| Notes  |                       |
 
 ## Maxwell Infrastructure
 
