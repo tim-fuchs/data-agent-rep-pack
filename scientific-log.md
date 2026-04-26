@@ -209,3 +209,14 @@ Activities:
 - To whom: both EuXFEL managers
 - How: 60-minute meeting
 - What? See [meeting procotol](/08-prototype-second-version/evaluation/01-meeting-euxfel-managers.md).
+
+## 2026-04-20 Presentation of Second Prototype to Data Analsis Group
+
+- How: 30-minute meeting
+- Objective: Invite group members (and interested scientists) to a user study
+
+## 2026-04-22 Start of User Study
+
+- Overall, 12 participants
+  - 8 people with profession in data science or software engineering
+  - 4 instrument scientists
