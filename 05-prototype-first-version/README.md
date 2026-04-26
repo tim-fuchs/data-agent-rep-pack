@@ -3,12 +3,13 @@
 ## Implemented System
 
 - Agent endpoint: `karabo-rag`
-  - Based on [EuXFEL Karabo RAG project](https://git.xfel.eu/llm/karabo-rag) (private access)
+  - Based on [EuXFEL Karabo RAG project](https://git.xfel.eu/llm/karabo-rag) (EuXFEL account required for access)
   - Exposes a single API handler that a frontend can consume and that supports multi-turn conversations
   - Exposes another API to manage its RAG service
-  - Does not provide internal, multi-agent workflows, including an agent loop.
+  - Does not provide multi-agent workflows, including an agent loop.
 - Agent frontend: [Jupyter AI v2](https://jupyter-ai.readthedocs.io/en/v2/)
   - Extension that we installed via `pip` on the remote Jupyter Lab server hosted on the EuXFEL HPC cluster
+  - Provides a pre-built *Jupyternaut* agent persona
   - Is preconfigured to connect to the agent endpoint
 
 ## Quantitative Evaluation of the RAG Component via a Benchmark
@@ -47,24 +48,29 @@
 - Date: 2025-03-19
 - Setting: hybrid meeting with 12 data scientists of the EuXFEL Data Analysis group
 - What are your first positive/negative thoughts on the demo? What would be important improvement potentials for the next prototype version?
-  - Good: Jupyter AI interface is straightforward. Configure an EuXFEL persona and eventually add custom commands.
-  - Good: The LLM responses in the side panel are formatted correctly with Markdown and code cells.
-  - Negative: The LLM responses of the cell magic should be executable code cells with inline code comments instead of plain text output.
-  - Negative: The LLM response should embed clickable URLs directly in the main response body, not just in the reference section.
-  - Negative: Generated code contains many hallucinations, such as non-existing methods or attributes.
+- **Good:**
+  - Jupyter AI interface is straightforward. Configure an EuXFEL persona and eventually add custom commands.
+  - The LLM responses in the side panel are formatted correctly with Markdown and code cells.
+- **Negative:**
+  - The LLM responses of the cell magic should be executable code cells with inline code comments instead of plain text output.
+  - The LLM response should embed clickable URLs directly in the main response body, not just in the reference section.
+  - Generated code contains many hallucinations, such as non-existing methods or attributes.
     - We should ingest the entire AST of the code together with the corresponding documentation comments and unit tests, and restrict the LLM to focus on the available data only.
     - We should ingest existing notebooks, e.g., from the users (be aware of potential copyright problems) and from the DA group).
     - We should run the LLM in agent mode **(Gen AI assistant vs. agentic AI system)**.
       - Add linting (Pylance, MyPy).
       - Add validation loop (generate, test, fix, re-run).
       - After the meeting, one of the meeting participants generated a notebook that contains an overview of every EXtra-data feature. They created it with Claude Opus, a short prompt, and a link to the public EXtra-data documentation. This creates the question if a RAG component is even necessary for modern agents with access to the internet.
-- What was unclear to you (missing information/action, confusing label, etc.)?
+- **Unclear/confusing:**
   - Which additional context from the notebook is sent to the LLM together with the prompt? Does it differ for the side panel and the cell magic?
     - By default, just the last two prompts and responses.
     - This can be configured in the Jupyter AI settings.
     - The context should eventually include the entire notebook, other files, or the entire repository.
-- Any further ideas or positive/negative feedback?
+- **Further notes:**
   - Check out **Grounded Docs**, an open-source MCP server as alternative to Context7, which can provide information from various documents (text, PDFs, code, etc.) and executes semantic chunking.
   - If the agent should be deployed on the HPC cluster:
     - Make sure it is sandboxed in a restricted environment. This could be enabled by **nono**, which uses Landlock. However, Landlock is apparently deactivated on the EuXFEL HPC.
     - Make sure that any code execution is approved by a human. An autonomously acting agent could consume a lot of capacity while working on flawed solutions.
+- **Takeaways:**
+  - Ready-to-use agentic tools (like Claude Code) perform much better than our self-developed system. Many developers already use such tools on their computers. We should built on that.
+  - The main challenge lies in integrating such agentic tools into the infrastructure at EuXFEL (particularly the HPC cluster) and adapting their behavior to the use case of offline data analysis at EuXFEL.
