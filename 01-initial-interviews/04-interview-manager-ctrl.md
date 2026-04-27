@@ -14,7 +14,7 @@ Date: 2025-12-10
 ## Planned Tool
 
 - Preferred interface for users (and for EuXFEL in the long term):
-  - Likely **Jupyter AI**. Authentication for JupyterHub on HPC cluster is partly handled already because users log in with their DESY/EuXFEL accounts.
+  - Likely **Jupyter AI**. Authentication for JupyterHub on HPC cluster is partially handled already because users log in with their DESY/EuXFEL accounts.
   - EuXFEL's internal LLM system (RAY) is not suitable; only staff and long-term guests have access, not regular users.
 - Current status of the EuXFEL RAG project (documentation unclear so far):
   - A DA team member has created an initial ingestion script for adding DA documentation.
