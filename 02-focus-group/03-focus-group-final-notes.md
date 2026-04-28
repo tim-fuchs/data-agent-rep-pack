@@ -5,8 +5,8 @@ Date: 2026-01-15
 ## Participants
 
 - 1 interviewer
-- 13 data scientists in-person
-- 3 data scientists via Zoom
+- 13 group members in-person
+- 3 group members via Zoom
 
 ## Intro
 
@@ -15,8 +15,9 @@ Date: 2026-01-15
   - What knowledge-related challenges in offline data analysis?
   - What requirements must an AI agent meet to address challenges?
   - What design recommendations can be derived?
-- Today: focus on problem identification
-- Process: interactive discussion with live editing of a mind map
+- Today:
+  - Focus on problem identification
+  - Interactive discussion; results documented in a mind map
 
 ## Tools
 
@@ -116,30 +117,47 @@ Date: 2026-01-15
 
 ## Challenges
 
-- What are typical support use cases during offline analysis?
-  - How to access/read the data
-  - Not familiar with infrastructure complexity
-  - Sometimes users are even unsure about what quantities to compute from the data
-  - Special cases when conducting non-established experiments
-  - Challenge of data scale. Anecdotical reference: "they cannot even calculate a mean"  
-  - Mismatch of what we vs. users expect from opening the data
-  - Reading data vs. interpreting data
+- Questions:
+  - What are knowledge-related challenges during offline data analysis (e.g., documentation, communication and support, clarity of tool features, requirements of users):
+    - For users?
+    - For DA members?
+    - For other EuXFEL members, e.g., instruments groups?
+  - What are the biggest challenges at the moment?
 
-- What are challenges for the DA members?
-  - Single functionalities are well documented, but putting them together in a user-centric practical workflow is a challenge
-  - It is also a question of familiarity, experience, and learning over years
-    - But good documentation facilitates and accelerates this process
-  - Textbook vs. cookbook information
-  - Understanding what the users want is a challenge
-  - Is support availability a problem?
-    - We have our tools to solve this problem.
-    - We cannot debug 1000 lines of user code, but we can support with the obvious things. We have to find middle ground.
+- In general: The range of user experience and variety of requirements are much larger than in other domains.
+  - E.g., experiments at telescopes are more structured.
 
-- Are there other stakeholders?
-  - Instrument scientists
-  - The data analysis support by instrument staff varies a lot.
-    - Sometimes, single scientists have invested more time than the users themselves.
-  - The variety and range of user experience and requirements is much larger than in other domains, e.g., experiments at radio telescopes are more structured.
+- Challenges of users:
+  - Initially unclear objectives for data analysis
+  - Contractual constrainsts: limited support by EuXFEL during offline data analysis phase
+    - We cannot debug 1000 lines of user code.
+    - But we can support with the obvious things.
+  - Mismatched expectations regarding complexity of data analysis process
+    - How to read and manipulate the data
+    - How to interpret the data
+  - Unfamiliarity with infrastructure complexity
+  - Unfamiliarity with HPC
+    - Especially regarding performance requirements of the code
+    - "Some cannot even calculate a mean."
+  - Unfamiliarity with complex, heterogeneous, somtimes novel analysis procedures of instruments and types of experiments
+    - Especially when conducting non-established experiments
+    - Good documentation facilitates and accelerates this process
+  - Composing the scattered documentation for a specific analysis objective
+    - Single functionalities are well documented, but putting them together in a user-centric practical workflow is a challenge.
+    - But users rather need "cookbook recipes".
+
+- Challenges of DA members:
+  - Unfamiliarity with complex, heterogeneous, somtimes novel analysis procedures of instruments and types of experiments
+    - Requires learning over years
+  - Composing the scattered documentation for a specific analysis objective
+  - Understand analysis objectives of users
+  - Time effort for supporting users
+
+- Challenges of instrument scientists:
+  - Understand analysis objectives of users
+  - Time effort for supporting users
+    - The data analysis support by instrument staff varies a lot.
+    - Sometimes, instrument scientists invest more time in the analysis than the users themselves.
 
 ## Further Information
 
