@@ -21,17 +21,18 @@ Date: 2026-01-15
 
 ## Tools
 
-- What tools do users use during offline data analysis?
+- Tools that users use during offline data analysis:
   - JupyterHub on Maxwell HPC cluster
-  - EXtra Python libraries
-  - DAMNIT
-  - myMdC
-  - myLog
-    - Customized Zulip messenger with streams (proposals) and channels (Data Analysis, etc.)
-    - Used for any proposal-related communication and metadata taken during the experiment
-    - myLog content is also presented on myMDC.
-  - Instrument-specific tools built upon EuXFEL libraries, e.g., SCS toolbox
+  - Python libraries by Data Analysis, e.g., EXtra-data
+  - Instrument-specific tools, e.g., SCS toolbox
   - Community tools, e.g., CrystFEL
+  - EuXFEL tools to collect and visualize experiment metadata:
+    - myMdC
+    - myLog
+      - Customized Zulip messenger with streams (proposals) and channels (Data Analysis, etc.)
+      - Used for any proposal-related communication and metadata taken during the experiment
+      - myLog content is also presented on myMDC.
+    - DAMNIT
   - Other tools by users (self-developed or from other facilities)
 
 ## Current Process
@@ -67,8 +68,8 @@ Date: 2026-01-15
   5. Set up analysis:
      - Most stable thing to start with: Jupyter notebook via JupyterHub on Maxwell cluster + software from Data Analysis group
      - Software config:
-       - Template options:
-         - Users rarely start from scratch. Usually, they use templates.
+       - Templates:
+         - Users rarely start from scratch. Often, they use templates:
            - Data Analysis can provide templates and custom notebooks.
            - Experienced users insist on using own notebook templates.
            - Others need help and appreciate our template notebooks.
@@ -94,7 +95,7 @@ Date: 2026-01-15
   - Where is this documentation located?
   - From whom do users receive the documentation?
 
-- Data Analysis documentation
+- Documentation by Data Analysis group
   - General docs
     - [DA webpage of EuXFEL website](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html)
     - [User documentation](https://dataanalysis.pages.xfel.eu/user-documentation/)
@@ -107,8 +108,8 @@ Date: 2026-01-15
   - Instance-specific docs
     - [Redmine tickets](https://redmine.xfel.eu/) (with problem and solution description)
     - DA recommendations added in experiment proposals
-- Instruments documentation
-  - Instrument-specific docs, e.g., [SCS](https://scs.pages.xfel.eu/documentation/index.html) and [SCS Toolbox](https://scs.pages.xfel.eu/toolbox/index.html) (docs of instruments vary in detail)
+- Documentation by instrument groups
+  - Instrument-specific docs, e.g., [SCS](https://scs.pages.xfel.eu/documentation/index.html) and [SCS Toolbox](https://scs.pages.xfel.eu/toolbox/index.html) (but docs of instruments vary in detail)
   - Technique-oriented documentation by DA (currently available for [FXE](https://dataanalysis.pages.xfel.eu/techniques-docs/fxe/) and [SQS](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/))
   - Technical reports on EuXFEL website, e.g, for [SPB/SFX](https://www.xfel.eu/facility/instruments/spb_sfx/documentation/index_eng.html)
 - [Maxwell documentation](https://docs.desy.de/maxwell/documentation)
@@ -124,10 +125,9 @@ Date: 2026-01-15
     - For other EuXFEL members, e.g., instruments groups?
   - What are the biggest challenges at the moment?
 
-- In general: The range of user experience and variety of requirements are much larger than in other domains.
-  - E.g., experiments at telescopes are more structured.
-
 - Challenges of users:
+  - In general: The range of user experience and variety of requirements are much larger than in other domains.
+    - E.g., experiments at telescopes are more structured.
   - Initially unclear objectives for data analysis
   - Contractual constrainsts: limited support by EuXFEL during offline data analysis phase
     - We cannot debug 1000 lines of user code.
