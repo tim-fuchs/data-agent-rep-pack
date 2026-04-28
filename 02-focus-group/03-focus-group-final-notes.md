@@ -35,10 +35,9 @@ Date: 2026-01-15
 
 ## Current Process
 
-- Interview questions:
-  - How does offline data analysis start and end?
-  - Whom do users contact during the different steps?
-  - If users use Jupyter notebooks, what content do notebooks typically have?
+- Questions:
+  - What are the typical process steps of users to accomplish offline data analysis?
+  - How do users typically start their notebook with? Totally blank? Template from DA/instruments? Cookbook recipe?
 
 - Process is hard to standardize.
   - Exact processes differ between instrument groups and even experiments within one instruments group.
@@ -82,20 +81,38 @@ Date: 2026-01-15
      - Hardware options:
        - Maxwell HPC cluster
        - User's own computation environment
-  6. Analyze the data
-
-- If users use Jupyter notebooks, what content do notebooks typically have?
-  - Before the experiments, it is sorted out what the users require and what the facility can offer.
-  
+  6. Analyze the data. Examples:
+     - Check if data is calibrated correctly
+     - Optimize the analysis to receive best signal from the data
+     - Produce data plots  
 
 ## Documentation
 
-- Interviewer looked at our existing docs resources, listed them, and asks if something was missing.
-- More specific:
-  - Instrument-specific docs
-  - technique-oriented documentation
-- Calibration docs are not written for users and thus likely not interesting from them (but public, and maybe worthwhile to be harvested by AI)
-- Relevant artifacts: publications (e.g., Xwiz paper contains tutorial section)
+- Questions:
+  - What documentation do users require when analyzing the data (e.g., DA documentation, instrument documentation)?
+  - Where is this documentation located?
+  - From whom do users receive the documentation?
+
+- Data Analysis documentation
+  - General docs
+    - [DA webpage of EuXFEL website](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html)
+    - [User documentation](https://dataanalysis.pages.xfel.eu/user-documentation/)
+    - EXtra libraries, e.g., [EXtra-data](https://extra-data.readthedocs.io)
+    - [DAMNIT](https://damnit.readthedocs.io/)
+    - GitLab and GitHub repositories of EuXFEL
+    - [Offline calibration website](https://calibration.pages.xfel.eu/pycalibration/)
+      - Not written for users and thus likely not interesting from them
+      - But public and eventually still relevant for AI system
+  - Instance-specific docs
+    - [Redmine tickets](https://redmine.xfel.eu/) (with problem and solution description)
+    - DA recommendations added in experiment proposals
+- Instruments documentation
+  - Instrument-specific docs, e.g., [SCS](https://scs.pages.xfel.eu/documentation/index.html) and [SCS Toolbox](https://scs.pages.xfel.eu/toolbox/index.html) (docs of instruments vary in detail)
+  - Technique-oriented documentation by DA (currently available for [FXE](https://dataanalysis.pages.xfel.eu/techniques-docs/fxe/) and [SQS](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/))
+  - Technical reports on EuXFEL website, e.g, for [SPB/SFX](https://www.xfel.eu/facility/instruments/spb_sfx/documentation/index_eng.html)
+- [Maxwell documentation](https://docs.desy.de/maxwell/documentation)
+- Publications by Data Analysis and instrument groups
+  - E.g. [EXtra-xwiz paper](https://doi.org/10.3390/cryst13111533) contains tutorial section
 
 ## Challenges
 
