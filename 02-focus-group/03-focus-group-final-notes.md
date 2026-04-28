@@ -47,7 +47,7 @@ Date: 2026-01-15
   - Common denominator: "It starts with data and ends with plots."
 
 - Common process:
-  1. Collect data during DAQ (data acquisition)
+  1. Collect data during DAQ (data acquisition) process
      - Metadata is stored in myMDC.
   2. Migrate data from online to offline data analysis storage
   3. Analyze experiment logs
@@ -67,6 +67,9 @@ Date: 2026-01-15
        - Especially for non-standard processes not contained in templates
   5. Set up analysis:
      - Most stable thing to start with: Jupyter notebook via JupyterHub on Maxwell cluster + software from Data Analysis group
+     - Hardware options:
+       - Maxwell HPC cluster
+       - User's own computation environment
      - Software config:
        - Templates:
          - Users rarely start from scratch. Often, they use templates:
@@ -79,10 +82,9 @@ Date: 2026-01-15
            - User's own template
        - Libraries and environments:
          - Python libraries and environment by Data Analysis group
+         - Instrument-specific tools, e.g., SCS toolbox
+         - Community tools, e.g., CrystFEL
          - User's own libraries and environment
-     - Hardware options:
-       - Maxwell HPC cluster
-       - User's own computation environment
   6. Analyze the data. Examples:
      - Check if data is calibrated correctly
      - Optimize the analysis to receive best signal from the data
