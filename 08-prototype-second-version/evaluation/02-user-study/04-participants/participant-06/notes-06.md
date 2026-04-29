@@ -105,7 +105,7 @@ What features do you miss:
 
 ### Technical Details
 
-- Timestamp: 2026-MM-29-11:00
+- Timestamp: 2026-04-29-11:00
 - Setup:
   - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
   - Agent instructions: AGENTS.md + skills directory + rules directory
