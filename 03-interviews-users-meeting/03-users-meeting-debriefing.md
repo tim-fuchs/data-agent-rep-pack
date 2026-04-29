@@ -42,7 +42,7 @@
 
 - Low number of interviewees:
   - Not sufficient as the sole basis for tool planning.
-  - Nevertheless, responses align with previous findings.
+  - Nevertheless, responses align with insights from previous interviews and focus group.
 - Several proposed tool features seem valuable, e.g.,:
   - Plotting XGM vs. train ID
   - Documentation retrieval
