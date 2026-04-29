@@ -1,4 +1,139 @@
 {
   "$schema": "https://app.kilo.ai/config.json",
+  "permission": {
+    "bash": "ask",
+    "edit": {
+      "*": "allow",
+    },
+    "jupyter_read_notebook": {
+      "*": "allow",
+    },
+    "jupyter_list_notebooks": {
+      "*": "allow",
+    },
+    "jupyter_read_cell": {
+      "*": "allow",
+    },
+    "jupyter_use_notebook": {
+      "*": "allow",
+    },
+    "jupyter_list_files": {
+      "*": "allow",
+    },
+    "jupyter_execute_code": {
+      "*": "allow",
+    },
+    "github-mcp_search_code": {
+      "*": "allow",
+    },
+    "github-mcp_search_repositories": {
+      "*": "allow",
+    },
+    "github-mcp_get_repository_tree": {
+      "*": "allow",
+    },
+    "github-mcp_get_file_contents": {
+      "*": "allow",
+    },
+    "grounded-docs-mcp_search_docs": {
+      "*": "allow",
+    },
+    "gitlab-mcp_search_repositories": {
+      "*": "allow",
+    },
+    "gitlab-mcp_get_project": {
+      "*": "allow",
+    },
+    "gitlab-mcp_list_projects": {
+      "*": "allow",
+    },
+    "gitlab-mcp_get_repository_tree": {
+      "*": "allow",
+    },
+    "gitlab-mcp_get_file_contents": {
+      "*": "allow",
+    },
+    "grounded-docs-mcp_fetch_url": {
+      "*": "allow",
+    },
+  },
+  "skills": {
+    "paths": ["~/.agents/skills/", ".agents/skills/"],
+  },
   "instructions": [".kilo/rules/*.md"],
+  "mcp": {
+    "jupyter-mcp-local": {
+      "type": "remote",
+      "url": "http://127.0.0.1:4040/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer helloworld",
+      },
+    },
+    "jupyter-mcp-hpc": {
+      "type": "remote",
+      "url": "http://127.0.0.1:4041/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer helloworld",
+      },
+    },
+    "jupyter-mcp-hpcbackup": {
+      "type": "remote",
+      "url": "http://127.0.0.1:4042/mcp",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer helloworld",
+      },
+    },
+    "grounded-docs-mcp": {
+      "type": "remote",
+      "url": "http://127.0.0.1:6280/mcp",
+      "enabled": true,
+    },
+    "zulipchat-mcp": {
+      "type": "local",
+      "enabled": true,
+      "command": [
+        "uvx",
+        "zulipchat-mcp",
+        "--zulip-config-file",
+        "/Users/Tim/.agents/zuliprc",
+      ],
+    },
+    "github-mcp": {
+      "type": "remote",
+      "url": "https://api.githubcopilot.com/mcp/x/all/readonly",
+      "enabled": true,
+      "headers": {
+        "Authorization": "Bearer {file:~/.secrets/github-mcp-pat}",
+      },
+    },
+    "gitlab-mcp": {
+      "type": "remote",
+      "url": "http://127.0.0.1:3002/mcp",
+      "enabled": true,
+    },
+  },
+  "default_agent": "ask",
+  "compaction": {
+    "auto": true,
+  },
+  "provider": {
+    "ollama": {
+      "name": "Ollama Local",
+      "npm": "@ai-sdk/openai-compatible",
+      "options": {
+        "baseURL": "http://localhost:11434/v1",
+      },
+      "models": {
+        "qwen3.5:4b": {
+          "name": "qwen3.5:4b",
+        },
+        "qwen3.5:9b": {
+          "name": "qwen3.5:9b",
+        },
+      },
+    },
+  },
 }
