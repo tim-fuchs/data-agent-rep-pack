@@ -19,7 +19,6 @@ Use this skill when:
   - Regularly report conversation progress to colleagues or staff.
   - Generate end-of-session, daily, or weekly status updates.
   - Produce auditable records for project governance.
-- You complete a task that involved file editing.
 
 ## Workflow
 
