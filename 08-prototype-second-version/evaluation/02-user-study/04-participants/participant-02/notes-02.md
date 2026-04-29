@@ -112,6 +112,7 @@ What features do you miss:
 - Timestamp: 2026-04-22-14:00
 - Setup:
   - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - Agent instructions: AGENTS.md + skills directory
   - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
 - LLMs: GPT-5.4-mini, Qwen3-Next-80B-A3B-Thinking, GPT-5.3-Codex
 
