@@ -60,7 +60,6 @@
   "skills": {
     "paths": ["~/.agents/skills/", ".agents/skills/"],
   },
-  "instructions": [".kilo/rules/*.md"],
   "mcp": {
     "jupyter-mcp-local": {
       "type": "remote",
