@@ -49,8 +49,8 @@ Have you brought your own use case or Jupyter notebook?
 - **Response:** New notebook. One error (index out of range) because it misunderstood the pulse attribute in the dataset. Error was fixed after a few edits by user and agent.
 - **Question:** Are you displaying dark images?
 - **Response:** Agent checked correctly if dark images selected
-- Question: Can you create an algorithm to find cosmic muons?
-- Response: Yes. Created the algorithm.
+- **Question:** Can you create an algorithm to find cosmic muons?
+- **Response:** Yes. Created the algorithm.
 - **Question:** Create an interactive overview plot for the candidates you find.
 - **Response:** Plot contains an error. Was fixed after user asked agent to fix the error. Interactive plot works. BUT: the data does not contain dark images.
 
@@ -114,5 +114,6 @@ What features do you miss:
 
 ### Improvement Notes
 
-- Instruct agent to generate code files instead of testing the code internally. Then, it should execute the generated code file and review any errors.
-- After the agent made changes to a file, it should tell user to close the file without saving and re-open it.
+- Instruct agent to create code files (e.g., Jupyter notebook) to execute and review the generated code, instead of trying to execute the code within its sandbox.
+  - Reason: Within its sandbox, the agent cannot access the remote kernel.
+- After the agent made changes to a Jupyter notebook, it should close the file without saving and re-open it to display the changes.
