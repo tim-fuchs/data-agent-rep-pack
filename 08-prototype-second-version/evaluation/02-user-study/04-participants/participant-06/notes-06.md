@@ -59,6 +59,7 @@ Further observations:
 - Agent has not asked about Git environment.
 - Agent did not tell the user to re-open the notebook to see the changes it made.
 - Agent created too much boilerplate code (model: GTP-5.3-Codex)
+- Agent did not prompt the options for sending the report as a form, just as text.
 
 ## Reporting
 
