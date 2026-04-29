@@ -55,6 +55,16 @@ When editing existing code:
   - Don't remove pre-existing dead code unless asked.
   - The test: Every changed line should trace directly to the user's request.
 
+**Write atomic components.**
+
+- When generating a Jupyter notebook, use notebook cells as logical units.
+- Good examples:
+  - All `import` commands in a single cell
+  - Creation + printing of a Dataframe object in a single cell
+- Bad example:
+  - `import` commands + further logic in a single cell
+  - Printing commands + subsequent commands in a single cell
+
 ### Test Code for Correctness and Safety Risk
 
 Always follow these steps when you generated code:
