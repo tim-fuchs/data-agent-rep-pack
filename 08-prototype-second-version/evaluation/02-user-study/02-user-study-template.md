@@ -56,12 +56,6 @@ Impression of the feature and report structure:
 
 - 
 
-## Drafting Manuscript
-
-Impression of the feature:
-
-- 
-
 ## Verdict
 
 Positive:
