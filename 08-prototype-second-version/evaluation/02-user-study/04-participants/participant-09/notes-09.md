@@ -58,7 +58,7 @@ Further observations:
 
 Impression of the feature and report structure:
 
-- Not tested
+- Not tested due to lacking time
 
 ## Verdict
 
