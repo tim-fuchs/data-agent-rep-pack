@@ -6,7 +6,7 @@
 | ------ | ------------------------------------------------------ |
 | Type   | HTML                                                   |
 | Link   | <https://www.xfel.eu/facility/overview/index_eng.html> |
-| Origin |                                                        |
+| Origin | Author's knowledge                                     |
 
 ## User Documentation of Data Analysis Group
 
@@ -46,8 +46,7 @@
 | ------ | ---------------------------------- |
 | Type   | Code                               |
 | Link   | <https://github.com/European-XFEL> |
-| Origin | Search engine                      |
-| Notes  |                                    |
+| Origin | Author's knowledge                 |
 
 ## EuXFEL GitLab
 
@@ -55,8 +54,7 @@
 | ------ | --------------------- |
 | Type   | Code                  |
 | Link   | <https://git.xfel.eu> |
-| Origin | Search engine         |
-| Notes  |                       |
+| Origin | Author's knowledge    |
 
 ## Maxwell Infrastructure
 
