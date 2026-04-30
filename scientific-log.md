@@ -217,6 +217,6 @@ Activities:
 
 ## 2026-04-22 Start of User Study
 
-- Overall, 12 participants
+- Overall, 13 participants
   - 8 people with profession in data science or software engineering
-  - 4 instrument scientists
+  - 5 people with profession in physics
