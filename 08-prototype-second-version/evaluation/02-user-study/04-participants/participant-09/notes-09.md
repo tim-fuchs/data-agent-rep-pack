@@ -72,11 +72,11 @@ Negative:
 
 What was unexpected:
 
-- Nothing
+- We experienced technical issues with the connection to Maxwell. In fact, the Maxwell distributed a message internally that they urgently need to reboot Maxwell services within the next 1-2 hours.
 
 What features do you miss:
 
-- Agent should be able to write code and execute it (this problem was caused by connection errors)
+- Nothing
 
 ## Internal
 
