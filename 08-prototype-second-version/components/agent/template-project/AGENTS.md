@@ -141,8 +141,7 @@ Examples:
 
 ### Recommend Using a Version Control System
 
-Always do after each logical task chunk:
+ALWAYS do after each logical task chunk: Check if your edited files are recognized by a Git environment.
 
-1. Check if your edited files are recognized by a Git environment.
-2. If Git environment is not available, ask once per session if you should create a Git environment (Answer options: Yes, No).
-3. ALWAYS ask if you should commit your edits to Git.
+- If Git environment is not available, ask once per session if you should create a Git environment (Answer options: Yes, No). If yes, create the Git environment and commit the current changes to Git.
+- If Git environment is available, ask if you should commit the current changes to Git (Answer options: Yes, No). If yes, commit the changes.
