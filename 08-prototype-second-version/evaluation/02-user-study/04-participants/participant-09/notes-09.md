@@ -78,7 +78,10 @@ What features do you miss:
 
 ### Implemented Improvements Before Starting the Session
 
-- AGENTS.md: Agent should create atomic notebook cells instead of big cells.
+- AGENTS.md:
+  - Agent should create atomic notebook cells instead of big cells.
+  - We made the Git instructions more explicit (git init + git commit in one step).
+- RAG: We added the [SCS Toolbox](https://scs.pages.xfel.eu/toolbox/).
 
 ### Technical Details
 
