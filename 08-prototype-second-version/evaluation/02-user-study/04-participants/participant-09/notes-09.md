@@ -100,3 +100,4 @@ What features do you miss:
 
 - Renew Maxwell documentation (only focused on Infrastructure webpages at the moment)
 - Add official [Slurm docs](https://slurm.schedmd.com)
+- Agent should check if its citation URLs are still available.

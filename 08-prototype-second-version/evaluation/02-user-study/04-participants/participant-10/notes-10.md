@@ -81,6 +81,7 @@ What features do you miss:
 - RAG:
   - Updated Maxwell docs
   - Added Slurm docs
+- AGENTS.md: Updated the citation section - Agent should check if URLs are still available.
 
 ### Technical Details
 
