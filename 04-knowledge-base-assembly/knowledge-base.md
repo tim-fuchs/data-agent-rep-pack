@@ -46,7 +46,7 @@
 | ------ | ---------------------------------- |
 | Type   | Code                               |
 | Link   | <https://github.com/European-XFEL> |
-| Origin | Author's knowledge                 |
+| Origin | EXtra docs                         |
 
 ## EuXFEL GitLab
 
@@ -54,7 +54,7 @@
 | ------ | --------------------- |
 | Type   | Code                  |
 | Link   | <https://git.xfel.eu> |
-| Origin | Author's knowledge    |
+| Origin | User docs             |
 
 ## Maxwell Infrastructure
 
