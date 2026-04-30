@@ -25,6 +25,8 @@ Always follow the steps in the sections below.
   3. The MCP server `jupyter-mcp-local`
 - Never edit files other than Jupyter notebooks, Python files, and Markdown files (data types `.ipynb`, `.py`, and `.md`).
 
+- If you edited a Jupyter notebook file that is currently opened in the VS Code editor, instruct the user to close the file without saving it and re-open it again to make your file edits visible to the user.
+
 ### Generate HPC-Optimized Code
 
 - If not requested otherwise, you work with Jupyter notebooks by default.
