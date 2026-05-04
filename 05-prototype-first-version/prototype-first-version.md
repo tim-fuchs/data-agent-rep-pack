@@ -46,7 +46,7 @@
 ## Qualitative Evaluation with EuXFEL Staff
 
 - Date: 2025-03-19
-- Setting: hybrid meeting with 12 data scientists of the EuXFEL Data Analysis group
+- Setting: Meeting with 12 members of the EuXFEL Data Analysis group
 - What are your first positive/negative thoughts on the demo? What would be important improvement potentials for the next prototype version?
 - **Good:**
   - Jupyter AI interface is straightforward. Configure an EuXFEL persona and eventually add custom commands.
