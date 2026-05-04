@@ -101,9 +101,12 @@ Date: 2026-01-15
   - General docs
     - [DA webpage of EuXFEL website](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html)
     - [User documentation](https://dataanalysis.pages.xfel.eu/user-documentation/)
-    - EXtra libraries, e.g., [EXtra-data](https://extra-data.readthedocs.io)
-    - [DAMNIT](https://damnit.readthedocs.io/)
-    - GitLab and GitHub repositories of EuXFEL
+    - Docs of software libraries, e.g.:
+      - [EXtra](https://extra.readthedocs.io/en/latest/)
+      - [EXtra-data](https://extra-data.readthedocs.io)
+      - [EXtra-geom](https://extra-geom.readthedocs.io/en/latest/)
+      - [DAMNIT](https://damnit.readthedocs.io/)
+    - [GitLab](https://git.xfel.eu) and [GitHub](https://github.com/European-XFEL) repositories of EuXFEL
     - [Offline calibration website](https://calibration.pages.xfel.eu/pycalibration/)
       - Not written for users and thus likely not interesting from them
       - But public and eventually still relevant for AI system
