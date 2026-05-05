@@ -180,7 +180,7 @@ Activities:
 
 ## 2026-03-13 Rapid, Multivocal Literature Review
 
-- Objective: to integrate lessons learned from similar studies into our requirements analysis by extracting requirements for our tool from these studies
+- Objective: Integrate insights from similar studies into our requirements analysis by extracting requirements for our tool from these studies
 - Activities: Review scientific and non-scientific literature with a rapid, AI-assisted literature review
 - Intermediate findings:
   - We created multiple Python scripts to establish a pipeline consisting of (1) identification of papers, (2) screening of papers, (3) processing eligible papers, and (4) conducting a thematic analysis to extract requirements.

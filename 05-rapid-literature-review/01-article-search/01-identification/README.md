@@ -42,7 +42,7 @@ This folder contains:
   `"I want to conduct a rapid multi-vocal literature review via Google, Google Scholar, and Consensus AI to review lessons learned from studies about human-ai interaction in the fields of software engineering and science. List good search terms."`
 
 - Search queries for Google and Google Scholar:
-  - Human AI collaboration:
+  - Human-AI collaboration:
     `("human AI" OR "human LLM" OR "human copilot" OR "human AI agent") (collaboration OR team OR "assisted work" OR "augmented work") ("lessons learned" OR recommendation OR experience OR evaluation)`
   - Developer experience:
     `("AI" OR "LLM" OR "copilot" OR "AI agent") ("developer" OR "coding assistant" OR "pair programming" OR "code generation" OR "software engineering") ("lessons learned" OR recommendation OR experience OR evaluation)`
