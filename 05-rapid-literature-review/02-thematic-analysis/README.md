@@ -60,15 +60,19 @@ This folder contains:
 
 ## Summary of Thematic Analysis
 
-### Overview of Automatic Process
+### Overview
 
-- 224 articles analyzed
-- 5365 requirements extracted (with near-duplicates)
-  - 3062 from GPT-5.4-mini
-  - 2303 from Minimax-M2.5
-- 26 themes
+- Automatic process:
+  - Analysis of 224 articles
+  - Extraction of 5365 requirements (with near-duplicates)
+    - 3062 from GPT-5.4-mini
+    - 2303 from Minimax-M2.5
+  - Synthesis of 26 themes, each representing a requirement
+- Manual rework to create 16 themes
+  - First 10 themes represent requirements that were already stated by EuXFEL staff and users.
+  - Last 6 themes represent new requirements that have a more general-purpose focus and will support the implementation of the tool.
 
-### Themes and Requirements After Manual Rework
+### Final Themes
 
 **01 Information Retrieval: Agent shall retrieve up-to-date code-related information from public and private resources.**
 
