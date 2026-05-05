@@ -131,29 +131,28 @@ Talk by Michael (DA group)
 
 - Registration of poster “AI Agent Support for Data Analysis” (T. Fuchs and L. Gelisio and S. Hauf and W. Maalej)
 
-## 2026-01-07 Preparation of Focus Group 1 with DA Group
+## 2026-01-07 Preparation of Focus Group with DA Group
 
 Activities:
 
-- Restructuring RQs to align them with design science research:
+- Restructuring RQs to align with design science research
 - Literature review of guidelines, especially:
   - Kontio et al. (2004, 2008) about focus groups
   - Luke et al. (2014) about mind mapping
   - Davis et al. (2023)
   - Tong et al., (2007)
   - O’Brien et al. (2014)
-- Structuring the first focus group session and collecting the questions for participants
+- Structuring the first focus group session, collecting the questions for participants, research possible answers per question
 
-## 2026-01-15 Execution of Focus Group 1
+## 2026-01-15 Execution of Focus Group
 
 - 30 minutes execution
 - 16 participants (13 in person, 3 via video conference) + 1 session host
 
 ## 2026-01-19 Meeting with DA group leader
 
-- Debriefing of focus group 1 (discussed questions about certain statements during the session)
+- Debriefing of focus group (discussed questions about certain statements during the session)
 - Discussed the Users’ Meeting poster and questionnaire
-- Outlined the next focus group
 - Further recommendations:
   - Conduct interviews with instrument groups (but eventually do this already during Users’ Meeting)
   - Check EuXFEL’s Alfresco platform for company-internal documentation by instrument groups and others.
@@ -169,16 +168,8 @@ Activities:
 ## 2026-02-12 Meeting with DA group
 
 - Objectives:
-  - Discuss results of Users’ Meeting
+  - Discuss results of Users' Meeting
   - Define next steps
-
-## 2026-02-23 Research on Available EuXFEL Documentation
-
-- Objective: Collect available documentation of EuXFEL that will be the basis of the RAG knowledge base
-- Intermediate findings:
-  - There are many resources that could be added to the knowledge base of our tool, especially public webpages of European XFEL. However, many of these webpages might already be included in the modern foundation model, such as GPT 5.
-  - It makes more sense to focus the knowledge base on coding-specific resources of European XFEL, as recent breaking changes in their software will not be included in the foundation models.
-  - For the first prototype, we will focus on available documentation for the `EXtra-data` library and any software specific to the scientific instrument `FXE` because the Data Analysis group recently published detailed documentation for this instrument.
 
 ## 2026-03-04 Prototyping for Version 1 of the Tool
 
