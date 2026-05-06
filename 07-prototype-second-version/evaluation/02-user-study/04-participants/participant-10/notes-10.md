@@ -110,5 +110,5 @@ What features do you miss:
 ### Improvement Notes
 
 - Agent must always ask the user which Python environment or Jupyter kernel it should use. It should never just choose one of the environments or kernels.
-- Agent must not follow defensive coding with default parameter values. Instead, agent should throw error messages if parametere values are missing.
+- Agent must not follow defensive coding with default parameter values. Instead, agent should throw error messages if parameter values are missing.
 - Agent must not use its internal environment to read any data from European XFEL. Instead, it must generate code in (temporary) Python or Jupyter notebook files that are connected to a Jupyter kernel to read the data. It should ask which Jupyter kernel it shall pick.
