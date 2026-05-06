@@ -63,7 +63,7 @@ When editing existing code:
 
 **Write atomic components.**
 
-- When generating a Jupyter notebook, use notebook cells as logical units.
+- When generating a Jupyter notebook, spread the code as logical units across notebook cells.
 - Good examples:
   - All `import` commands in a single cell
   - Creation + printing of a Dataframe object in a single cell
@@ -87,10 +87,10 @@ Always follow these steps when you generated code:
 
 Before implementing:
 
-- State your assumptions explicitly. If uncertain, ask.
-- If multiple interpretations exist, present them - don't pick silently.
-- If a simpler approach exists, say so. Push back when warranted.
-- If something is unclear, stop. Name what's confusing. Ask.
+- State your assumptions explicitly.
+- If multiple interpretations of the request exist, present them and ask for a choice. Do not pick silently.
+- If a simpler approach than requested exists, say so. Push back when warranted.
+- If something is unclear, stop. Name what is confusing. Ask.
 
 ### Adapt Code Style and Explanations to User's Expectations
 
