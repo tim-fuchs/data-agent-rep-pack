@@ -2,26 +2,27 @@
 
 ## Notes
 
-- Considered agentic tools: Kilo Code, OpenCode, goose, Roo Code, Deep Agents, Jupyter AI
-- Ratings focus on only on free, open-source features. Premium features, such as KiloClaw by Kilo, are not considered.
-- General constraint: The quality of tool output depends strongly on model choice and prompt quality.
+- Ratings focus only on free, open-source tools and tool features. We did not consider premium features, such as KiloClaw by Kilo.
+- General constraint: The quality of tool output depends on model choice and prompt quality. Hence, the tool analysis should be independent from the performance of the LLMs connected to the tools.
 - General configuration options:
   - Most tools provide multiple options to configure global and project-level agent workflows.
   - Common examples: `AGENTS.md` files, `SKILL.md` files, custom agents, custom commands
-  - Additional possibilities, such as `.goosehints` file (goose) and `rules` directory (Roo Code), are usually near-duplicates that we expect to be removed in future releases.
-  - We refer to such possibilities when we say that users can configure a specific behavior.
+  - We refer to such possibilities when we state below that users can configure a specific behavior.
+  - Additional possibilities, such as `.goosehints` file (goose) and `rules` directory (Roo Code, Kilo Code), are redundant and expect that they will be removed in future tool releases.
 
 ## Candidates
 
-- **Kilo Code**
+- **[Kilo Code](https://kilo.ai/code)**
+  - Version: 7.2.10
   - What:
     - Ready-to-use, model-agnostic agentic AI system ("agent harness")
     - Interactivity:
       - VS Code extension (first class)
       - CLI app
-    - Now a fork of OpenCode. Formerly a fork of Roo Code.
+    - Currently a fork of OpenCode. Formerly a fork of Roo Code.
 
-- **OpenCode**
+- **[OpenCode](https://opencode.ai)**
+  - Version: 1.4.10
   - What:
     - Ready-to-use, model-agnostic agentic AI system ("agent harness")
     - Interactivity:
@@ -31,19 +32,29 @@
       - Web app
       - GitHub Actions and GitLab Runners workflow (for issue management)
 
-- **goose**
+- **[goose](https://goose-docs.ai)**
+  - Version: 1.30.0
   - What:
     - Ready-to-use, model-agnostic agentic AI system ("agent harness")
     - Interactivity:
       - CLI app (first class)
       - Desktop app
 
-- **Jupyter AI**
+- **[Roo Code](https://roocode.com)**
+  - Version: 3.53.0
+  - What:
+    - Ready-to-use, model-agnostic agentic AI system ("agent harness")
+  - Interactivity:
+    - VS Code extension
+
+- **[Jupyter AI](https://jupyter-ai.readthedocs.io)**
+  - Version: 3.0.0
   - What:
     - Extension for Jupyter Lab
+    - Built-in Jupyter MCP server
     - Built by Jupyter-affiliated developers
     - Does not provide an agent out-of-the-box
-    - User can install Jupyternaut agent (authored by the same developers) or install common agents (OpenCode, Claude Code, etc.).
+    - User can add Jupyternaut agent (authored by the same developers) or common agents (OpenCode, Claude Code, etc.) to the extension.
   - Important limitation for our use case:
     - The existing user environment is a remote Jupyter Lab server hosted on the HPC cluster of EuXFEL/DESY.
     - A user cannot access specific configuration files on the server and also cannot install external agents (such as OpenCode) via `npx` commands.
@@ -54,17 +65,18 @@
     - Framework to create agentic AI systems
     - Based on LangChain's LangGraph framework
     - Interactivity via local endpoint (reachable via CLI or IDE extension (e.g., Continue))
-  - Summarized requirements analysis (arguments are mostly the same across all requirements):
+  - Summarized analysis (arguments are mostly the same across all requirements):
     - Rating: -/--
     - Strengths:
       - User has maximum flexibility to create a tailored agentic AI tool.
     - Weaknesses:
-      - User must design, implement, deploy, and maintain the full agent system themselves.
+      - User must design, implement, deploy, and maintain the full agent system.
       - Tool is less interoperatable with other agentic AI tools. Agent is rather embedded in code or available as HTTP endpoint than a standalone tool, like the other tools.
 
 - **Alternative candidates to Kilo Code, OpenCode, goose, Roo Code, Jupyter AI**
   - What do they have in common: ready-to-use, open-source, login-free, model-agnostic agentic AI system ("agent harness")
-  - There are further such tools available. The [Agent Skills website](https://agentskills.io/clients) lists many of them. As they are usually similar in features and architecture, we do not list them here explicitly.
+  - Examples: [Roo Code](https://roocode.com), [Cline](https://cline.bot), [Tabby](https://www.tabbyml.com)
+  - There are further tools available. The [Agent Skills website](https://agentskills.io/clients) lists many of them.
 
 - **Alternative candidates to DeepAgents**
   - What do they have in common:
@@ -94,7 +106,7 @@
 - **Irrelevant candidates**
   - [Letta Code](https://docs.letta.com/letta-code)
     - Interactivity: via CLI app
-    - Downside: Requires logging in to a free Letta account.
+    - Downside: Requires a (free) Letta account.
   - GitHub Copilot
     - Requires a paid subscription
     - Is not open-source

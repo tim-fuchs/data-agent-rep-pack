@@ -1,41 +1,42 @@
-# Overview of All Necessary Components for the Agentic AI System
+# Comparison of Candidates for Components of the Agentic AI System
 
-- Vision for the agentic AI system at EuXFEL:
-  - EuXFEL hosts various MCP servers that provide connections to Zulip, RAG, Jupyter Lab, etc.
-  - A user flexibly connects their agent to the servers via API keys.
+- New vision for the agentic AI system:
+  - Users operate their favorite AI agent on their computer (Kilo Code, OpenCode, Claude Code, etc.).
+  - EuXFEL hosts various MCP servers that provide connections to Jupyter Lab, a RAG system, GitHub, GitLab, Zulip, etc.
+  - Users can flexibly connect their agent to the servers (plug-and-play).
 
 - Notes about best candidates:
   - First principle when selecting among the candidates: **"Reach users where they are. Do not force them to use your environment and workflows."**
-  - We finalized this analysis mid April 2026. Keep this date in mind as the agentic AI train moves fast.
-  - Many of the agentic AI tools are (partially) interoperable and offer similar features. Their developer communities all analyze the strengths and weaknesses of competitors and want people to migrate to their tool.
+  - We finalized this analysis mid April 2026. Keep this date in mind as the landscape of agentic AI tool evolves fast.
+  - Many of the agentic AI tools are (partially) interoperable and offer similar features. A possible reason is that the tool developer analyze the strengths and weaknesses of competitors and want users to migrate to their tool.
   - We chose the tools that would fit best to the requirements of our use case and the opinions of the domain experts we interviewed. Most other candidates would be strong alternatives.
 
 ## Relevant Requirements and System Components
 
 The agentic AI system shall ...
 
-| Requirement                                                                | Jupyter | Agent | Zulip | RAG | GitHub/GitLab | Safety |
-| -------------------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- | ------ |
-| Access the remote Jupyter Lab server                                       | X       | X     |       |     |               |        |
-| Interact with notebook content [^1]                                        | X       | X     |       |     |               |        |
-| Generate code optimized for high-performance computing                     |         | X     |       |     |               |        |
-| Test code for correctness and safety risks                                 |         | X     |       |     |               |        |
-| Request user feedback to guide and improve solutions                       |         | X     |       |     |               |        |
-| Adapt code style and explanations to the user's expectations               |         | X     |       |     |               |        |
-| Generate code documentation on project- and code-level                     |         | X     |       |     |               |        |
-| Request human approval for sensitive actions [^2]                          |         | X     |       |     |               | X      |
-| Access relevant context information within a project [^3]                  |         | X     |       |     |               |        |
-| Decompose a request into verifiable goals                                  |         | X     |       |     |               |        |
-| Work with up-to-date information [^4]                                      |         | X     |       | X   | X             |        |
-| Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |        |
-| Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |        |
-| Report conversations between user and agent to EuXFEL staff [^5]           |         | X     | X     |     |               |        |
-| Assist in drafting scientific manuscripts                                  |         | X     |       |     |               |        |
-| Recommend using a version control system [^6]                              |         | X     |       |     |               |        |
-| Optimize latency [^7]                                                      | X       | X     | X     | X   | X             | X      |
-| Not share user data with third parties [^8]                                | X       | X     | X     | X   | X             | X      |
-| Minimize implementation effort                                             | X       | X     | X     | X   | X             | X      |
-| Minimize effort required to replace components [^9]                        | X       | X     | X     | X   | X             | X      |
+| Requirement                                                                | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
+| -------------------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
+| Access the remote Jupyter Lab server                                       | X       | X     |       |     |               |
+| Interact with notebook content [^1]                                        | X       | X     |       |     |               |
+| Generate code optimized for high-performance computing                     |         | X     |       |     |               |
+| Test code for correctness and safety risks                                 |         | X     |       |     |               |
+| Request user feedback to guide and improve solutions                       |         | X     |       |     |               |
+| Adapt code style and explanations to the user's expectations               |         | X     |       |     |               |
+| Generate code documentation on project- and code-level                     |         | X     |       |     |               |
+| Request human approval for sensitive actions [^2]                          |         | X     |       |     |               |
+| Access relevant context information within a project [^3]                  |         | X     |       |     |               |
+| Decompose a request into verifiable goals                                  |         | X     |       |     |               |
+| Work with up-to-date information [^4]                                      |         | X     |       | X   | X             |
+| Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |
+| Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |
+| Report conversations between user and agent to EuXFEL staff [^5]           |         | X     | X     |     |               |
+| Assist in drafting scientific manuscripts                                  |         | X     |       |     |               |
+| Recommend using a version control system [^6]                              |         | X     |       |     |               |
+| Optimize latency [^7]                                                      | X       | X     | X     | X   | X             |
+| Not share user data with third parties [^8]                                | X       | X     | X     | X   | X             |
+| Minimize implementation effort                                             | X       | X     | X     | X   | X             |
+| Minimize effort required to replace components [^9]                        | X       | X     | X     | X   | X             |
 
 - [^1] E.g. explain/insert/modify/delete cells, create entire notebooks
 - [^2] E.g., file deletion or code execution on HPC cluster
@@ -47,26 +48,25 @@ The agentic AI system shall ...
 - [^8] E.g., self-hosted LLMs possible, telemetry control, secured API access
 - [^9] E.g., potential vendor lock, available migration workflows
 
-## Comparison of Candidates for System Components
+## Comparison of Candidates and Selected Candidates
 
-- [Jupyter Lab integration](comparison-jupyter.md): Jupyter Hub API
-- [Agentic AI tool](comparison-agent.md): Kilo Code
-- [Zulip integration](comparison-zulip.md): ZulipChat MCP
-- [RAG integration](comparison-rag.md): Grounded Docs
-- [GitHub and GitLab integration](comparison-git.md): GitHub MCP + GitLab MCP
-- [Safety guardrails](comparison-satety.md): nono
+- [Jupyter Lab integration](01-comparison-jupyter.md): **Jupyter Lab API**
+- [Agentic AI tool](02-comparison-agent.md): **Kilo Code**
+- [RAG integration](03-comparison-rag.md): **Grounded Docs**
+- [GitHub and GitLab integration](04-comparison-git.md): **GitHub MCP + GitLab MCP**
+- [Zulip integration](05-comparison-zulip.md): **ZulipChat MCP**
 
 ## Possible User Interaction Channels
 
 | Interaction Channel                 | Example                           |
 | ----------------------------------- | --------------------------------- |
 | Browser tab                         | Jupyter Lab + Jupyter AI          |
-| Browser tab + IDE extension         | Jupyter Lab + Kilo Code           |
+| Browser tab + IDE extension         | Jupyter Lab + Roo Code            |
 | Browser tab + CLI                   | Jupyter Lab + OpenCode (CLI app)  |
 | Browser tab + standalone app        | Jupyter Lab + goose (desktop app) |
 | Browser tab + browser tab (desktop) | Jupyter Lab + OpenCode (web app)  |
 | Browser tab + browser tab (mobile)  | Jupyter Lab + OpenCode (web app)  |
-| IDE + IDE extension                 | VS Code + Roo Code                |
+| IDE + IDE extension                 | VS Code + Kilo Code               |
 | IDE + CLI                           | VS Code + goose (CLI app)         |
 | IDE + standalone app                | VS Code + OpenCode (desktop app)  |
 | IDE + browser tab (desktop)         | VS Code + OpenCode (web app)      |
