@@ -111,7 +111,7 @@
 - **Jupyter Lab API**
   - Rating: +
   - Strengths:
-    - No telemetry in Jupyter Lab , as far as we know.
+    - No telemetry in Jupyter Lab, as far as we know.
     - Telemetry of VS Code can be deactivated.
   - Weaknesses:
     - None
