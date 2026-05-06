@@ -16,7 +16,7 @@
     jupyter lab --no-browser --ip 0.0.0.0 --port 45123 --IdentityProvider.token="your-secure-jlab-token"
    ```
 
-8. Open `extra.ipynb` and select the Maxwell Jupyter kernel.
+8. Open `extra.ipynb`, eventually enter Jupyter Lab token, and select kernel from Maxwell Jupyter Lab server.
 9. Open `overview.pdf`.
 
 ## Intro
