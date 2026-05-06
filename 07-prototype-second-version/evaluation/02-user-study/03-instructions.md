@@ -8,7 +8,14 @@
 4. Edit name, e.g., template-project-06.
 5. Open new version in VS Code.
 6. Deactivate jupyter-mcp servers in Kilo Code.
-7. Start SSH connection to Maxwell in a Terminal session.
+7. In a terminal session, start SSH connection to Maxwell, load EuXFEL Python module, start Jupyter Lab.
+
+   ```bash
+    ssh -L 8888:localhost:45123 max-exfl-display.desy.de
+    module load exfel exfel-python/202601
+    jupyter lab --no-browser --ip 0.0.0.0 --port 45123 --IdentityProvider.token="your-secure-jlab-token"
+   ```
+
 8. Open `extra.ipynb` and select the Maxwell Jupyter kernel.
 9. Open `overview.pdf`.
 
