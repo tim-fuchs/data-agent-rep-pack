@@ -104,4 +104,5 @@ What features do you miss:
 
 ### Improvement Notes
 
-- 
+- Rework instructions on how agent should split code cells. In this session, it generated the initial notebook with a single code cell.
+- Add instruction that agent should ask clarification questions.
