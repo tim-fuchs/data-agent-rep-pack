@@ -2,12 +2,15 @@
 
 ## Preparation
 
-1. Duplicate template project.
-2. Edit name, e.g., template-project-06.
-3. Open new version in VS Code.
-4. Deactivate jupyter-mcp servers.
-5. Connect to Maxwell Jupyter Lab.
-6. Open `overview.pdf`.
+1. Check that Docker containers with MCP servers run.
+2. Update template project with notes from previous session (e.g., `kilo.jsonc` and `AGENTS.md`).
+3. Duplicate template project.
+4. Edit name, e.g., template-project-06.
+5. Open new version in VS Code.
+6. Deactivate jupyter-mcp servers in Kilo Code.
+7. Start SSH connection to Maxwell in a Terminal session.
+8. Open `extra.ipynb` and select the Maxwell Jupyter kernel.
+9. Open `overview.pdf`.
 
 ## Intro
 

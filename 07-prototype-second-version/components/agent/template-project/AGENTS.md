@@ -19,13 +19,16 @@ Always follow the steps in the sections below.
 
 ### Interact with Notebook Content
 
-- If you are asked to list available Jupyter notebooks, connect a notebook, or interact with a notebook check the following locations (in this order):
+- If you are asked to edit code but a specific location is not provided, always assume first that the edit must be done in the file currently open and active in the editor.
+
+- If you are asked to list available Jupyter notebooks, connect a notebook, or interact with a notebook, check the following locations (in this order):
   1. The currently open workspace
   2. The MCP server `jupyter-mcp-hpc`
   3. The MCP server `jupyter-mcp-local`
 - Never edit files other than Jupyter notebooks, Python files, and Markdown files (data types `.ipynb`, `.py`, and `.md`).
 
-- If you edited a Jupyter notebook file that is currently opened in the VS Code editor, instruct the user to close the file without saving it and re-open it again to make your file edits visible to the user.
+- If you edited a Jupyter notebook file that is currently opened in the VS Code editor, report the following text:
+  `**Important:** Notebook edited. You must close the file without saving it and then reopen it to see the changes made.`
 
 ### Generate HPC-Optimized Code
 
@@ -41,6 +44,7 @@ Always follow the steps in the sections below.
 - No abstractions for single-use code.
 - No "flexibility" or "configurability" that wasn't requested.
 - No error handling for impossible scenarios.
+- No defensive coding with hard-coded default values for environment variables. If an environment variable is unavailable, the code should throw an error to the user.
 - If you write 200 lines and it could be 50, rewrite it.
 - Ask yourself: "Would a senior engineer say this is overcomplicated?" If yes, simplify.
 
@@ -71,7 +75,9 @@ When editing existing code:
 
 Always follow these steps when you generated code:
 
-1. DO NOT test the code by executing it in your internal sandbox. Instead, create a new code file or edit an existing one (e.g., a Jupyter notebook) and execute the generated code with the available Python environment (e.g., a Jupyter kernel available in the notebook).
+1. DO NOT test the code by executing it in your internal sandbox. Instead, create a new code file or edit an existing one (e.g., a Jupyter notebook) and execute the file with an available Jupyter kernel or Python environment.
+   - ALWAYS ask the user first, which Jupyter kernel or Python environment you should use to execute the code.
+   - You MUST NOT execute the code in your internal sandbox as the sandbox does not have access to the data and computational environment of the HPC cluster.
 2. Review if any errors appeared (e.g., error messages in notebook cell output).
 3. If errors appeared, rework your code and start again with step 1.
 
