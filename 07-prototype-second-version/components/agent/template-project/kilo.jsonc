@@ -1,7 +1,19 @@
 {
   "$schema": "https://app.kilo.ai/config.json",
   "permission": {
-    "bash": "ask",
+    "bash": {
+      "*": "ask",
+      "ls *": "allow",
+      "python3 *": "allow",
+      "git init *": "allow",
+      "git status *": "allow",
+      "git diff *": "allow",
+      "git log *": "allow",
+      "git add *": "allow",
+      "git commit *": "allow",
+      "jupyter *": "allow",
+      "python -c *": "allow",
+    },
     "edit": {
       "*": "allow",
     },
@@ -97,7 +109,7 @@
         "uvx",
         "zulipchat-mcp",
         "--zulip-config-file",
-        "/Users/Tim/.agents/zuliprc",
+        "~/.agents/zuliprc",
       ],
     },
     "github-mcp": {
@@ -135,4 +147,18 @@
       },
     },
   },
+  "model": "openai/gpt-5.4",
+  "small_model": "openai/gpt-5.4-mini",
+  "agent": {
+    "plan": {
+      "model": "openai/gpt-5.4",
+    },
+    "ask": {
+      "model": "openai/gpt-5.4",
+    },
+    "code": {
+      "model": "openai/gpt-5.4",
+    },
+  },
+  "auto_collapse_reasoning": true,
 }
