@@ -3,12 +3,12 @@
 ## Candidates
 
 - [Grounded Docs](https://grounded.tools)
-  - What: Open-source, ready-to-use RAG service with main focus on MCP connectivity
   - Version: 2.2.1
+  - What: Open-source, ready-to-use RAG service with main focus on MCP connectivity
 
 - [OpenRAG](https://www.openr.ag)
-  - What: open-source, ready-to-use RAG service with additional [MCP connecitivity](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp)
   - Version: 0.4.1
+  - What: open-source, ready-to-use RAG service with additional [MCP connecitivity](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp)
 
 - **Irrelevant candidates**
   - [Context7](https://context7.com)
@@ -31,7 +31,7 @@
 ### Work With Up-to-Date Information
 
 - **Grounded Docs**
-  - Rating: +
+  - Rating: ++
   - Strengths:
     - User can ingest websites and local documents.
     - User can update the ingested docs via a refresh button and the API.
@@ -44,7 +44,7 @@
     - Tool does not synthesize the retrieved chunks into a response.
 
 - **OpenRAG**
-  - Rating: -
+  - Rating: +
   - Strengths:
     - User can ingest websites and local documents.
     - User can ingest documents stored on external storage sources (e.g., Google Drive).
@@ -52,8 +52,7 @@
     - MCP server delivers a ready-to-print response that the LLM of OpenRAG synthesized from the retrieved chunks.
   - Weaknesses:
     - User must index the relevant source first.
-    - User must manually remove and renew documents, e.g., when a website was updated. OpenRAG does not provide a refresh feature.
-    - Websites can only be ingested via chat interface, not via the knowledge interface.
+    - User must remove and renew documents, e.g., when a website was updated. OpenRAG does not provide a refresh feature.
 
 ### Latency Optimization
 
@@ -92,37 +91,39 @@
 ### Implementation Effort
 
 - **Grounded Docs**
-  - Rating: +
+  - Rating: ++
   - Strengths:
-    - Ready-to-use MCP server with CLI and web UI.
-    - Can be started with a single `npx` command, and client wiring is straightforward.
+    - Tool is a ready-to-use RAG service with CLI and GUI interactivity, as well as built-in MCP server.
+    - User can start the tool with a single `npx` command (or with a Docker container).
+    - User can simply add a remote MCP client to their agentic tool to connect to Grounded Docs.
+    - Tool is very lightweight.
   - Weaknesses:
-    - Still requires configuring sources, indexing, and optionally embeddings.
-    - Best results need some setup choices around source selection and version targeting.
+    - User must config model provider initially.
 
 - **OpenRAG**
-  - Rating: --
+  - Rating: ++
   - Strengths:
-    - Provides a complete, opinionated RAG platform instead of separate building blocks.
-    - Quickstart and Docker flows exist for getting the stack running.
+    - Tool is a ready-to-use RAG service with GUI interactivity that exposes an API for MCP connectivity.
+    - Tool is containerized by design. User can start container with a `uvx` command.
+    - User can simply add a local MCP client to their agentic tool to connect to Grounded Docs. Alternatively, the [OpenRAG MCP server](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp) can also be containerized and added as remote MCP client to the agent.
   - Weaknesses:
-    - Requires coordinating several services and environment variables.
-    - Initial setup includes model providers, passwords, OpenSearch, Langflow, and Docling concerns.
+    - User must install a quite heavy Docker container containing OpenSearch, Langflow, Docling, etc.
+    - User must config model provider and app password initially.
 
 ### Component Replacement Effort
 
 - **Grounded Docs**
-  - Rating: +
+  - Rating: ++
   - Strengths:
-    - Good fit when the current component is a documentation lookup or search layer.
-    - MCP-based integration makes it relatively easy to swap into an assistant toolchain.
+    - MCP connectivity makes it simple to switch to other MCP-supporting RAG services.
+    - Tool provides [CLI commands](https://github.com/arabold/docs-mcp-server/blob/main/docs/guides/basic-usage.md) that enable regular document ingestion runs.
   - Weaknesses:
-    - Replacing a broader RAG platform still requires adapting ingestion and indexing workflows.
+    - None
 
 - **OpenRAG**
-  - Rating: --
+  - Rating: ++
   - Strengths:
-    - Can replace multiple pieces at once because it bundles ingestion, search, chat, and flow editing.
+    - MCP connectivity makes it simple to switch to other MCP-supporting RAG services.
+    - Tool provides [Python SDK](https://github.com/langflow-ai/openrag/tree/cb5acc0497928f580cc46f3ed67d58cfd7ef28b7/sdks/python) that enables regular document ingestion runs.
   - Weaknesses:
-    - It is a full stack replacement, not a drop-in component swap.
-    - Migration likely touches infra, data flow, and client configuration at the same time.
+    - None

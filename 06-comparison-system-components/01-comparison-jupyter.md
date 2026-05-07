@@ -10,24 +10,24 @@
 ## Candidates
 
 - **[Jupyter Lab API](https://jupyterlab.readthedocs.io/en/latest/)**
+  - Version: 4.1.6
   - What:
     - User can set a Jupyter Lab token and use it, e.g., in VS Code to connect a local Jupyter notebook file with the remote Jupyter Lab kernel.
     - User can then use VS Code and a local agentic tool to edit and execute the notebook file.
     - EuXFEL provides (slightly outdated) [docs](https://docs.desy.de/maxwell/documentation/miscellaneous/jlab_vscode/) for this process, focused on for their Jupyter Hub/Lab server.
-  - Version: 4.1.6
 
-- **[Jupyter MCP Server](https://jupyter-mcp-server.datalayer.tech)**
+- **[Jupyter MCP](https://jupyter-mcp-server.datalayer.tech)**
+  - Version: 0.22.1
   - What:
     - MCP server providing tools to access, read, and edit files of a Jupyter Lab server via a agentic tool
     - User could connect their local agentic tool with Jupyter MCP to edit notebook files on the remote Jupyter Lab server.
     - The Jupyter AI extension for Jupyter Lab also uses Jupyter MCP to access the notebook files of the server.
-  - Version: 0.22.1
 
 - **[VS Code Remote](https://code.visualstudio.com/docs/remote/ssh)**
+  - Version: 0.122.0
   - What:
     - SSH access to the HPC cluster via VS Code Remote extension (`ssh $USER@max-exfl-display.desy.de`)
     - See [docs](https://dataanalysis.pages.xfel.eu/user-documentation/offline/#getting-access) of EuXFEL Data Analysis group.
-  - Version: 0.122.0
 
 ## Requirements Analysis
 
