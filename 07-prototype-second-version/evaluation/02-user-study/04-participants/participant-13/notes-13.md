@@ -98,4 +98,4 @@ What features do you miss:
 
 ### Improvement Notes
 
-- Nothing
+- Add CrystFEL docs to RAG system

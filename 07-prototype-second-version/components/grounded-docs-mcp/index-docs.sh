@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+npx @arabold/docs-mcp-server@latest scrape "CrystFEL" https://www.desy.de/~twhite/crystfel/index.html --scope subpages --scrape-mode playwright
 npx @arabold/docs-mcp-server@latest scrape "EuXFEL DA Group" https://dataanalysis.pages.xfel.eu/user-documentation/ --scope subpages --scrape-mode playwright
 npx @arabold/docs-mcp-server@latest scrape "EuXFEL Website" https://xfel.eu/ --scope hostname --scrape-mode playwright
 npx @arabold/docs-mcp-server@latest scrape "EXtra" https://extra.readthedocs.io/en/latest/ --scope hostname --scrape-mode playwright
