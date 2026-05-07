@@ -16,7 +16,7 @@
     - User can then use VS Code and a local agentic tool to edit and execute the notebook file.
     - EuXFEL provides (slightly outdated) [docs](https://docs.desy.de/maxwell/documentation/miscellaneous/jlab_vscode/) for this process, focused on for their Jupyter Hub/Lab server.
 
-- **[Jupyter MCP Server](https://jupyter-mcp-server.datalayer.tech)**
+- **[Jupyter MCP](https://jupyter-mcp-server.datalayer.tech)**
   - Version: 0.22.1
   - What:
     - MCP server providing tools to access, read, and edit files of a Jupyter Lab server via a agentic tool

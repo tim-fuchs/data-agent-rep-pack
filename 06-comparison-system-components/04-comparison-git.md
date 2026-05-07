@@ -19,80 +19,84 @@
 ### Work With Up-to-Date Information
 
 - **GitHub MCP by GitHub**
-  - Rating:
+  - Rating: ++
   - Strengths:
-    - 
+    - Tool provides various features to read and write GitHub data, including private repositories.
+    - Tool provides read-only mode.
   - Weaknesses:
-    - 
+    - None
 
 - **GitLab MCP by GitLab**
-  - Rating: 
+  - Rating: +
   - Strengths:
-    - 
+    - Tool provides various features to read and write GitLab data, including private repositories.
+    - User can configure tool with restricted read-only toolset
   - Weaknesses:
-    - 
+    - None
 
 - **GitLab MCP by zereight**
   - Rating: ++
   - Strengths:
-    - 
+    - Tool provides various features to read and write GitLab data, including private repositories.
+    - Tool provides read-only mode.
   - Weaknesses:
-    - 
+    - None
 
 ### Latency Optimization
 
 - **GitHub MCP by GitHub**
-  - Rating:
+  - Rating: +
   - Strengths:
-    - 
+    - Read-only mode with smaller toolset improves latency
   - Weaknesses:
-    - 
+    - Overhead due to MCP layer
 
 - **GitLab MCP by GitLab**
-  - Rating: 
+  - Rating: +
   - Strengths:
-    - 
+    - Manually configured read-only toolset improves latency
   - Weaknesses:
-    - 
+    - Overhead due to MCP layer
 
 - **GitLab MCP by zereight**
-  - Rating: ++
+  - Rating: +
   - Strengths:
-    - 
+    - Read-only mode with smaller toolset improves latency
   - Weaknesses:
-    - 
+    - Overhead due to MCP layer
 
 ### Not Share User Data
 
 - **GitHub MCP by GitHub**
-  - Rating:
+  - Rating: --
   - Strengths:
-    - 
+    - None
   - Weaknesses:
-    - 
+    - Authentication via personal access token or OAuth. Anonymous access not possible.
 
 - **GitLab MCP by GitLab**
-  - Rating: 
+  - Rating: --
   - Strengths:
-    - 
+    - None
   - Weaknesses:
-    - 
+    - Authentication via OAuth. Anonymous access not possible.
 
 - **GitLab MCP by zereight**
-  - Rating: ++
+  - Rating: --
   - Strengths:
-    - 
+    - None
   - Weaknesses:
-    - 
+    - Authentication via personal access token or OAuth. Anonymous access not possible.
 
 ### Implementation Effort
 
 - **GitHub MCP by GitHub**
-  - Rating:
+  - Rating: +
   - Strengths:
-    - 
+    - Tool enables authentication via a personal access token, which works well for the desktop app of OpenCode and Kilo Code, in comparison to OAuth authentication.
   - Weaknesses:
-    - 
+    - Cumbersome process to set up a Docker container
+    - User must store personal access token in a separate file. Environment variable does not seem to be possible.
 
 - **GitLab MCP by GitLab**
   - Rating: --
@@ -106,28 +110,29 @@
   - Strengths:
     - Tool can access the EuXFEL GitLab server because it simply wraps the GitLab API with an MCP layer. It does not require additional server features, such as GitLab Duo.
     - Tool enables authentication via a personal access token, which works well for the desktop app of OpenCode and Kilo Code, in comparison to OAuth authentication.
+    - User can simply set up a Docker container.
   - Weaknesses:
-    - 
+    - None
 
 ### Component Replacement Effort
 
 - **GitHub MCP by GitHub**
-  - Rating:
+  - Rating: ++
   - Strengths:
-    - 
+    - User could quickly switch to another GitHub MCP server.
   - Weaknesses:
-    - 
+    - None
 
 - **GitLab MCP by GitLab**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - User could quickly switch to another GitLab MCP server.
   - Weaknesses:
-    - 
+    - None
 
 - **GitLab MCP by zereight**
   - Rating: ++
   - Strengths:
-    - 
+    - User could quickly switch to another GitLab MCP server.
   - Weaknesses:
-    - 
+    - None
