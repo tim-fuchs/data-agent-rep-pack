@@ -35,8 +35,8 @@ The agentic AI system shall ...
 | Recommend using a version control system [^6]                              |         | X     |       |     |               |
 | Optimize latency [^7]                                                      | X       | X     | X     | X   | X             |
 | Not share user data with third parties [^8]                                | X       | X     | X     | X   | X             |
-| Minimize implementation effort                                             | X       | X     | X     | X   | X             |
-| Minimize effort required to replace components [^9]                        | X       | X     | X     | X   | X             |
+| Require minimal implementation effort (NEW)                                | X       | X     | X     | X   | X             |
+| Require minimal effort to replace components (NEW) [^9]                    | X       | X     | X     | X   | X             |
 
 - [^1] E.g. explain/insert/modify/delete cells, create entire notebooks
 - [^2] E.g., file deletion or code execution on HPC cluster
