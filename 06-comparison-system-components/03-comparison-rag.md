@@ -3,12 +3,12 @@
 ## Candidates
 
 - [Grounded Docs](https://grounded.tools)
-  - What: Open-source, ready-to-use RAG service with main focus on MCP connectivity
   - Version: 2.2.1
+  - What: Open-source, ready-to-use RAG service with main focus on MCP connectivity
 
 - [OpenRAG](https://www.openr.ag)
-  - What: open-source, ready-to-use RAG service with additional [MCP connecitivity](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp)
   - Version: 0.4.1
+  - What: open-source, ready-to-use RAG service with additional [MCP connecitivity](https://github.com/langflow-ai/openrag/tree/main/sdks/mcp)
 
 - **Irrelevant candidates**
   - [Context7](https://context7.com)
