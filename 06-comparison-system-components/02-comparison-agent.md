@@ -501,3 +501,7 @@
     - Tool (in theory) supports multiple agents through ACP and custom personas.
   - Weaknesses:
     - User cannot exchange agents due to restricted server environment.
+
+## References
+
+- [Blog post](https://docs.bswen.com/blog/2026-03-14-kilo-roocode-opencode-comparison) comparing Roo Code, OpenCode, and Kilo Code

@@ -2,7 +2,7 @@
 
 - New vision for the agentic AI system:
   - Users operate their favorite AI agent on their computer (Kilo Code, OpenCode, Claude Code, etc.).
-  - EuXFEL hosts various MCP servers that provide connections to Jupyter Lab, a RAG system, GitHub, GitLab, Zulip, etc.
+  - EuXFEL hosts various [MCP](https://modelcontextprotocol.io) servers that provide connections to Jupyter Lab, a RAG system, GitHub, GitLab, [Zulip](https://zulip.com), etc.
   - Users can flexibly connect their agent to the servers (plug-and-play).
 
 - Notes about best candidates:
@@ -105,26 +105,6 @@ The agentic AI system shall ...
 
 ## References
 
-<details><summary>Details</summary>
-
-## Official Docs of Candidates
-
-- [OpenCode](https://opencode.ai)
-- [Kilo Code](https://kilo.ai)
-- [goose](https://goose-docs.ai)
-- [DeepAgents](https://www.langchain.com/deep-agents)
-- [DeepAgents tutorial by LangChain Academy](https://academy.langchain.com/courses/deep-agents-with-langgraph)
-- [Jupyter MCP](https://jupyter-mcp-server.datalayer.tech)
-- [ZulipChat MCP](https://github.com/akougkas/zulipchat-mcp/tree/main)
-- [Grounded Docs MCP](https://grounded.tools)
-
-### Miscellaneous
-
-- [Blog post](https://docs.bswen.com/blog/2026-03-14-kilo-roocode-opencode-comparison) comparing Roo Code, OpenCode, and Kilo Code
-- [Zulip](https://zulip.com)
-- [MCP protocol](https://modelcontextprotocol.io)
 - [Blog post](https://www.katonic.ai/blog/agent-protocols) comparing the protocols MCP, A2A, ANP, ACP, and AGORA
 - [FastMCP](https://gofastmcp.com)
 - [FastMCP tutorial](https://www.freecodecamp.org/news/how-to-build-your-first-mcp-server-using-fastmcp) by freeCodeCamp
-
-</details>
