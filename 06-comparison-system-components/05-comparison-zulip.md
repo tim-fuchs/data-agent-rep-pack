@@ -15,82 +15,83 @@
 ### Report Conversations to EuXFEL Staff
 
 - **ZulipChat MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - Agent can send messages to Zulip via Zulip bot.
   - Weaknesses:
-    - 
+    - None
 
 - **Zulip MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - Agent can send messages to Zulip via Zulip bot.
   - Weaknesses:
-    - 
+    - None
 
 ### Latency Optimization
 
 - **ZulipChat MCP**
-  - Rating: 
+  - Rating: +
   - Strengths:
-    - 
+    - Nothing relevant
   - Weaknesses:
-    - 
+    - Overhead due to MCP layer
 
 - **Zulip MCP**
-  - Rating: 
+  - Rating: +
   - Strengths:
-    - 
+    - Nothing relevant
   - Weaknesses:
-    - 
+    - Overhead due to MCP layer
 
 ### Not Share User Data
 
 - **ZulipChat MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - No telemetry, according to the docs
   - Weaknesses:
-    - 
+    - None
 
 - **Zulip MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - No telemetry, according to the docs
   - Weaknesses:
-    - 
+    - None
 
 ### Implementation Effort
 
 - **ZulipChat MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - Tool provides comprehensive docs and setup wizard
+    - Quick setup
   - Weaknesses:
-    - 
+    - None
 
 - **Zulip MCP**
-  - Rating: 
+  - Rating: -
   - Strengths:
-    - 
+    - Quick setup
   - Weaknesses:
-    - 
+    - Maintainers do not actively maintain the project
 
 ### Component Replacement Effort
 
 - **ZulipChat MCP**
-  - Rating: 
+  - Rating: -
   - Strengths:
-    - 
+    - User can quickly replace this tool with another MCP server.
   - Weaknesses:
-    - 
+    - None
 
 - **Zulip MCP**
-  - Rating: 
+  - Rating: ++
   - Strengths:
-    - 
+    - User can quickly replace this tool with another MCP server.
   - Weaknesses:
-    - 
+    - None
 
 ### References
 
