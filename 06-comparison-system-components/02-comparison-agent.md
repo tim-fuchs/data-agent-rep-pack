@@ -331,7 +331,7 @@
   - Weaknesses:
     - User must instruct the agent every session.
 
-### Support Responses with Citations, Confidence Levels, or Verification Steps
+### Provide Citations, Confidence Levels, and Verification Steps
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: +

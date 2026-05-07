@@ -15,28 +15,28 @@
 
 The agentic AI system shall ...
 
-| Requirement                                                                | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
-| -------------------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
-| Access the remote Jupyter Lab server                                       | X       | X     |       |     |               |
-| Interact with notebook content [^1]                                        | X       | X     |       |     |               |
-| Generate code optimized for high-performance computing                     |         | X     |       |     |               |
-| Test code for correctness and safety risks                                 |         | X     |       |     |               |
-| Request user feedback to guide and improve solutions                       |         | X     |       |     |               |
-| Adapt code style and explanations to the user's expectations               |         | X     |       |     |               |
-| Generate code documentation on project- and code-level                     |         | X     |       |     |               |
-| Request human approval for sensitive actions [^2]                          |         | X     |       |     |               |
-| Access relevant context information within a project [^3]                  |         | X     |       |     |               |
-| Decompose a request into verifiable goals                                  |         | X     |       |     |               |
-| Work with up-to-date information [^4]                                      |         | X     |       | X   | X             |
-| Close tasks with narrative summaries and recommended next steps            |         | X     |       |     |               |
-| Support responses with citations, confidence levels, or verification steps |         | X     |       |     |               |
-| Report conversations between user and agent to EuXFEL staff [^5]           |         | X     | X     |     |               |
-| Assist in drafting scientific manuscripts                                  |         | X     |       |     |               |
-| Recommend using a version control system [^6]                              |         | X     |       |     |               |
-| Optimize latency [^7]                                                      | X       | X     | X     | X   | X             |
-| Not share user data with third parties [^8]                                | X       | X     | X     | X   | X             |
-| Require minimal implementation effort (NEW)                                | X       | X     | X     | X   | X             |
-| Require minimal effort to replace components (NEW) [^9]                    | X       | X     | X     | X   | X             |
+| Requirement                                                      | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
+| ---------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
+| Access the remote Jupyter Lab server                             | X       | X     |       |     |               |
+| Interact with notebook content [^1]                              | X       | X     |       |     |               |
+| Generate code optimized for high-performance computing           |         | X     |       |     |               |
+| Test code for correctness and safety risks                       |         | X     |       |     |               |
+| Request user feedback to guide and improve solutions             |         | X     |       |     |               |
+| Adapt code style and explanations to the user's expectations     |         | X     |       |     |               |
+| Generate code documentation on project- and code-level           |         | X     |       |     |               |
+| Request human approval for sensitive actions [^2]                |         | X     |       |     |               |
+| Access relevant context information within a project [^3]        |         | X     |       |     |               |
+| Decompose a request into verifiable goals                        |         | X     |       |     |               |
+| Work with up-to-date information [^4]                            |         | X     |       | X   | X             |
+| Close tasks with narrative summaries and recommended next steps  |         | X     |       |     |               |
+| Provide citations, confidence levels, and verification steps     |         | X     |       |     |               |
+| Report conversations between user and agent to EuXFEL staff [^5] |         | X     | X     |     |               |
+| Assist in drafting scientific manuscripts                        |         | X     |       |     |               |
+| Recommend using a version control system [^6]                    |         | X     |       |     |               |
+| Optimize latency [^7]                                            | X       | X     | X     | X   | X             |
+| Not share user data with third parties [^8]                      | X       | X     | X     | X   | X             |
+| Require minimal implementation effort (NEW)                      | X       | X     | X     | X   | X             |
+| Require minimal effort to replace components (NEW) [^9]          | X       | X     | X     | X   | X             |
 
 - [^1] E.g. explain/insert/modify/delete cells, create entire notebooks
 - [^2] E.g., file deletion or code execution on HPC cluster

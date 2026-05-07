@@ -136,7 +136,7 @@ Examples:
   - Files touched
   - Next steps
 
-### Support Responses with Citations, Confidence Levels, or Verification Steps
+### Provide Citations, Confidence Levels, and Verification Steps
 
 - ALWAYS provide at least one full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, or `webfetch`.
 - ALWAYS check if the URLs are still available (HTTP response `200`).
