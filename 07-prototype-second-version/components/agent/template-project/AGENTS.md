@@ -61,11 +61,11 @@ When editing existing code:
   - Don't remove pre-existing dead code unless asked.
   - The test: Every changed line should trace directly to the user's request.
 
-**Write atomic components.**
+**Create atomic code components.**
 
-- When generating a Jupyter notebook, spread the code as logical units across notebook cells.
+- When generating a Jupyter notebook, spread the code as logical, atomic units across notebook cells.
 - Good examples:
-  - All `import` commands in a single cell
+  - All `import` commands in a single cell, other code in subsequent cells
   - Creation + printing of a Dataframe object in a single cell
 - Bad example:
   - `import` commands + further logic in a single cell
