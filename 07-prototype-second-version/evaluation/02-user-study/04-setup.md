@@ -10,7 +10,7 @@
    - Name: `Local Maxwell`
    - URL: `http://localhost:8888/lab?token=your-secure-jlab-token`
 
-Kilo Code version: `7.2.20`
+Kilo Code version: `7.2.10`
 
 ## 2. OpenCode + Remote VS Code
 
