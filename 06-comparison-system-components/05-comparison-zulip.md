@@ -3,12 +3,12 @@
 ## Candidates
 
 - **[ZulipChat MCP](https://github.com/akougkas/zulipchat-mcp)**
-  - Version: 
-  - What: 
+  - Version: 0.6.2
+  - What: ready-to-use MCP server providing connectivity to Zulip
 
 - **[Zulip MCP](https://github.com/Monadical-SAS/zulip-mcp)**
-  - Version: 
-  - What: 
+  - Version: no version number stated (date: 2026-03)
+  - What: ready-to-use MCP server providing connectivity to Zulip
 
 ## Requirements Analysis
 
