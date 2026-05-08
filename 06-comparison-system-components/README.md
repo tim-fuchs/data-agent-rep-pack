@@ -56,9 +56,9 @@ The agentic AI system shall ...
 - [GitHub and GitLab integration](04-comparison-git.md): **GitHub MCP (by GitHub) + GitLab MCP (by zereight)**
 - [Zulip integration](05-comparison-zulip.md): **ZulipChat MCP**
 
-## Possible User Interaction Channels
+## Possible Combinations of User Interfaces
 
-| Interaction Channel                 | Example                           |
+| Interface                           | Example                           |
 | ----------------------------------- | --------------------------------- |
 | Browser tab                         | Jupyter Lab + Jupyter AI          |
 | Browser tab + IDE extension         | Jupyter Lab + Roo Code            |
@@ -72,7 +72,7 @@ The agentic AI system shall ...
 | IDE + browser tab (desktop)         | VS Code + OpenCode (web app)      |
 | IDE + browser tab (mobile)          | VS Code + OpenCode (web app)      |
 
-... + MCP servers (Jupyter, Zulip, RAG, GitHub, GitLab) + nono (local machine and Jupyter Lab server)
+... + MCP servers (Jupyter, Zulip, RAG, GitHub, GitLab)
 
 ## Workflow Automation as Alternative Approach to User-Installed Agentic AI System
 
