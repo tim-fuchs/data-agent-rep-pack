@@ -50,8 +50,8 @@ The agentic AI system shall ...
 
 ## Comparison of Candidates and Selected Candidates
 
-- [Jupyter Lab integration](01-comparison-jupyter.md): **Jupyter Lab API**
-- [Agentic AI tool](02-comparison-agent.md): **Kilo Code**
+- [Agentic AI tool](01-comparison-agent.md): **Kilo Code**
+- [HPC integration](02-comparison-hpc.md): **Jupyter Lab API**
 - [RAG integration](03-comparison-rag.md): **Grounded Docs**
 - [GitHub and GitLab integration](04-comparison-git.md): **GitHub MCP (by GitHub) + GitLab MCP (by zereight)**
 - [Zulip integration](05-comparison-zulip.md): **ZulipChat MCP**

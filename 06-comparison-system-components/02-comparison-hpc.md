@@ -1,4 +1,4 @@
-# Comparison of Candidates for Interacting with Jupyter Lab
+# Comparison of Candidates for Connecting to HPC Cluster
 
 ## Notes
 

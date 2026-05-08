@@ -75,7 +75,7 @@
 
 - **Alternative candidates to Kilo Code, OpenCode, goose, Roo Code, Jupyter AI**
   - What do they have in common: ready-to-use, open-source, login-free, model-agnostic agentic AI system ("agent harness")
-  - Examples: [Roo Code](https://roocode.com), [Cline](https://cline.bot), [Tabby](https://www.tabbyml.com)
+  - Examples: [Cline](https://cline.bot), [Tabby](https://www.tabbyml.com)
   - There are further tools available. The [Agent Skills website](https://agentskills.io/clients) lists many of them.
 
 - **Alternative candidates to DeepAgents**
