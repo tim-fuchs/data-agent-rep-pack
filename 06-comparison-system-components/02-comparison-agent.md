@@ -313,7 +313,7 @@
   - Weaknesses:
     - User cannot configure MCP clients on the remote server.
 
-### Close Tasks with Narrative Summaries and Recommended Next Steps
+### Close Task with Narrative Summary and Recommended Steps
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: ++

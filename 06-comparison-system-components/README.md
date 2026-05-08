@@ -28,7 +28,7 @@ The agentic AI system shall ...
 | Access relevant context information within a project [^3]        |         | X     |       |     |               |
 | Decompose a request into verifiable goals                        |         | X     |       |     |               |
 | Work with up-to-date information [^4]                            |         | X     |       | X   | X             |
-| Close tasks with narrative summaries and recommended next steps  |         | X     |       |     |               |
+| Close task with narrative summary and recommended steps          |         | X     |       |     |               |
 | Provide citations, confidence levels, and verification steps     |         | X     |       |     |               |
 | Report conversations between user and agent to EuXFEL staff [^5] |         | X     | X     |     |               |
 | Assist in drafting scientific manuscripts                        |         | X     |       |     |               |

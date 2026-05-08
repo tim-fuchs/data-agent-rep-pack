@@ -128,7 +128,7 @@ Examples:
   4. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
   5. Use the tool `webfetch`.
 
-### Close Tasks with Narrative Summaries and Recommended Next Steps
+### Close Task with Narrative Summary and Recommended Steps
 
 - When you completed an edit, always summarize:
   - What changed
