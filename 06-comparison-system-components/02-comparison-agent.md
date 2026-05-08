@@ -119,7 +119,7 @@
 
 ## Requirements Analysis
 
-### Access Remote HPC Cluster
+### Access HPC Cluster
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: ++
