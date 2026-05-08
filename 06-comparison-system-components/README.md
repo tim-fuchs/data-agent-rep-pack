@@ -17,7 +17,7 @@ The agentic AI system shall ...
 
 | Requirement                                                      | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
 | ---------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
-| Access the remote HPC cluster                                    | X       | X     |       |     |               |
+| Access the high-performance computing cluster                    | X       | X     |       |     |               |
 | Interact with notebook content [^1]                              | X       | X     |       |     |               |
 | Generate code optimized for high-performance computing           |         | X     |       |     |               |
 | Test code for correctness and safety risks                       |         | X     |       |     |               |

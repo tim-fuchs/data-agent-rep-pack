@@ -31,7 +31,7 @@
 
 ## Requirements Analysis
 
-### Access Remote HPC Cluster
+### Access HPC Cluster
 
 - **Jupyter Lab API**
   - Rating: +
