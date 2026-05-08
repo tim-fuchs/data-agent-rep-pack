@@ -74,7 +74,7 @@ This folder contains:
 
 **Agentic AI system shall ...**
 
-**Access the remote Jupyter Lab server**
+**Access the remote HPC cluster**
 
 - [c-q2-01] It is implemented in a non-intrusive way, that is, not interfering with the users’ original notebook and allowing interaction with the AI assistant through a side panel
 - [c-q2-01] we conduct our study in a computational notebook (Jupyter) environment, given its popularity among data scientists

@@ -119,7 +119,7 @@
 
 ## Requirements Analysis
 
-### Access Remote Jupyter Lab Server
+### Access Remote HPC Cluster
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: ++
