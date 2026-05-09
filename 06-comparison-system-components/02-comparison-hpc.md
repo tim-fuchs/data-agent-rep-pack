@@ -80,8 +80,7 @@
   - Strengths:
     - User can use an agentic tool within VS Code to interact with the notebook.
   - Weaknesses:
-    - Agentic tools that start a local server (e.g., to handle background tasks of sub-agents) might not work in the SSH session (e.g., Kilo Code).
-    - Selection of agentic tools is restricted to VS Code extensions.
+    - Selection of agentic tools is restricted to VS Code extensions. Regarding CLI tools, such as OpenCode, user would need to install them first on the HPC cluster, which is problematic.
 
 ### Latency Optimization
 
