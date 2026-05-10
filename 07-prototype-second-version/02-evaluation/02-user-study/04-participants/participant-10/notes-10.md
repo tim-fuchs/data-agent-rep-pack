@@ -4,7 +4,7 @@
 
 What is your job position?
 
-- Group leader (physics background)
+- Group manager (physics background)
 
 How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 

@@ -37,11 +37,10 @@ Present purpose and features of:
   - GitHub MCP
   - GitLab MCP
   - nono
-- Current problem:
-  - I cannot do execute action on the HPC Jupyter Lab server anymore.
-    - VS Code: Access to remote kernels possible, but not executing notebooks a remote kernel.
-    - Jupyter MCP: Can connect to notebook, but cannot access notebook content (read and write).
-  - Possible cause: Landlock recently activated HPC cluster? Inquery DA member about it.
+- Current problem: Jupyter MCP Server not working anymore.
+  - VS Code: Access to remote kernels possible, but not executing notebooks a remote kernel.
+  - Jupyter MCP: Can connect to notebook, but cannot access notebook content (read and write).
+  - Possible cause: flaws in the server configuration
 
 ## Requirements
 
@@ -50,7 +49,7 @@ Present purpose and features of:
 
 ## Further Steps
 
-Hands-on tests:
+**User study:**
 
 - Participants:
   - 2-5 DA members
@@ -58,10 +57,10 @@ Hands-on tests:
 - Duration: 60 min
 - Focus: qualitative insights
 - Setup:
-  - Test on my machine possible (for simplicity and time reasons)
+  - We provide a computer with the configured agentic AI system (for simplicity and time reasons)
   - Alternative: Fresh install on participants' machines using Docker files.
 
-Further optimization options:
+**Further optimization options:**
 
 - Ingesting and retrieving entire templates of Jupyter notebooks possible with a specific MCP tool?
 - Ingesting Alfresco wiki with Grounded Docs possible?

@@ -4,7 +4,7 @@
 
 What is your job position?
 
-- Experimentalist + Data Scientists (physics background)
+- Experimentalist + data scientist (physics background)
 
 How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 

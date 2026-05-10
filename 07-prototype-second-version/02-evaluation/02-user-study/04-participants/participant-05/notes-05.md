@@ -18,7 +18,7 @@ With what AI assistants have you worked before?
 
 - Claude
 - Claude Code
-- Copilot
+- GitHub Copilot
 - ChatGPT
 - Mistral
 

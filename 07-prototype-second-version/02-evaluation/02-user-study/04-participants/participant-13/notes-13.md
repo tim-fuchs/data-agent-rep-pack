@@ -17,7 +17,7 @@ How often do you use generative AI (e.g., ChatGPT, Claude Code)?
 With what AI assistants have you worked before?
 
 - ChatGPT
-- Image generator
+- Various image generators
 
 How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 

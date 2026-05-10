@@ -109,7 +109,6 @@ What features do you miss:
 
 ### Improvement Notes
 
-- Work on another SSH solution that enables agent to access the remote kernel.
 - Add [EXtra library](https://extra.readthedocs.io/en/latest/) to RAG indexing script.
 - Update AGENTS.md:
   - Agent should **always** request to git-commit after completing an edit.
