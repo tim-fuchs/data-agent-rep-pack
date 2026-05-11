@@ -81,7 +81,7 @@ This folder contains:
 - [c-q5-12] The wizard acted as the backend of an AI assistant, carefully crafting and timing suggestions to analysts working through a data analysis task in a customized JupyterLab notebook.
 - [c-q2-06] The design space encompasses interface locations ranging from ambient text-based suggestions to targeted cell-based or side-panel approaches, reflecting different trade-offs between discoverability, obtrusiveness, and user control. [...] It is implemented in a non-intrusive way, that is, not interfering with the users’ original notebook
 
-**Interact with notebook content**
+**Interact with content of computational notebook**
 
 - [c-q2-01] The user can interact with the code recommendation using the following actions: *accept* the recommendation, *reject* the recommendation, *edit* the recommendation, and *save* the recommendation for later use.
 - [c-q2-01] they can insert it into the cell with a click of a button

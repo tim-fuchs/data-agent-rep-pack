@@ -74,7 +74,7 @@
 | - Coding: Agent asks about Jupyter kernel or Python environment for code execution     | 10               |
 | - Coding: Less defensive coding, more minimalistic code with error propagation         | 5,10             |
 | - Reporting: Agent consistently requests to report conversation to staff               | 6                |
-| - Report: Also enable reporting when agent has not generated code                      | 7                |
+| - Reporting: Also enable reporting when agent has not generated code                   | 7                |
 
 ## Positive Notes
 
@@ -86,8 +86,8 @@
 | - Retrieval: Quality of documentation retrieval       | 1,2,3,4,5,12,13 |
 | - Retrieval: Availability of citations                | 2,7             |
 | - Retrieval: No hallucinations                        | 7               |
-| - Reporting: Existence of reporting feature           | 1,2,3,4,5,10    |
 | - Coding: Code execution on HPC cluster possible      | 9               |
+| - Reporting: Existence of reporting feature           | 1,2,3,4,5,10    |
 
 ## Open Improvement Potentials
 
