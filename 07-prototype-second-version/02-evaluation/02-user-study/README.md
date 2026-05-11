@@ -75,9 +75,6 @@
 | - Coding: Less defensive coding, more minimalistic code with error propagation         | 5,10             |
 | - Reporting: Agent consistently requests to report conversation to staff               | 6                |
 | - Report: Also enable reporting when agent has not generated code                      | 7                |
-|                                                                                        |                  |
-|                                                                                        |                  |
-|                                                                                        |                  |
 
 ## Positive Notes
 
@@ -94,151 +91,162 @@
 
 ## Open Improvement Potentials
 
-| Improvement potential                                                                   | Participant |
-| --------------------------------------------------------------------------------------- | ----------- |
-| - Architecture: Agent should support displaying code diffs                              | 6           |
-| - Behavior: Enforce behavior via agent hooks instead of AGENTS.md                       | 5           |
-| - Behavior: Kilo Code asks to but cannot switch from Plan to Code agent                 | 1,2         |
-| - Behavior: Avoid required humal approvals for (fast) read operations                   | 1,3,10      |
-| - Retrieval: Make European XFEL docs agent-ready                                        | 12,13       |
-| - Behavior: Agent should ask clarification questions (e.g., relevant libraries)         | 7           |
-| - Coding: Ask clarification questions for decisions (parameter values, libraries, etc.) | 4,11,12     |
-| - Coding: Add LSPs (e.g., Pylance) to improve code testing                              | 5           |
-| - Coding: More minimalistic, prototyping-focused coding                                 | 5,6         |
-| - Coding: Agent must always display plan and ask for clarifications before coding       | 10,12       |
-| - Report: Evaluate and improve quality of the report structure                          | 1,2,6,7     |
-| - Report: Add a problem-focused reporting feature                                       | 2,4,6       |
-| - Manuscript draft: feature not tested due to lacking time                              | all         |
-|                                                                                         |             |
-|                                                                                         |             |
+| Improvement potential                                                                  | Participant |
+| -------------------------------------------------------------------------------------- | ----------- |
+| - Architecture: Agent should support displaying code diffs                             | 6           |
+| - Behavior: Force behavior via agent hooks instead of AGENTS.md                        | 5           |
+| - Behavior: Kilo Code asks to but cannot switch from Plan to Code agent                | 1,2         |
+| - Behavior: Notebook changes of Kilo Code not visible until user reopens notebook file | 8           |
+| - Behavior: Avoid required humal approvals for (fast) read operations                  | 1,3,10      |
+| - Retrieval: Make European XFEL docs agent-ready                                       | 12,13       |
+| - Retrieval: Inform user about outdated documentation (HTTP status 404)                | -           |
+| - Behavior: Agent should ask clarification questions (e.g., relevant libraries)        | 7           |
+| - Coding: Force spec-driven development                                                | 4,11,12     |
+| - Coding: Add LSPs (e.g., Pylance) to improve code testing                             | 5           |
+| - Coding: More minimalistic, prototyping-focused coding                                | 5,6         |
+| - Coding: Agent must always display plan and ask for clarifications before coding      | 10,12       |
+| - Report: Evaluate and improve quality of the report structure                         | 1,2,6,7     |
+| - Report: Add a problem-focused reporting feature                                      | 2,4,6       |
+| - Manuscript draft: feature not tested due to lacking time                             | all         |
 
 ## Design Recommendations
 
-**System architecture:**
+### System Architecture
 
-- Decide on agent system architecture based on variance of user workflows.
-  - Varying workflows: user-installed agent with flexible agent instructions + deployed MCP servers
-  - Rigid workflows: SaaS to automate workflows
+- Opt for a system architecture based on the variance of user workflows.
+  - Process:
+    - Data analysis processes of different facilities, as well as instruments and experiment types at one facility differ from each other.
+    - Hence, the agent must support a varying number of analysis workflows.
+    - Number of workflows at some facilities might be low and the workflows rigid.
+    - At European XFEL, the number is high and the users with diverse skills and objectives require adaptable workflows.
+  - Solution:
+    - For rigid workflows: decide to develop a SaaS that automates the workflows (e.g., with n8n)
+    - For flexible workflows: decide to recommend a user-installed agentic tool and prepare a basis for further refinement (AGENTS.md, skills, MCP servers)
 
-- Check which features users require before recommending an agentic tool. Examples:
-  - Display code diffs:
-    - Yes: GitHub Copilot
-    - No: Kilo Code
-  - Display token costs:
-    - Yes: Kilo Code
-    - No: OpenCode
-  - Configuration entirely via GUI:
-    - Yes: Kilo Code
-    - No: OpenCode
-  - Various user interfaces:
-    - Yes: OpenCode
-    - No: Roo Code
+- Check a user's tool expectations before recommending an agentic tool.
+  - Problem:
+    - Different users are used to or require different user interfaces (CLI, GUI, IDE extension, experience with specific agents)
+    - Agentic tools are mostly interoperable, but differ in their user interfaces and specific features. Examples:
+      - Displays code diffs:
+        - Yes: GitHub Copilot
+        - No: Kilo Code
+      - Displays token costs:
+        - Yes: Kilo Code
+        - No: OpenCode
+      - Configuration entirely via GUI:
+        - Yes: Kilo Code
+        - No: OpenCode
+      - Provides various user interfaces:
+        - Yes: OpenCode
+        - No: Roo Code
+  - Solution:
+    - Refer to our description for possible combinations of user interfaces, e.g., web browser + standalone agent desktop app.
+    - Provide user with an overview of recommended tools for specific workflows.
 
-**General agent behavior:**
+### General Agent Behavior
 
-- In `AGENTS.md`, instruct agent to reuse specific commands and text quotes.
-  - Otherwise, agent might not execute the commands, respond to a request with a different text, or ignore the instruction entirely.
-  - Reoccuring problems:
-    - No request to use Git init and commit after task completion
-    - No request to close and reopen the edited notebook file to make code changes of agent visible
-    - Varying requests to report conversation to staff (via explicit forms, text-embedded questions, text-embedded information)
-  - Solution: In AGENTS.md, explicit quote what to ask the user + explicit answer options.
+- Use programmatic hooks to force the agent to adhere to behavior (instead of AGENTS.md instructions)
+  - Problem:
+    - Different models and models with different reasoning levels adhere to natural-language instructions differently.
+    - In our study, even the large GPT-5.3-Codex model ignored some of our instructions.
+    - Examples that reoccured multiple times during user study:
+      - Agent does not request to create Git environment and commit changes after task completion.
+      - Agent does not request user to close and reopen the edited notebook file to make code changes visible to user.
+      - Agent requests to create and send the conversation report, but requests in varying ways:
+        - Explicit form a user must answer (best option)
+        - Text-embedded questions
+        - Text-embedded information (worst option)
+  - Solution:
+    - Recommend user to use an agentic tool that support agent hooks.
+      - OpenCode supports hooks via plugins and even provides a plugin marketplace.
+      - Kilo Code does not support hooks.
+    - You or user can add code plugins to the hooks to ensure that the agent will always execute specific workflows.
+    - If agentic tool does not support hooks, add detailed instructions in AGENTS.md:
+      - Instruct on reoccuring workflows, including single workflow steps and conditions.
+      - Instruct on responding with defined formulations.
+      - Instruct with providing good and bad examples for each workflow.
+      - Instruct on decomposing a request into verifiable goals to provide users with transparency regarding the agent workflow, including any verification steps and results.
+      - Throughout the user study sessions with Kilo Code, we could solve the recurring problems via these instructions.
 
-- Use programatic agent hooks instead of AGENTS.md instructions.
-  - Whenever possible.
-  - Agent will always execute the hooks, but not always consider all AGENTS.md instructions.
-  - Problem: not a common feature yet.
-    - OpenCode supports hooks and related plugins.
-    - Kilo Code does not provide hooks.
+- Configure the required types of human approvals in advance.
+  - Problem:
+    - We started the first session without configuring any auto-approvals.
+    - Therefore, Kilo Code requested approval for any MCP tool call, even for simple read operations.
+    - Participant was annoyed and overwhelmed by the mass of approval actions quickly. At some point, they just approved without even reading the request.
+  - Solution:
+    - Prepare an agent config file (e.g., `kilo.jsonc` or `opencode.json`) that contains auto-approval entries for uncritical actions.
 
-- Preconfigure required human approvals.
-  - By default, agent will request approval for any MCP tool call, even for read operations.
-  - Auto-approve any read operation (at least if they are usually finished quickly).
-  - Otherwise, user can be overwhelmed by the mass of approval actions.
-
-**Knowledge retrieval:**
+### Knowledge Retrieval
 
 - Make your documentation agent-ready.
   - Problem:
-    - Complex documents (e.g., complicated table structures, relevant text in figures) is hard to analyze computationally.
-    - Incomplete API reference documentation let agent speculate about the correct workflow.
-    - Superficial API reference documentation (e.g., reoccuring toy examples) let agent speculate about the correct parameter values.
+    - Complex documents (e.g., complicated table structures, relevant text in figures) are hard to analyze computationally.
+    - Incomplete API reference documentation lets agent speculate about the correct workflow.
+    - Superficial API reference documentation (e.g., reoccuring toy examples) lets agent speculate about the correct parameter values.
   - Solution:
     - Provide *llm.txt* versions of your documentation.
-    - API reference documentation must be available for every library.
+    - API reference documentation must be available for every software library.
     - API reference documentation must provide explanations and useful examples for **each** operation.
 
-- Instruct agent to use specific knowledge sources.
+- Steer the agent toward relevant knowledge sources.
   - Problem:
     - Agent has various knowledge sources available (indexed RAG docs, all public GitHub repos, etc.)
     - Agent might require multiple MCP tool calls to find and retrieve relevant docs.
+    - Agent might use irrelevant docs.
   - Solution:
-    - In AGENTS.md, hint towards relevant documentation:
-      - Use specific RAG docs for known workflows.
-      - Retrieve knowledge from specific GitHub/GitHub repositories (e.g., European XFEL organization on GitHub).
+    - In AGENTS.md, steer agent toward relevant documentation:
+      - Refer to use specific docs indexed in RAG system.
+      - Refer to specific GitHub/GitHub repositories (e.g., of European XFEL organization on GitHub).
 
-- Instruct order of knowledge sources:
+- Force the order of knowledge sources for knowledge retrieval.
   - Problem:
-    - Instead of quickly retrieving relevant docs from RAG system, agent might conduct complicated web search.
+    - Agent might conduct complicated web search, instead of quickly retrieving relevant docs from RAG system.
   - Solution:
-    - In AGENTS.md, enforce order of knowledge sources:
+    - In AGENTS.md, force the order of knowledge sources for knowledge retrieval.
+    - We forced the following order:
       1. Available context within current project
       2. RAG system
       3. GitLab
       4. GitHub
       5. Internet
 
-- Enable customization of relevant documentation.
+- Enable a user to customize knowledge retrieval workflow.
   - Problem:
-    - You might have preconfigured a set of relevant documentation.
-      - Indexing docs in RAG system
-      - Steering to relevant docs in AGENTS.md
-    - User needs to steer agent towards further docs (websites, private files, publications).
-    - Problem occurs especially for varying use cases for which admin might not be able to recognize and add all relevant docs upfront.
-    - In 8 of our sessions, users added further docs to the RAG system.
+    - You might have configured a workflow for knowledge retrieval:
+      - Various docs in RAG system
+      - Instructions in AGENTS.md to define the workflow.
+    - However, user might need to steer agent towards further docs (websites, private files, publications).
+      - Problem occurs especially for a high number of workflows or workflow variants.
+      - Admin might not be able to recognize and add all relevant docs upfront.
+      - Example: In 8 of 13 user study sessions, users added further docs to the RAG system.
   - Solution:
-    - Allow user to index further docs to RAG system.
-    - Allow user to customize AGENTS.md.
+    - Make the interface of the RAG system available to the user.
+    - Allow user to add further documents to the RAG system, or to add their own RAG system to the agentic system.
+    - Allow user to customize retrieval workflow (e.g., via local AGENTS.md or agent hooks).
 
-- Use small LLM with medium/high reasoning level for retrieval tasks.
+- Use a small LLM with medium/high reasoning level for knowledge retrieval.
   - Problem:
-    - Various knowledge sources require many MCP calls
-    - Each call costs tokens (and money)
-    - Expensive for large LLMs (e.g., GPT-5.4)
+    - Existence of various knowledge sources can lead to many MCP tool calls.
+    - Each call requires tokens (and costs money).
+    - This leads to expensive sessions when using a large LLM (e.g., GPT-5.4).
   - Solution:
-    - Use small LLM (GPT-5.4-mini) with medium/high reasoning level
-    - Cheap operations
-    - Reasoning leads to good results
+    - Use a small LLM (GPT-5.4-mini) with medium/high reasoning level.
+    - The small LLM is much cheaper.
+    - Reasoning process usually leads to good results.
     - Also, small model could have lower latency than large model.
 
-- Enforce citations.
+### Code Generation
 
-- Double-check availability of retrieved and cited resources.
-  - Problem:
-    - The documentation chunks that the RAG system retrieved might be related to a URL that is not available in the internet anymore.
-  - Solution:
-    - Instruct agent to check the HTTP status of the URL (200 vs. 404).
-    - If 404, search for alternative knowledge resources (e.g., via webfetch).
-
-**Code generation:**
-
-- Enforce spec-driven development.
+- Force spec-driven development.
   - Problem:
     - Code agent might use wrong/no library to implement user request.
     - Code agent might select wrong/unclear parameter values for code operations.
+    - User must request corrections or additional explanations.
   - Solution:
-    - Recommend user to use Plan agent to brainstorm a solution before switching to Code agent.
-    - Enforce agent to display its implementation plan and ask clarification questions before starting to code (even if user has not used Plan agent).
+    - Recommend the user to use the Plan agent to brainstorm a solution before switching to the Code agent.
+    - Force the agent to always display its implementation plan and to ask clarification questions before starting to code, even if the user has not used Plan agent.
 
-- Use large LLM with low/medium reasoning level for coding tasks.
-  - Problem (observations from using GPT-5.4-mini with medium reasoning):
-    - Agent calls various MCP tools for each small change request (long latency).
-    - Agent does not adhere to instructions about reusing existing libraries.
-  - Solution (switching to GPT-5.4 with medium reasoning):
-    - Agent calls less MCP tools (short latency)
-    - Agent adheres to reusing existing libraries.
-
-- Enforce clarification question on execution environment.
+- Force a clarification question regarding the execution environment.
   - Problem:
     - By default, agent will execute code in sandbox, not in real environment.
     - In principle, availability of executing code in agent sandbox is a great feature for safety and latency.
@@ -248,28 +256,34 @@
     - We added explicit instructions forbidding the agent to use the internal sandbox, and using the real environment instead.
     - We instructed the agent to ask for the execution environment instead of selecting any available kernel or environment itself.
 
-- Instruct the expected code structure.
-  - By default, agent often put all code into a single notebook cell.
-  - This included import commands and long-running analysis steps, as well as plotting commands.
-  - For notebooks, atomic cell structure required (separate cells for import, analysis, plotting).
-
-- Instruct to propagate errors, and forbid defensive coding.
-  - Agents create complicated code structures to avoid runtime errors.
-  - This includes hard-coding default values of expected environment variables (that might contain sensitive data).
-  - This does not reflect human-like prototyping but focuses on building production-ready code.
-  - You must instruct agent explictly to avoid such defensive coding and, instead, to implement error messages when expected data is unavailable during runtime.
-
-- Instruct to create minimalistic, prototyping-focused code.
-  - User expectation:
-    - First, create a simple solution as proof of concept.
-    - Later, create production-ready code (with error handling, refactoring, etc.)
+- Force iterative prototyping of minimal solutions.
   - Problem:
-    - Agent tries to create production-ready code from the start.
-    - This results in a lot of code overwhelming the user.
+    - User expectation:
+      - First, create a simple solution as proof of concept.
+      - Later, create production-ready code (with error handling, default values, etc.)
+    - Default agent behavior:
+      - Create production-ready code as response to first user request.
+      - This results in a lot of code that is overwhelming the user and mismatches their expectations.
   - Solution:
-    - Use and improve the [Andrej Karparthy Skills](https://github.com/forrestchang/andrej-karpathy-skills) instructions.
-      - We reused the instructions in the AGENTS.md from the first session.
-      - Agent consistently considered some instructions that had very explicit examples, e.g., for goal-driven task execution.
-      - However, Agent did not fulfill the simplicity-focused instructions.
-    - Make vague instructions more explicit.
-      - Always add good and bad examples.
+    - Instruct agent to deliver minimal solution first. Provide production-ready code only on explicit demand.
+    - Eventually adopt and adjust the instructions of the [Andrej Karparthy Skills](https://github.com/forrestchang/andrej-karpathy-skills) repository.
+      - In our user study, the agent consistently considered the instructions that provided explicit examples, e.g., for goal-driven task execution.
+      - However, the agent ignored more vague instructions, e.g., instructions focused on simplicity.
+      - If you want to reuse such instructions, ensure and test that they are specific enough.
+
+- Forbid the agent from hard-coding default values for expected environment variables.
+  - Problem:
+    - By default, agent focuses on defensive programming.
+    - Hence, agent creates complicated code structures to avoid any runtime errors.
+    - This included hard-coding default parameter values of expected environment variables, including ports of servers or even sensitive API tokens.
+  - Solution:
+    - Forbid the agent from hard-coding default values for expected environment variables.
+    - Instruct the agent to implement error messages if such environment variables are unavailable.
+
+- Use a large LLM with low/medium reasoning level for code generation.
+  - Problem (our observations from using GPT-5.4-mini with medium reasoning):
+    - Agent invoked various MCP tools for each change request, resulting in high latency.
+    - Agent did not adhere to our instructions regarding the reuse of specific libraries from the European XFEL.
+  - Solution (switching to GPT-5.4 with medium reasoning):
+    - Agent invoked less MCP tools, resulting to shorter latency.
+    - Agent reused European XFEL libraries.

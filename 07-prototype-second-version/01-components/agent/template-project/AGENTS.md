@@ -13,7 +13,7 @@
 
 Always follow the steps in the sections below.
 
-### Optimize Latency
+### Use Concise Language
 
 - At the beginning of the session, activate the skill `/caveman lite` to reduce the length of your responses.
 
@@ -128,6 +128,11 @@ Examples:
   4. Use the MCP server `gitlab-mcp` to retrieve information from internal code repositories of European XFEL.
   5. Use the tool `webfetch`.
 
+### Provide and Verify Citations
+
+- ALWAYS provide at least one full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, or `webfetch`.
+- ALWAYS verify if the URLs are still available with HTTP response `200`. If HTTP response `404`, find and verify alternative citation.
+
 ### Close Task with Narrative Summary and Recommended Steps
 
 - When you completed an edit, always summarize:
@@ -135,11 +140,6 @@ Examples:
   - Why it changed
   - Files touched
   - Next steps
-
-### Provide Citations, Confidence Levels, and Verification Steps
-
-- ALWAYS provide at least one full URL as citation if you answered a prompt via information from `grounded-docs`, `github-mcp`, `gitlab-mcp`, or `webfetch`.
-- ALWAYS check if the URLs are still available (HTTP response `200`).
 
 ### Report Conversations to EuXFEL Staff
 
