@@ -113,7 +113,7 @@
 
 ### System Architecture
 
-- Opt for a system architecture based on the variance of user workflows.
+- Decide on system architecture based on variance of user workflows.
   - Process:
     - Data analysis processes of different facilities, as well as instruments and experiment types at one facility differ from each other.
     - Hence, the agent must support a varying number of analysis workflows.
@@ -123,7 +123,7 @@
     - For rigid workflows: decide to develop a SaaS that automates the workflows (e.g., with n8n)
     - For flexible workflows: decide to recommend a user-installed agentic tool and prepare a basis for further refinement (AGENTS.md, skills, MCP servers)
 
-- Check a user's tool expectations before recommending an agentic tool.
+- Check user's tool expectations before recommending agentic tool.
   - Problem:
     - Different users are used to or require different user interfaces (CLI, GUI, IDE extension, experience with specific agents)
     - Agentic tools are mostly interoperable, but differ in their user interfaces and specific features. Examples:
@@ -145,7 +145,7 @@
 
 ### General Agent Behavior
 
-- Use programmatic hooks to force the agent to adhere to behavior (instead of AGENTS.md instructions)
+- Use programmatic hooks to force the agent to adhere to behavior.
   - Problem:
     - Different models and models with different reasoning levels adhere to natural-language instructions differently.
     - In our study, even the large GPT-5.3-Codex model ignored some of our instructions.
@@ -157,7 +157,7 @@
         - Text-embedded questions
         - Text-embedded information (worst option)
   - Solution:
-    - Recommend user to use an agentic tool that support agent hooks.
+    - Recommend user to use an agentic tool that supports agent hooks (and not just AGENTS.md instructions).
       - OpenCode supports hooks via plugins and even provides a plugin marketplace.
       - Kilo Code does not support hooks.
     - You or user can add code plugins to the hooks to ensure that the agent will always execute specific workflows.
@@ -168,7 +168,7 @@
       - Instruct on decomposing a request into verifiable goals to provide users with transparency regarding the agent workflow, including any verification steps and results.
       - Throughout the user study sessions with Kilo Code, we could solve the recurring problems via these instructions.
 
-- Configure the required types of human approvals in advance.
+- Configure required types of human approvals in advance.
   - Problem:
     - We started the first session without configuring any auto-approvals.
     - Therefore, Kilo Code requested approval for any MCP tool call, even for simple read operations.
@@ -178,7 +178,7 @@
 
 ### Knowledge Retrieval
 
-- Make your documentation agent-ready.
+- Make available documentation agent-ready.
   - Problem:
     - Complex documents (e.g., complicated table structures, relevant text in figures) are hard to analyze computationally.
     - Incomplete API reference documentation lets agent speculate about the correct workflow.
@@ -188,7 +188,7 @@
     - API reference documentation must be available for every software library.
     - API reference documentation must provide explanations and useful examples for **each** operation.
 
-- Steer the agent toward relevant knowledge sources.
+- Steer agent toward relevant knowledge sources.
   - Problem:
     - Agent has various knowledge sources available (indexed RAG docs, all public GitHub repos, etc.)
     - Agent might require multiple MCP tool calls to find and retrieve relevant docs.
@@ -198,7 +198,7 @@
       - Refer to use specific docs indexed in RAG system.
       - Refer to specific GitHub/GitHub repositories (e.g., of European XFEL organization on GitHub).
 
-- Force the order of knowledge sources for knowledge retrieval.
+- Force order of knowledge sources during knowledge retrieval.
   - Problem:
     - Agent might conduct complicated web search, instead of quickly retrieving relevant docs from RAG system.
   - Solution:
@@ -210,7 +210,7 @@
       4. GitHub
       5. Internet
 
-- Enable a user to customize knowledge retrieval workflow.
+- Enable user to customize knowledge retrieval workflow.
   - Problem:
     - You might have configured a workflow for knowledge retrieval:
       - Various docs in RAG system
@@ -224,7 +224,7 @@
     - Allow user to add further documents to the RAG system, or to add their own RAG system to the agentic system.
     - Allow user to customize retrieval workflow (e.g., via local AGENTS.md or agent hooks).
 
-- Use a small LLM with medium/high reasoning level for knowledge retrieval.
+- Use small LLM with medium/high reasoning for knowledge retrieval.
   - Problem:
     - Existence of various knowledge sources can lead to many MCP tool calls.
     - Each call requires tokens (and costs money).
@@ -246,16 +246,6 @@
     - Recommend the user to use the Plan agent to brainstorm a solution before switching to the Code agent.
     - Force the agent to always display its implementation plan and to ask clarification questions before starting to code, even if the user has not used Plan agent.
 
-- Force a clarification question regarding the execution environment.
-  - Problem:
-    - By default, agent will execute code in sandbox, not in real environment.
-    - In principle, availability of executing code in agent sandbox is a great feature for safety and latency.
-    - In our case, sandbox was not practical as data, computational resources, and libraries of HPC cluster were required.
-    - Furthermore, if agent executes code in real environment, it might use the wrong Jupyter kernel or Python environment.
-  - Solution:
-    - We added explicit instructions forbidding the agent to use the internal sandbox, and using the real environment instead.
-    - We instructed the agent to ask for the execution environment instead of selecting any available kernel or environment itself.
-
 - Force iterative prototyping of minimal solutions.
   - Problem:
     - User expectation:
@@ -271,16 +261,26 @@
       - However, the agent ignored more vague instructions, e.g., instructions focused on simplicity.
       - If you want to reuse such instructions, ensure and test that they are specific enough.
 
-- Forbid the agent from hard-coding default values for expected environment variables.
+- Forbid hard-coding default values for mandatory user input.
   - Problem:
     - By default, agent focuses on defensive programming.
     - Hence, agent creates complicated code structures to avoid any runtime errors.
-    - This included hard-coding default parameter values of expected environment variables, including ports of servers or even sensitive API tokens.
+    - This included hard-coding default parameter values of mandatory environment variables, including ports of servers or even sensitive API tokens.
   - Solution:
-    - Forbid the agent from hard-coding default values for expected environment variables.
+    - Forbid the agent from hard-coding default values for mandatory environment variables.
     - Instruct the agent to implement error messages if such environment variables are unavailable.
 
-- Use a large LLM with low/medium reasoning level for code generation.
+- Force request to clarify the execution environment.
+  - Problem:
+    - By default, agent will execute code in sandbox, not in real environment.
+    - In principle, availability of executing code in agent sandbox is a great feature for safety and latency.
+    - In our case, sandbox was not practical as data, computational resources, and libraries of HPC cluster were required.
+    - Furthermore, if agent executes code in real environment, it might use the wrong Jupyter kernel or Python environment.
+  - Solution:
+    - We added explicit instructions forbidding the agent to use the internal sandbox, and using the real environment instead.
+    - We instructed the agent to ask for the execution environment instead of selecting any available kernel or environment itself.
+
+- Use large LLM with low/medium reasoning for code generation.
   - Problem (our observations from using GPT-5.4-mini with medium reasoning):
     - Agent invoked various MCP tools for each change request, resulting in high latency.
     - Agent did not adhere to our instructions regarding the reuse of specific libraries from the European XFEL.
