@@ -105,9 +105,9 @@ What features do you miss:
 
 - Timestamp: 2026-04-24-14:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.3-Codex
 
 ### Improvement Notes

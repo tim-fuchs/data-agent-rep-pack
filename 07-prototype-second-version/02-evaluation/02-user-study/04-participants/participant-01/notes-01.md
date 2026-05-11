@@ -36,20 +36,16 @@ Have you brought your own use case or Jupyter notebook?
 ## RAG Interaction (via Grounded Docs UI)
 
 - Participant added [EXtra docs](https://extra.readthedocs.io/en/latest/).
-- EXtra-data question: **What options to open a run are available for open_run?**
-- Extra-data question: **How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
+- Q (EXtra-data): **What options to open a run are available for open_run?**
+- Q (Extra-data): **How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-What was the plan:
-
-- Question: **I am a new user at EuXFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
-
-What were the results:
-
-- First version of code: okayish. The agent did not know about Pasha library of EuXFEL at first. Used the more generic Pool library instead.
-- Second version: Looked better. Did not work though.
-- Third version: Agent fixed the bug. Solutions worked.
+- Q: **I am a new user at EuXFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
+- A:
+  - First version of code: okayish. The agent did not know about Pasha library of EuXFEL at first. Used the more generic Pool library instead.
+  - Second version: Looked better. Did not work though.
+  - Third version: Agent fixed the bug. Solutions worked.
 
 Further observations:
 
@@ -96,9 +92,9 @@ What features do you miss:
 
 - Timestamp: 2026-04-26-11:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.4-mini
 
 ### Improvement Notes

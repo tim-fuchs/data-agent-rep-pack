@@ -36,19 +36,19 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- EuXFEL user docs: Can you find the documentation for how to use the Slurm
-  - Could not find the result
-- Maxwell: How to use Slurm
-  - Could not find it
+- Q (EuXFEL user docs): Can you find the documentation for how to use Slurm?
+- A: Could not find the result
+- Q (Maxwell): How to use Slurm
+- A: Could not find it
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
 - Q (Ask): How to use Slurm? I have a Python file. I want to submit this as a job.
-- R: Reasonable answer. Provided citation to Maxwell docs.
-- Q: I have a for loop in my code, which has 500 iterations. Each one is independently computable. I want to use Slurm to run multiple loops simultaneously. How to do that? Explain with example.
-- R: Reasonable answer. A bit unncessary extras (common commands).
+- A: Reasonable answer. Provided citation to Maxwell docs.
+- Q: I have a for-loop in my code, which has 500 iterations. Each one is independently computable. I want to use Slurm to run multiple loops simultaneously. How to do that? Explain with example.
+- A: Reasonable answer. A few unncessary extras (common commands).
 - Q (Code): Can you check using my Juptyter kernel how many nodes I have available for use and depending on that tell me how long my array can be.
-- R: Agent first responded that it could not access sinfo via its internal terminal. Participant had to steer it to use the available Jupyter notebook to check this information. Via some back and worth we made it work.
+- A: Agent first responded that it could not access sinfo via its internal terminal. Participant had to steer it to use the available Jupyter notebook and kernel to check this information. Via some back and worth we made it work.
 
 Further observations:
 
@@ -68,11 +68,12 @@ Positive:
 
 Negative:
 
-- RAG system could not find relevant information
+- Nothing
 
 What was unexpected:
 
-- We experienced technical issues with the connection to Maxwell. In fact, the Maxwell distributed a message internally that they urgently need to reboot Maxwell services within the next 1-2 hours.
+- RAG system could not find relevant information. Cause: We re-indexed the Maxwell docs in session 5, but used the URL of a sub-page, not URL of the homepage.
+- We experienced technical issues with the connection to Maxwell. Just after the session, the Maxwell notified us that they urgently had to reboot the Maxwell services within the next 1-2 hours.
 
 What features do you miss:
 
@@ -92,7 +93,7 @@ What features do you miss:
 
 - Timestamp: 2026-04-30-11:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 

@@ -38,8 +38,8 @@ Have you brought your own use case or Jupyter notebook?
 ## RAG Interaction (via Grounded Docs UI)
 
 - Participant added [EXtra-Geom docs](https://extra-geom.readthedocs.io/en/latest/index.html)
-- Question: **Can you provide an example of how to display the geometry of the AGIPD-1M detector?**
-- Response: Correct chunks. But order of chunks was sensitive to the "-".
+- Q (EXtra-geom): **Can you provide an example of how to display the geometry of the AGIPD-1M detector?**
+- A: Correct chunks. But order of chunks was sensitive to the "-".
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
@@ -88,9 +88,9 @@ What features do you miss:
 
 - Timestamp: 2026-04-22-16:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.3-Codex
 
 ### Improvement Notes

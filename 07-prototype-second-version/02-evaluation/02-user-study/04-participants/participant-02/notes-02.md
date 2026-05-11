@@ -37,29 +37,31 @@ Have you brought your own use case or Jupyter notebook?
 ## RAG Interaction (via Grounded Docs UI)
 
 - Participant added [SQS technique-oriented docs](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/).
-- Question to SQS docs: **How can I calibrate data from the eTOF in SQS?**
-- System did not find the correct doc, but a near-duplicate, which provides slightly different (and the wrong) code.
+- Q (SQS docs): **How can I calibrate data from the eTOF in SQS?**
+- A: System did not find the correct doc, but a near-duplicate, which provides slightly different (and the wrong) code.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
 GPT-5.4-mini:
 
-- Question: **How can I calibrate data from the eTOF in SQS?**
-- Answer was conceptually correct, but implemented many lines of code, representing what the EuXFEL library can do with a few lines.
-- After re-prompting, the agent spend a lot of time by calling many MCP tools. It reused a GitHub repo from DESY FLASH (instead of EuXFEL). Answer seemed to be conceptually correct, but was not the EuXFEL version described in the SQS docs.
-- Participant pointed the model towards the SQS docs available via the RAG mcp server. Produced code was correct but just used numpy and not the expected EuXFEL library.
+- Q: **How can I calibrate data from the eTOF in SQS?**
+- A: Answer was conceptually correct, but implemented many lines of code, representing what the EuXFEL library can do with a few lines.
+- Q/A:
+  - After re-prompting, the agent spend a lot of time by calling many MCP tools. It reused a GitHub repo from DESY FLASH (instead of EuXFEL). Answer seemed to be conceptually correct, but was not the EuXFEL version described in the SQS docs.
+  - Participant pointed the model towards the SQS docs available via the RAG mcp server. Produced code was correct but just used numpy and not the expected EuXFEL library.
 
 Qwen3-Next-80B-A3B-Thinking:
 
-- Question: **How could I read data from the MaranaX detector in SCS and optimize its resolution in an HRIXS experiment at European XFEL?**
-- Agent mixed up SCS with SQS. Overall, there was at lot of misunderstood points in the response.
+- Q: **How could I read data from the MaranaX detector in SCS and optimize its resolution in an HRIXS experiment at European XFEL?**
+- A: Agent mixed up SCS with SQS. Overall, there was at lot of misunderstood points in the response.
 
 GPT-5.3-Codex:
 
-- Same SCS question again
-- Solution seemed to be conceptually correct, but lacked code for some steps. Eventually, as the user prompt was not explicitly focused on code.
-- After re-prompting to produce code for the steps, the response contained a lot of code but not from the relevant SCS Toolbox repo from GitLab.
-- After re-prompting to steer the agent towards the SCS toolbox, the response was a good solution using the library. BUT it actually used a fork of the repo, not the original repo from SCS.
+- Q: Same SCS question again
+- A: Solution seemed to be conceptually correct, but lacked code for some steps. Eventually, as the user prompt was not explicitly focused on code.
+- Q/A:
+  - After re-prompting to produce code for the steps, the response contained a lot of code but not from the relevant SCS Toolbox repo from GitLab.
+  - After re-prompting to steer the agent towards the SCS toolbox, the response was a good solution using the library. BUT it actually used a fork of the repo, not the original repo from SCS.
 
 Further observations:
 
@@ -105,9 +107,9 @@ What features do you miss:
 
 - Timestamp: 2026-04-22-14:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.4-mini, Qwen3-Next-80B-A3B-Thinking, GPT-5.3-Codex
 
 ### Improvement Notes

@@ -38,29 +38,29 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- EXtra: Proposal
-- EXtra: What is the pulse energy
+- A (EXtra): Proposal component
+- A (EXtra): What is pulse energy?
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- Q (Ask): How can I get the XFEL pulse energy for proposal 8034
-- R: Good instructions, but low-level code. Agent did not provide high-level XGM component code.
-- Q: I think there is a simpler (less code) way to get this quantity.
-- R: Did not provide the solution
+- Q (Ask): How can I get the XFEL pulse energy for proposal 8034?
+- A: Good instructions, but low-level code. Agent did not provide high-level XGM component code.
+- Q: I think there is a simpler (less complex) way to get this quantity.
+- A: Did not provide the solution
 - Q: Steering towards EXtra library and XGM component
-- R: Found the high-level solution
+- A: Found the high-level solution
 - Q (Plan): Can you generate a notebook in which XGM pulse energy for proposal 7000001 run 2, 3, and 4 is read and plotted
-- R: Did not share the plan and just asked to implement the solution
+- A: Did not share the plan and just asked to implement the solution
 - Q (Code): Start implementation
-- R: A lot of back and worth until agent created a good solution (used the wrong kernel in the beginning, produced a lot of boilerplate code for defensive coding, user fault: proposal 700001 not available).
+- A: A lot of back and worth until agent created a good solution (used the wrong kernel in the beginning, produced a lot of boilerplate code for defensive coding, user fault: proposal 700001 not available).
 - Q: (further coding request for Proposal API)
-- R: Good code
+- A: Good code
 
 Further observations:
 
-- Agent continued to reuse the wrong Python kernel. It should ask the user which kernel it should use instead of assuming a kernel.
-- Agent should not focus on defensive coding but on throwing error messages when information is missing.
+- Agent continued to reuse the wrong Python kernel for code execution. It should ask the user which kernel it should use instead of assuming a kernel.
 - Agent tries to read GPFS data within its sandbox. Instead, it should always use Python files or notebooks connected to the Jupyter kernel to read the data.
+- Agent should not focus on defensive coding but on throwing error messages when information is missing.
 
 ## Reporting
 
@@ -101,9 +101,9 @@ What features do you miss:
 
 ### Technical Details
 
-- Timestamp: 2026-MM-DD-TT:00
+- Timestamp: 2026-04-30-16:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 

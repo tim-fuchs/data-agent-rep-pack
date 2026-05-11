@@ -39,10 +39,10 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Question: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it.
-- Responses: Required info was part of the first chunk.
-- Question: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scan class *not* Scantool.
-- Responses: Required info was part of the first chunk.
+- Q (EXtra-data): I want to use extra.components.scan to analyze an extra_data run that has a motor source in it.
+- A: Required info was part of the first chunk.
+- Q: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scan class *not* Scantool.
+- A: Required info was part of the first chunk.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
@@ -106,9 +106,9 @@ Other:
 
 - Timestamp: 2026-04-24-10:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.3-Codex
 
 ### Improvement Notes

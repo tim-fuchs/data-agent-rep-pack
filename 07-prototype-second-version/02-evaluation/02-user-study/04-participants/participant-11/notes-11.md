@@ -33,18 +33,18 @@ Have you brought your own use case or Jupyter notebook?
 - Load data for a run + run info
 - Check data structure
 - Analyze and plot time of flight info
-- Create coincidence map
+- (Create coincidence map)
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Q (EXtra-data): I want to open a specific remi example run. What do you need as the information to do this?
+- Q (EXtra-data): I want to open a specific REMI example run. What do you need as the information to do this?
 - A: Reasonable when I know the specific run number, but nothing specific to SQS
-- Q (SQS docs): I want to open the remi example data run for N2. I have the proposal and run rumber. Can you give me a specific code to open the run?
+- Q (SQS docs): I want to open the REMI example data run for N2. I have the proposal and run rumber. Can you give me a specific code to open the run?
 - A: Relevant information retrieved
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- Q (Ask): I want to open the remi example data run for N2. I have the proposal and run rumber. Can you give me a specific code to open the run?
+- Q (Ask): I want to open the REMI example data run for N2. I have the proposal and run rumber. Can you give me a specific code to open the run?
 - A: Provided info how to open a run
 - Q: More specific instructions regarding proposal, run, and device
 - Q (Plan + Code): Create notebook with this code
@@ -58,7 +58,7 @@ Have you brought your own use case or Jupyter notebook?
 Further observations:
 
 - Agent provided URL as citation information and checked that URL is still available.
-- In Plan mode, the agent creates the plan but does not print it. It just asks if it now should start with the implementation.
+- In Plan mode, the agent created the plan but does not print it. It just asks if it now should start with the implementation.
 - Agent put everything into one code cell (imports, code, prints).
 
 ## Reporting
@@ -75,7 +75,7 @@ Positive:
 
 Negative:
 
-- Agent should ask more clarification questions before editing code.
+- Agent should ask more clarification questions before creating code.
 
 What was unexpected:
 
@@ -98,7 +98,7 @@ What features do you miss:
 
 - Timestamp: 2026-05-06-11:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 

@@ -36,24 +36,25 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Q: I want to load data with digitizers to correlate it with an XGM. I am curious about which data is loaded when I use toolbox_scs.open(). Can you please walk me through it? Maybe use FastADC (or something similar) for the digitizer and XGM (or SCS SA3).
-- R: Provided a chunk that contained relevant webpage
+- Q (SCS Toolbox): I want to load data with digitizers to correlate it with an XGM. I am curious about which data is loaded when I use toolbox_scs.open(). Can you please walk me through it? Maybe use FastADC (or something similar) for the digitizer and XGM (or SCS SA3).
+- A: Provided a chunk that contained relevant webpage
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
 - Q (Ask): I want to load data with digitizers to correlate it with an XGM. I am curious about which data is loaded when I use toolbox_scs.open(). Can you please walk me through it? Maybe use FastADC (or something similar) for the digitizer and XGM (or SCS SA3).
-- R: Corrected flaw in the question. Provided mostly relevant and correct information. One hint to an EXtra component was incorrect.
+- A: Corrected flaw in the participant's question. Provided mostly relevant and correct information. One hint to an EXtra component was incorrect.
 - Q: Request to correct specific flaws in the agent response
-- R: Improved the information. Quite verbose though.
+- A: Improved the information. Quite verbose though.
 - Q: Create a code snippet
-- R: Created code
+- A: Created code
 - Q (Code): Generate notebook with that code
-- R: Created notebook. Could not test it due to missing toolbox_scs package.
+- A: Created notebook. Could not test it due to missing toolbox_scs package.
 - Q: Install the missing package.
-- R: Worked. Notebook looked good overall. We could not fully test all cells due to missing data in the test datasets.
+- A: Worked. Notebook looked good overall. We could not fully test all cells due to missing data in the test datasets.
 
 - Further observations:
   - Initial prompt was very detailed. This steered the agent to a good direction.
+  - Agent corrected flaw in participant's request.
 
 ## Reporting
 
@@ -93,7 +94,7 @@ What features do you miss:
 
 - Timestamp: 2026-05-07-11:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 

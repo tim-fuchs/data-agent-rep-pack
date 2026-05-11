@@ -36,23 +36,23 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- User docs: Are there any dark images or dark data sets in the example data?
-  - RAG could not answer this question.
+- Q (User docs): Are there any dark images or dark data sets in the example data?
+- A: RAG could not answer this question.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- **Question:** Do you have access to the EuXFEL example data sets and if so, which?
-- **Response:** No, as Kilo Code does not have direct access to Maxwell
-- **Question:** Reuse the proposal in extra.ipynb to check its data sources. AGIPD will be one of them. Create the per-pixel, per memory ...
-- **Response:** Wanted to create an internal Python package that could not access extra-data.
-- **Question:** Create a new notebook instead
-- **Response:** New notebook. One error (index out of range) because it misunderstood the pulse attribute in the dataset. Error was fixed after a few edits by user and agent.
-- **Question:** Are you displaying dark images?
-- **Response:** Agent checked correctly if dark images selected
-- **Question:** Can you create an algorithm to find cosmic muons?
-- **Response:** Yes. Created the algorithm.
-- **Question:** Create an interactive overview plot for the candidates you find.
-- **Response:** Plot contains an error. Was fixed after user asked agent to fix the error. Interactive plot works. BUT: the data does not contain dark images.
+- Q: Do you have access to the EuXFEL example data sets and if so, which?
+- A: No, as Kilo Code did not have direct access to Maxwell
+- Q: Reuse the proposal in extra.ipynb to check its data sources. AGIPD will be one of them. Create the per-pixel, per memory ...
+- A: Wanted to create an internal Python package that could not access extra-data.
+- Q: Create a new notebook instead
+- A: New notebook. One error (index out of range) because it misunderstood the pulse attribute in the dataset. Error was fixed after a few edits by user and agent.
+- Q: Are you displaying dark images?
+- A: Agent checked correctly if dark images selected
+- Q: Can you create an algorithm to find cosmic muons?
+- A: Yes. Created the algorithm.
+- Q: Create an interactive overview plot for the candidates you find.
+- A: Plot contains an error. Was fixed after user asked agent to fix the error. Interactive plot works. BUT: the data does not contain dark images.
 
 Further observations:
 
@@ -102,9 +102,9 @@ What features do you miss:
 
 - Timestamp: 2026-04-29-11:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory + rules directory
-  - Note: Agent could not execute code itself as it is outside the SSH environment and did not have access to the kernel.
+  - Note: Agent could not execute code itself as it missed instructions on how to use remote Jupyter kernel.
 - LLMs: GPT-5.3-Codex
 
 ### Improvement Notes

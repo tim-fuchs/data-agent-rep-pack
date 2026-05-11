@@ -41,14 +41,14 @@ Have you brought your own use case or Jupyter notebook?
 ## Code Generation/Explanation/Improvement (via AI agent)
 
 - Q (Plan): I would like to estimate the (110) diffraction Bragg peak intensity of a P63 crystal deposited on a pixelized detector with pixel size of 200 um, sample to detector distance 12 mm and photon energy of 12 keV. Please compare the numerical ground truth with analytical results.
-- R: Asked clarification question about P63 crystal via form. Afterward, created reasonable plan.
+- A: Asked clarification question about P63 crystal via form. Afterward, created reasonable plan.
 - Q (Code): Start implementation.
-- R: Created a new notebook, executed the cells to test if errors exist. Result was as expected. BUT: it did not use SciPy (as participant expected) but used NumPy instead.
+- A: Created a new notebook, executed the cells to test if errors exist. Result was as expected. BUT: it did not use SciPy (as participant expected) but used NumPy instead.
 - Q: Estimate the peak width in reciprocal space using Gaussian function, select the pixels within the 3-sigma range in the reciprocal space as the detector ROI for numerical ground truth. Reduce the pixel siye to 10 um.
 - Q (Ask): What is the orientation of the crystal and the incident beam direction and the normal direction of the detector?
-- R: Reasonable
+- A: Reasonable
 - Q (Code): Can you align the crystal c axis along the z direction and redo the calculation?
-- R: Reasoning was not fully as expected at first. Further Q+R in Ask mode and then in Code mode followed. Result was overall good.
+- A: Reasoning was not fully as expected at first. Further Q+R in Ask mode and then in Code mode followed. Result was overall good.
 
 Further observations:
 
@@ -95,7 +95,7 @@ What features do you miss:
 
 - Timestamp: 2026-04-29-16:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 
