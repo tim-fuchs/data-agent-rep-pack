@@ -65,12 +65,6 @@ Impression of the feature and report structure:
 - Good level of detail.
 - Agent-own steps at the end were unnecessary (e.g., "Sending the report").
 
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Not tested due to lacking time
-
 ## Verdict
 
 Positive:

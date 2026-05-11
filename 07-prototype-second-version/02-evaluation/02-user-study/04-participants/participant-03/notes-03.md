@@ -43,15 +43,10 @@ Have you brought your own use case or Jupyter notebook?
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-What was the plan:
-
-- Same question as before (AGIPD-1M) + second version for LPD detector
-
-What were the results:
-
-- For the AGIPD version, it entered a placeholder path to a geom file.
-- Since participant brought a geom file for LPD, they created a second version with a LPD geom file.
-- Fully correct solution!
+- Q (Code): Same question as before (AGIPD-1M) + second version for LPD detector
+- A: For the AGIPD version, it entered a placeholder path to a geom file.
+- Q: Since participant brought a geom file for LPD, they requested a second version with a LPD geom file.
+- A: Fully correct solution.
 
 Further observations:
 
@@ -62,12 +57,6 @@ Further observations:
 Impression of the feature and report structure:
 
 - Positive: Would be helpful. Can be helpful later on (even in months).
-
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Not tested due to lacking time
 
 ## Verdict
 
@@ -106,7 +95,7 @@ What features do you miss:
 
 ### Improvement Notes
 
-- Work on another SSH solution that enables agent to access the remote kernel.
+- Work on a solution that enables agent to execute code via the remote kernel.
 - Permit the agent to conduct all read options (clicking `Accept` is a bit annoying).
 - Add [EXtra-Geom docs](https://extra-geom.readthedocs.io/en/latest/index.html) to RAG ingestion script.
 - Be aware of a possible connection issue to SSH when closing the laptop.

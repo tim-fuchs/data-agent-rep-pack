@@ -66,12 +66,6 @@ Impression of the feature and report structure:
 
 - Did not work because no code was generated
 
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Did not test it
-
 ## Verdict
 
 Positive:

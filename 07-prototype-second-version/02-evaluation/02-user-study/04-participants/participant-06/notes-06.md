@@ -70,12 +70,6 @@ Impression of the feature and report structure:
 - Should focus more on the generated data (the algorithm, etc.)
 - Less on small fixes
 
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Not tested
-
 ## Verdict
 
 Positive:

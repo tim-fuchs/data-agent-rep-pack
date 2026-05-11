@@ -38,24 +38,24 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- **Question to EuXFEL user docs:** What Python version is used in the DA environment of 2024?
-- **Response:** Found the right information in the first chunk.
-- **Question to Maxwell docs:** List specific maxwell hardware.
-- **Response:** Could not find the page as it is located on a page not accessible outside the internal network.
+- Q (EuXFEL user docs): What Python version is used in the DA environment of 2024?
+- A: Found the right information in the first chunk.
+- Q (Maxwell docs): List specific maxwell hardware.
+- A: Could not find the page as it is located on a page not accessible outside the internal network.
 - Participant updated the Maxwell docs to include the internal pages.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- **Question:** Add a publication-worthy caption to the plot in the `extra.ipynb`.
-- **Response:** Good
-- **Question:** How to show distribution of photon fluxes across multiple run (not just one)?
-- **Response:** Good. One note was off: You should process one run at a time (but Maxwell can do parallel processing).
-- **Question:** Write code to calculate this.
-- **Response:** Code was somewhat correct. But extremely verbose. Problem was that it created another Python helper file, which could not be instantly executed via the Jupyter kernel. Manual work was necessariry to make this work.
+- Q: Add a publication-worthy caption to the plot in the `extra.ipynb`.
+- A: Good
+- Q: How to show distribution of photon fluxes across multiple runs (not just one)?
+- A: Good. One note was strange: "You should process one run at a time" (but Maxwell is designed for parallel processing).
+- Q: Write code to calculate this.
+- A: Code was somewhat correct. But extremely verbose. Problem was that it created another Python helper file, which could not be instantly executed via the Jupyter kernel. Manual work was necessary to make this work.
 
 Further observations:
 
-- Apparently, 5.3-Codex ignored the AGENTS.md again (for Git commit).
+- Apparently, GPT-5.3-Codex ignored the AGENTS.md again (for Git commit).
 
 ## Reporting
 
@@ -63,12 +63,6 @@ Impression of the feature and report structure:
 
 - Conversation summary can be useful.
 - Summary might be also suited as extended session memory.
-
-## Drafting Manuscript
-
-Impression of the feature:
-
--
 
 ## Verdict
 

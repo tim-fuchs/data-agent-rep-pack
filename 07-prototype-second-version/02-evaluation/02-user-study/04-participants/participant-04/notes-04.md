@@ -41,19 +41,15 @@ Have you brought your own use case or Jupyter notebook?
 
 - Question: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it.
 - Responses: Required info was part of the first chunk.
-- Question: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scann class *not* Scantool.
+- Question: I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scan class *not* Scantool.
 - Responses: Required info was part of the first chunk.
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- **Question:** I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scann class *not* Scantool.
-- **Response:** was good and in code. However, participant found it concerning that it did not provide additional information about the parameter values it chose as default. It should provide more information about replacing the default values.
-- **Question:** Generate a notebook based on this code. Open proposal 700005 run number 4. Look at motor source SXP_LAS_... .
-- **Response:**
-  - Generated notebook looks reasonable.
-  - Unnecessary `run.info` (but the info does not hurt).
-  - Participant could execute the generated notebook. But ran into a problem due to the unavailability of specific motor data in the run.
-  - Agent should not combine so many commands in one cell. Not more than one "edit" command in one cell.
+- Q (Ask): I want to use extra.components.scan to analyze an extra_data run that has a motor source in it. I am interested in the Scann class *not* Scantool.
+- A: Was good and in code. However, participant found it concerning that it did not provide additional information about the parameter values it chose as default. It should provide more information about replacing the default values.
+- Q (Code): Generate a notebook based on this code. Open proposal 700005 run number 4. Look at motor source SXP_LAS_... .
+- A: Generated notebook looks reasonable. Unnecessary `run.info` (but the info does not hurt). Participant could execute the generated notebook. But ran into a problem due to the unavailability of specific motor data in the run. Agent should not combine so many commands in one cell. Not more than one "edit" command in one cell.
 
 - **Potential further question (but not asked):** Find runs that include the required motor data.
 
@@ -74,12 +70,6 @@ Potential value of a problem report:
 
 - Be careful, as DA members might not want to debug any non-DA problems (connection problems to Maxwell, bad prompts to the agent, etc.).
   - Split report into DA-related problems (EXtra, etc.) and agent-related problems.
-
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Not tested due to lacking time
 
 ## Verdict
 

@@ -73,12 +73,6 @@ Impression of the feature and report structure:
 - Interesting. But participant does not have a plan (yet) on how they would react to the report. It is a bit overwhelming.
 - Report should be focused on reporting problems.
 
-## Drafting Manuscript
-
-Impression of the feature:
-
-- Not tested due to lacking time
-
 ## Verdict
 
 Positive:
@@ -118,7 +112,7 @@ What features do you miss:
 
 ### Improvement Notes
 
-- Work on another SSH solution that enables agent to access the remote kernel.
+- Work on a solution that enables agent to execute code via the remote kernel.
 - Use GPT-5.3-Codex instead of GPT-5.4-mini to improve latency and quality of results.
 - Add [SQS technique-oriented docs](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/) to RAG ingestion script.
 - Update AGENTS.md:
