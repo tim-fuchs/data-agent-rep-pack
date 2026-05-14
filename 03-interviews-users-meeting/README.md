@@ -5,7 +5,9 @@
 ### Overview
 
 - Date: 2026-01-27
-- Event: Annual *Users' Meeting* of European XFEL and DESY
+- Event: Poster session of annual *Users' Meeting* of European XFEL and DESY
+  - 1,100 registered participants for the multi-day event
+  - 101 posters
 - Participants:
   - Three users
   - Five staff members (four scientists, one manager)
