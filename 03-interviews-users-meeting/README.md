@@ -1,14 +1,17 @@
-# Debriefing of Interviews During EuXFEL Users' Meeting
+# Interviews with Facility Users and Members
 
-## Summary of Users' Meeting
+## Summary of Interview Results
 
 ### Overview
 
 - Date: 2026-01-27
+- Event: Annual *Users' Meeting* of European XFEL and DESY
 - Participants:
-  - Five staff members (four instrument scientists, one manager)
   - Three users
-- Raw results: see `02-users-meeting-results.md`
+  - Five staff members (four scientists, one manager)
+- Resources:
+  - [Poster](01-users-meeting-poster.pdf)
+  - [Interview results](02-users-meeting-results.md)
 
 ### Problem Identification and Motivation
 

@@ -1,4 +1,4 @@
-# Results of EuXFEL Users' Meeting
+# Results of Interviews During Users' Meeting
 
 ## Questions
 
