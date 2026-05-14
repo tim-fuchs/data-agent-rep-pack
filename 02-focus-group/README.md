@@ -1,12 +1,16 @@
-# Focus Group with Data Analysis Group of EuXFEL
+# Focus Group with Data Analysis Group
 
 Date: 2026-01-15
+
+## Mind Maps
+
+- [Initial version](01-focus-group-initial-mindmap.pdf)
+- [Final version](02-focus-group-final-mindmap.pdf)
 
 ## Participants
 
 - 1 interviewer
-- 13 group members in-person
-- 3 group members via Zoom
+- 16 group members
 
 ## Intro
 
