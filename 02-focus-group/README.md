@@ -26,13 +26,13 @@ Date: 2026-01-15
 ## Tools
 
 - Tools that users use during offline data analysis:
-  - JupyterHub on Maxwell HPC cluster
-  - Python libraries by Data Analysis, e.g., EXtra-data
+  - [Jupyter Hub on Maxwell HPC cluster](https://doi.org/10.1007/s41781-021-00058-y)
+  - Python libraries by Data Analysis, e.g., EXtra-data, [EXtra-xwiz](https://doi.org/10.3390/cryst13111533)
   - Instrument-specific tools, e.g., SCS toolbox
   - Community tools, e.g., CrystFEL
   - EuXFEL tools to collect and visualize experiment metadata:
-    - myMdC
-    - myLog
+    - [myMdC](https://doi.org/10.18429/JACOW-ICALEPCS2025-THCR005)
+    - [myLog](https://doi.org/10.18429/JACOW-ICALEPCS2025-THMG013)
       - Customized Zulip messenger with streams (proposals) and channels (Data Analysis, etc.)
       - Used for any proposal-related communication and metadata taken during the experiment
       - myLog content is also presented on myMDC.
