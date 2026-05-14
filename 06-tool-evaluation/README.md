@@ -1,4 +1,4 @@
-# Comparison of Candidates for Components of the Agentic AI System
+# Evaluation of Solutions for Agentic AI System Components
 
 - New vision for the agentic AI system:
   - Users operate their favorite AI agent on their computer (Kilo Code, OpenCode, Claude Code, etc.).
@@ -6,7 +6,6 @@
   - Users can flexibly connect their agent to the servers (plug-and-play).
 
 - Notes about best candidates:
-  - First principle when selecting among the candidates: **"Reach users where they are. Do not force them to use your environment and workflows."**
   - We finalized this analysis mid April 2026. Keep this date in mind as the landscape of agentic AI tool evolves fast.
   - Many of the agentic AI tools are (partially) interoperable and offer similar features. A possible reason is that the tool developer analyze the strengths and weaknesses of competitors and want users to migrate to their tool.
   - We chose the tools that would fit best to the requirements of our use case and the opinions of the domain experts we interviewed. Most other candidates would be strong alternatives.
@@ -18,43 +17,44 @@ The agentic AI system shall ...
 | Requirement                                                      | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
 | ---------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
 | Access the high-performance computing cluster                    | X       | X     |       |     |               |
-| Interact with notebook content [^1]                              | X       | X     |       |     |               |
+| Optimize latency [^1]                                            | X       | X     | X     | X   | X             |
+| Not share user data with third parties [^2]                      | X       | X     | X     | X   | X             |
+| Require minimal implementation effort                            | X       | X     | X     | X   | X             |
+| Require minimal effort to replace components [^3]                | X       | X     | X     | X   | X             |
+| Interact with notebook content [^4]                              | X       | X     |       |     |               |
+| Decompose a request into verifiable goals                        |         | X     |       |     |               |
+| Request human approval to guide and improve solutions            |         | X     |       |     |               |
+| Close task with narrative summary and recommended steps          |         | X     |       |     |               |
+| Use concise language                                             |         | X     |       |     |               |
+| Retrieve up-to-date information [^5]                             |         | X     |       | X   | X             |
+| Access relevant context information within a project [^6]        |         | X     |       |     |               |
+| Provide citations, confidence levels, and verification steps     |         | X     |       |     |               |
 | Generate code optimized for high-performance computing           |         | X     |       |     |               |
 | Test code for correctness and safety risks                       |         | X     |       |     |               |
-| Request user feedback to guide and improve solutions             |         | X     |       |     |               |
+| Request human approval for sensitive actions [^7]                |         | X     |       |     |               |
 | Adapt code style and explanations to the user's expectations     |         | X     |       |     |               |
 | Generate code documentation on project- and code-level           |         | X     |       |     |               |
-| Request human approval for sensitive actions [^2]                |         | X     |       |     |               |
-| Access relevant context information within a project [^3]        |         | X     |       |     |               |
-| Decompose a request into verifiable goals                        |         | X     |       |     |               |
-| Work with up-to-date information [^4]                            |         | X     |       | X   | X             |
-| Close task with narrative summary and recommended steps          |         | X     |       |     |               |
-| Provide citations, confidence levels, and verification steps     |         | X     |       |     |               |
-| Report conversations between user and agent to EuXFEL staff [^5] |         | X     | X     |     |               |
+| Recommend using a version control system [^8]                    |         | X     |       |     |               |
+| Report conversations between user and agent to EuXFEL staff [^9] |         | X     | X     |     |               |
 | Assist in drafting scientific manuscripts                        |         | X     |       |     |               |
-| Recommend using a version control system [^6]                    |         | X     |       |     |               |
-| Optimize latency [^7]                                            | X       | X     | X     | X   | X             |
-| Not share user data with third parties [^8]                      | X       | X     | X     | X   | X             |
-| Require minimal implementation effort (NEW)                      | X       | X     | X     | X   | X             |
-| Require minimal effort to replace components (NEW) [^9]          | X       | X     | X     | X   | X             |
 
-- [^1] E.g. explain/insert/modify/delete cells, create entire notebooks
-- [^2] E.g., file deletion or code execution on HPC cluster
-- [^3] E.g., project files, previous messages, other agent conversation
-- [^4] E.g., by retrieving external public and private resources
-- [^5] Only on user demand
-- [^6] To ensure code availability and reproducibility of results
-- [^7] E.g., streamed responses, sub-agents executed in parallel, reasoning depth adjusted to task complexity, caching of prompts and responses, token minimization, threads for multiple users
-- [^8] E.g., self-hosted LLMs possible, telemetry control, secured API access
-- [^9] E.g., potential vendor lock, available migration workflows
+- [^1] E.g., streamed responses, sub-agents executed in parallel, reasoning depth adjusted to task complexity, caching of prompts and responses, token minimization, threads for multiple users
+- [^2] E.g., self-hosted LLMs possible, telemetry control, secured API access
+- [^3] E.g., potential vendor lock, available migration workflows
+- [^4] E.g. explain/insert/modify/delete cells, create entire notebooks
+- [^5] E.g., by retrieving external public and private resources
+- [^6] E.g., project files, previous messages, other agent conversation
+- [^7] E.g., file deletion or code execution on HPC cluster
+- [^8] To ensure code availability and reproducibility of results
+- [^9] Only on user demand
 
 ## Comparison of Candidates and Selected Candidates
 
-- [Agentic AI tool](01-comparison-agent.md): **Kilo Code**
-- [HPC integration](02-comparison-hpc.md): **Jupyter Lab API**
-- [RAG integration](03-comparison-rag.md): **Grounded Docs**
-- [GitHub and GitLab integration](04-comparison-git.md): **GitHub MCP (by GitHub) + GitLab MCP (by zereight)**
-- [Zulip integration](05-comparison-zulip.md): **ZulipChat MCP**
+- [Agentic AI tool](01-agent.md): **Kilo Code**
+- [HPC integration](02-hpc.md): **Jupyter Lab API**
+- [RAG integration](03-rag.md): **Grounded Docs**
+- [GitHub and GitLab integration](04-git.md): **GitHub MCP (by GitHub) + GitLab MCP (by zereight)**
+- [Zulip integration](05-zulip.md): **ZulipChat MCP**
 
 ## Possible Combinations of User Interfaces
 

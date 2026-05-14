@@ -1,4 +1,4 @@
-# Comparison of Candidates for Connecting to HPC Cluster
+# Evaluation of Candidates for Connecting to HPC Cluster
 
 ## Notes
 

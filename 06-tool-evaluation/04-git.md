@@ -1,4 +1,4 @@
-# Comparison of Candidates for GitHub and GitLab Integration
+# Evaluation of Candidates for GitHub and GitLab Integration
 
 ## Candidates
 

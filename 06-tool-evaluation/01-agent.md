@@ -1,4 +1,4 @@
-# Comparison of Candidates for the Agent Component
+# Evaluation of Candidates for the Agent Component
 
 ## Notes
 
@@ -501,6 +501,22 @@
     - Tool (in theory) supports multiple agents through ACP and custom personas.
   - Weaknesses:
     - User cannot exchange agents due to restricted server environment.
+
+### Use Concise Language
+
+- **Kilo Code, OpenCode, goose, Roo Code**
+  - Rating: ++
+  - Strengths:
+    - User can configure response behavior, e.g, via Caveman skill.
+  - Weaknesses:
+    - None
+
+- **Jupyter AI**
+  - Rating: +
+  - Strengths:
+    - User can prompt agent to use concise language.
+  - Weaknesses:
+    - User must instruct the agent every session.
 
 ## References
 

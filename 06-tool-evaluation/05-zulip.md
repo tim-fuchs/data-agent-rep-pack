@@ -1,4 +1,4 @@
-# Comparison of Candidates for Integrating Zulip Messenger
+# Evaluation of Candidates for Integrating Zulip Messenger
 
 ## Candidates
 

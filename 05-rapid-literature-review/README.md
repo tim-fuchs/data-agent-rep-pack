@@ -1,6 +1,6 @@
 # Rapid, Multivocal Literature Review
 
-## Research Question for the Review
+## Review Question
 
 What are requirements for an agentic AI system that supports scientists in creating source code for data analysis?
 

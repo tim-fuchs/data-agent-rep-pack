@@ -1,4 +1,4 @@
-# Comparison of Candidates for Integrating Retrieval-Augmented Generation (RAG) Functionality
+# Evaluation of Candidates for Integrating Retrieval-Augmented Generation (RAG) Functionality
 
 ## Candidates
 
