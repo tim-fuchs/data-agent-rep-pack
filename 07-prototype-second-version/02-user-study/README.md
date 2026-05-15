@@ -1,4 +1,8 @@
-# User Study to Evaluate Second Prototype
+# Summary of User Study to Evaluate Second Prototype
+
+## File Overview
+
+// TODO
 
 ## Demographics
 

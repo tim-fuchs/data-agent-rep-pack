@@ -1,6 +1,6 @@
-# Instructions
+# Instructions During User Study Session
 
-## Preparation
+## Session Preparation
 
 1. Check that Docker containers with MCP servers run.
 2. Update template project with notes from previous session (e.g., `kilo.jsonc` and `AGENTS.md`).
@@ -8,7 +8,7 @@
 4. Edit name, e.g., template-project-06.
 5. Open new version in VS Code.
 6. Deactivate jupyter-mcp servers in Kilo Code.
-7. In a terminal session, start SSH connection to Maxwell, load EuXFEL Python module, start Jupyter Lab.
+7. In a terminal session, start SSH connection to Maxwell, load EuXFEL Python module, start Jupyter Lab:
 
    ```bash
     ssh -L 8888:localhost:45123 max-exfl-display.desy.de
@@ -16,8 +16,11 @@
     jupyter lab --no-browser --ip 0.0.0.0 --port 45123 --IdentityProvider.token="your-secure-jlab-token"
    ```
 
-8. Open `extra.ipynb`, eventually enter Jupyter Lab token, and select kernel from Maxwell Jupyter Lab server.
-9. Open `overview.pdf`.
+8. Open `extra.ipynb`.
+9. (Do this once) Click the kernel selection button, add a remote Jupyter kernel:
+   - Name: `HPC`
+   - URL: `http://localhost:8888/lab?token=your-secure-jlab-token`
+10. If prompted by VS Code, enter the Jupyter Lab token (`your-secure-jlab-token`). Select remote Jupyter kernel.
 
 ## Intro
 
@@ -44,16 +47,13 @@
 
 2. Repo overview
    - Have you brought your own notebook or use case?
-   - Notebook
    - Explain agent features (modes Ask/Plan/Code, new sessions)
    - AGENTS.md (purpose)
    - Skills (purpose)
-   - What is a bit limiting:
-     - Only open notebook in read mode, not write mode (otherwise, close notebook to see edits from the agent).
 
 ## Focus of This Session
 
-- Have you brought your own use case or Jupyter notebook?
+- Explain your own notebook or use case.
 
 ## Knowledge Sources
 
@@ -76,11 +76,6 @@
 - What would you like to create with the agent?
 - Based on what you researched, use the Plan mode of the agent to create a new notebook.
 - (Check if you can install further packages)
-
-## Drafting Manuscript
-
-- Use the skill /draft-manuscript to create a first manuscript draft
-- What would you have expected from this feature?
 
 ## Reporting
 

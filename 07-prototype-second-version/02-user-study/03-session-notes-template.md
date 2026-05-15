@@ -84,7 +84,7 @@ What features do you miss:
 
 - Timestamp: 2026-MM-DD-TT:00
 - Setup:
-  - VS Code + remote kernel via SSH to Maxwell Jupyter Lab + Kilo Code
+  - VS Code + Jupyter Lab API + Kilo Code
   - Agent instructions: AGENTS.md + skills directory
 - LLMs: GPT-5.4
 

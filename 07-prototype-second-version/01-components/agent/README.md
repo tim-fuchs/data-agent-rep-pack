@@ -2,33 +2,14 @@
 
 ## Purpose
 
-- This folder provides installation and configuration instructions for the AI agent tools.
-  - We focus on the desktop and CLI apps of OpenCode, and the VS Code extension Kilo Code.
-  - There are also many other open-source agents such as Roo Code and goose.
+- This README provides installation and configuration instructions for the agentic tool.
+  - We focus on the VS Code extension Kilo Code and the desktop and CLI apps of OpenCode.
+  - There are many other open-source agents such as goose and Roo Code.
   - Most of them have very similar installation and configuration options.
-- This folder also provides a template project with multiple prompt engineering artifacts to implement the requirements of the agent.
+- This folder is also a template project with multiple prompt engineering artifacts to implement the requirements of the agent.
+  - We reused this folder for every user study session.
 
-## Install and Configure
-
-### OpenCode (Desktop App, CLI App, VS Code Extension)
-
-- **Installation:**
-  - Choose your favorite installation option from the [OpenCode website](https://opencode.ai/download).
-  - We recommend installing OpenCode Desktop.
-  - We recommend installing OpenCode Terminal as well, as it is practical for quick checks. Also, it is (currently) required for any OAuth processes for MCP servers (but this is not required in our setup).
-  - You can also install the OpenCode VS Code extension. It looks like OpenCode Terminal, but within VS Code. The other options offer a better UX (in our opinion).
-
-- **Configure LLM provider:**
-  1. Click on the app symbol (OpenCode Desktop) or enter `opencode` in the CLI (OpenCode Terminal) to start the app.
-  2. Click on setting symbol (OpenCode Desktop) or use `/connect` command (OpenCode Terminal).
-  3. Connect to your prefered provider (e.g., Ollama via `Custom provider` or OpenAI via API key).
-     - Note: API keys of providers are stored in `~/.local/share/opencode/auth.json`.
-
-- **Notes on configuration:**
-  - The global configuration file for OpenCode is stored in your user directory on your machine (`~/.config/opencode/opencode.json`).
-  - You can also override global settings with a project-specific config (`.opencode/opencode.json` in project root).
-
-### Kilo Code (VS Code Extension)
+## Install and Configure Kilo Code
 
 - **Installation:**
   1. Install the [Kilo Code extension](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code) within VS Code via the extension marketplace.
@@ -51,7 +32,12 @@
   - The VS Code settings edit the global configuration file for Kilo Code (`~/.config/kilo/kilo.jsonc`).
   - You can also override global settings with a project-specific config (`.kilo/kilo.jsonc` in project root).
 
-## Template Project
+## Agent Project
+
+### Configuration File
+
+- The configuration file `.kilo/kilo.jsonc` contains the configuration of the MCP clients and other settings suchs as auto-approved actions.
+- You can add further entries as you like (MCP server, approvals, etc.)
 
 ### Prompt Engineering Artifacts
 
@@ -72,32 +58,24 @@
       - Small downside of OpenCode and Kilo Code in comparison to Claude Code, which can activate it automatically.
       - To automate this, we added the skill activation to the `AGENTS.md`.
 
-### Preconfiguration
-
-- The configuration files `.opencode/opencode.json` and `.kilo/kilo.jsonc` contain the configuration of the MCP clients, as well as other settings, such as additional plugins, like the [websearch-cited tool](https://github.com/ghoulr/opencode-websearch-cited).
-- Hence, the tools are ready to use. You just have to start the MCP servers first (see instructions in the subdirectories `grounded-docs-mcp`, etc.).
-
 ### Run the Project
 
-#### OpenCode
+1. Start the MCP servers (see instructions in the subdirectories of [grounded-docs-mcp](../grounded-docs-mcp/README.md), etc.).
+2. If open, restart VS Code.
+3. Open this folder VS Code.
+4. Open the Kilo Code chat window.
+5. Check that the MCP servers are available (Kilo Code settings > `Agent Behavior` > `MCP Servers`).
+6. Open `extra.ipynb`. Prompt, "What is the purpose of extra.ipynb?" with the Ask, Plan, or Code agent.
+7. Prompt, "Which notebooks are available on Jupyter Lab?" with the Ask, Plan, or Code agent.
 
-1. Open the `template-project` folder in OpenCode Desktop.
-2. Check that the MCP servers are available (green or red indicator on the top right).
-3. Prompt, "Which notebooks are available on Jupyter Lab?" with the Plan or Build agent.
-
-#### Kilo Code
-
-1. Open the `templace-project` folder VS Code.
-2. Check that the MCP servers are available (Kilo Code settings > `Agent Behavior` > `MCP Servers`).
-3. Prompt, "Which notebooks are available on Jupyter Lab?" with the Ask, Plan, or Code agent.
+// TODO add instructions about connecting to remote Jupyter kernel / to Jupyter MCP
 
 ## Further Reads
 
-- [OpenCode docs with instructions for custom agents, skills, commands, tools](https://opencode.ai/docs)
-- [Kilo Code docs with instructions for custom agents, skills, commands, tools](https://kilo.ai/docs/customize)
+- [Kilo Code docs](https://kilo.ai/docs/customize) with instructions for custom agents, skills, commands, tools
 - "Find Skills" Skill:
   - Install [Skills CLI tool](https://github.com/vercel-labs/skills) with `npx skills` to streamline finding and installing external skills.
   - Check out the [skills leaderboard](https://skills.sh).
   - Update installed skills: `npx skills update`
 - [Agent Skills website](https://agentskills.io/skill-creation/best-practices)
-- [AGENTS.md with Karpathy-inspired Claude Code guidelines](https://github.com/forrestchang/andrej-karpathy-skills)
+- [Andrej-Karpathy-Skills](https://github.com/forrestchang/andrej-karpathy-skills) (AGENTS.md with coding instructions)

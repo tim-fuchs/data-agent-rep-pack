@@ -9,12 +9,12 @@
 ## Prerequisites
 
 - AI agent tool that supports MCP, e.g., OpenCode or Kilo Code
-- [Zulip](https://zulip.com)
+- An available [Zulip](https://zulip.com) organization
 - [uv](https://docs.astral.sh/uv/getting-started/installation/)
 
 ## Create a Zulip Bot
 
-1. In Zulip, go to `Settings` > `Personal settings` > `Bot` > `Add a new bot`
+1. In your Zulip organization, go to `Settings` > `Personal settings` > `Bot` > `Add a new bot`
 2. In the form, detail bot information, and add the bot:
    - Bot type: `Incoming webhook`
    - Name: whatever name you like
