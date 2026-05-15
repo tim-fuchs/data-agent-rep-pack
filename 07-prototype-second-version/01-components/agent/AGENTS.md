@@ -71,7 +71,7 @@ When editing existing code:
   - `import` commands + further logic in a single cell
   - Printing commands + subsequent commands in a single cell
 
-### Test Code for Correctness and Safety Risk
+### Execute and Test Code on HPC Cluster
 
 Always follow these steps when you generated code:
 
