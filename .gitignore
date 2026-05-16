@@ -1,5 +1,3 @@
 *.DS_Store
 *.bkp
 **.env
-**/.mcp/zulipchat/
-**/.kilo/plans/

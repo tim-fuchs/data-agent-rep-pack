@@ -1,8 +1,13 @@
 # Interviews with Facility Users and Members
 
-## Summary of Interview Results
+## Overview of Files
 
-### Overview
+- [Poster](01-interviews-users-members-poster.pdf)
+- [Interview results](02-interviews-users-members-results.md)
+
+## Summary
+
+### Setting
 
 - Date: 2026-01-27
 - Event: Poster session of annual *Users' Meeting* of European XFEL and DESY
@@ -11,9 +16,7 @@
 - Participants:
   - Three users
   - Five staff members (four scientists, one manager)
-- Resources:
-  - [Poster](01-users-meeting-poster.pdf)
-  - [Interview results](02-users-meeting-results.md)
+- All participants have participated via informal interviews, not via the digital survey.
 
 ### Problem Identification and Motivation
 

@@ -1,14 +1,14 @@
-# User Study Invitation
+# User Study: Invitation
 
 Hi [name],
 
-Thank you very much for wanting to participate in the evaluation study of my AI agent!
+Thank you very much for wanting to participate in the evaluation study of the AI agent!
 
 **Procedure:**
 
-- I have prepared an AI agent that is connected to Jupyter Lab on the Maxwell cluster as well as to multiple knowledge sources (EuXFEL GitLab, GitHub, a RAG database, and the internet).
+- I have prepared an AI agent that is connected to Jupyter Lab on the Maxwell cluster as well as to multiple knowledge sources (European XFEL GitLab, GitHub, a RAG database, and the internet).
 - You will explore the different ways of interacting with the agent, learn about its features, and test its limits.
-- The study will take place on-site at EuXFEL on my computer. You do not need to bring your own device.
+- The study will take place on-site at European XFEL on my computer. You do not need to bring your own device.
 
 **Preparation (optional):**
 
@@ -26,5 +26,3 @@ Thank you very much for wanting to participate in the evaluation study of my AI 
 - The session will last approximately 45 to 60 minutes.
 - Do you have any preferred times on [Day], [Date]?
 - I am available [TimeRange].
-
-Kind regards,

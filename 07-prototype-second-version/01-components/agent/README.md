@@ -13,7 +13,10 @@
 
 - **Installation:**
   1. Install the [Kilo Code extension](https://marketplace.visualstudio.com/items?itemName=kilocode.Kilo-Code) within VS Code via the extension marketplace.
-  2. Tip for a more GitHub Copilot-like UX: Open the chat window by clicking the chat symbol in the search bar at the top of VS Code. Then, drag the Kilo Code symbol into the chat window.
+  2. Tip for a more GitHub Copilot-like UX:
+     - Open the chat window by clicking the chat symbol in the search bar at the top of VS Code.
+     - Drag the Kilo Code symbol into the chat window.
+     - Kilo Code now appears in a tab inside the chat window.
   
 - **Configure LLM provider:**
 
@@ -60,15 +63,21 @@
 
 ### Run the Project
 
-1. Start the MCP servers (see instructions in the subdirectories of [grounded-docs-mcp](../grounded-docs-mcp/README.md), etc.).
-2. If open, restart VS Code.
+1. Start all previous components of the [start-up order](../README.md).
+2. If already open, restart VS Code.
 3. Open this folder VS Code.
 4. Open the Kilo Code chat window.
-5. Check that the MCP servers are available (Kilo Code settings > `Agent Behavior` > `MCP Servers`).
-6. Open `extra.ipynb`. Prompt, "What is the purpose of extra.ipynb?" with the Ask, Plan, or Code agent.
-7. Prompt, "Which notebooks are available on Jupyter Lab?" with the Ask, Plan, or Code agent.
-
-// TODO add instructions about connecting to remote Jupyter kernel / to Jupyter MCP
+5. Check if the MCP servers are connected (Kilo Code settings > `Agent Behavior` > `MCP Servers`). If not, detect the configuration error (e.g., Docker container failed, config in [kilo.jsonc](kilo.jsonc) does not fit to environment variables of servers, etc.)
+6. Open `extra.ipynb`.
+7. If connection to Jupyter Lab should be established via Jupyter Lab API (not Jupyter MCP Server):
+   1. (Do this once) In the notebook, click the kernel selection button, and add a remote Jupyter kernel:
+      - Name: `<PREFERRED_NAME_OF_JUPYTERLAB_SERVER>`
+      - URL: `<JUPYTERLAB_URL_INCL_TOKEN>` (e.g. `http://localhost:8888/lab?token=your-secure-jlab-token`)
+   2. If prompted by VS Code, enter the Jupyter Lab token (`your-secure-jlab-token`).
+   3. Select remote Jupyter kernel.
+8. Test Kilo Code by entering prompts with the Ask, Plan, or Code agent:
+   - "What is the purpose of extra.ipynb?"
+   - "Which notebooks are available on Jupyter Lab?"
 
 ## Further Reads
 

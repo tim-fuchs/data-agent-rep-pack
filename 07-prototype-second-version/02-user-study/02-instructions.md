@@ -1,14 +1,14 @@
-# Instructions During User Study Session
+# User Study: Preparation and Instructions During Session
 
-## Session Preparation
+## Preparation
 
 1. Check that Docker containers with MCP servers run.
 2. Update template project with notes from previous session (e.g., `kilo.jsonc` and `AGENTS.md`).
-3. Duplicate template project.
-4. Edit name, e.g., template-project-06.
-5. Open new version in VS Code.
-6. Deactivate jupyter-mcp servers in Kilo Code.
-7. In a terminal session, start SSH connection to Maxwell, load EuXFEL Python module, start Jupyter Lab:
+3. Duplicate agent project.
+4. Edit name, e.g., `project-06` (to not display Kilo Code history of previous sessions).
+5. Open the duplicate in VS Code.
+6. If active, deactivate `jupyter-mcp` server in Kilo Code.
+7. In a terminal session, start SSH connection to Maxwell, load European XFEL Python module, start Jupyter Lab:
 
    ```bash
     ssh -L 8888:localhost:45123 max-exfl-display.desy.de
@@ -20,7 +20,8 @@
 9. (Do this once) Click the kernel selection button, add a remote Jupyter kernel:
    - Name: `HPC`
    - URL: `http://localhost:8888/lab?token=your-secure-jlab-token`
-10. If prompted by VS Code, enter the Jupyter Lab token (`your-secure-jlab-token`). Select remote Jupyter kernel.
+10. If prompted by VS Code, enter the Jupyter Lab token (`your-secure-jlab-token`).
+11. Select remote Jupyter kernel.
 
 ## Intro
 
@@ -58,7 +59,7 @@
 ## Knowledge Sources
 
 1. RAG
-   - Open Grounded Docs (<http://localhost:6280>)
+   - Open Grounded Docs UI (<http://localhost:6280>)
    - Go to Extra-data library.
    - Ask a question (e.g., how to open a run).
    - What documentation does the agent require to understand your regular use case (papers, websites, software docs, etc.)?

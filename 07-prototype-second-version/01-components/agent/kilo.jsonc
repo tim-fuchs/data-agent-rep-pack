@@ -73,25 +73,9 @@
     "paths": ["~/.agents/skills/", ".agents/skills/"],
   },
   "mcp": {
-    "jupyter-mcp-local": {
+    "jupyter-mcp": {
       "type": "remote",
       "url": "http://127.0.0.1:4040/mcp",
-      "enabled": true,
-      "headers": {
-        "Authorization": "Bearer helloworld",
-      },
-    },
-    "jupyter-mcp-hpc": {
-      "type": "remote",
-      "url": "http://127.0.0.1:4041/mcp",
-      "enabled": true,
-      "headers": {
-        "Authorization": "Bearer helloworld",
-      },
-    },
-    "jupyter-mcp-hpcbackup": {
-      "type": "remote",
-      "url": "http://127.0.0.1:4042/mcp",
       "enabled": true,
       "headers": {
         "Authorization": "Bearer helloworld",

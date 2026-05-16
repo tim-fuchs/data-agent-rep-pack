@@ -9,7 +9,7 @@
 
 ### Methodology
 
-- Likely approach: action research:
+- Eventually action research:
   - Identify knowledge patterns through:
     - Interviews with data scientists
     - Content analysis of dataset documentation
@@ -27,7 +27,7 @@
 
 ## 2025-06-03: Internal Brainstorming
 
-### **Study Context**
+### Study Context
 
 - User needs vary from basic API usage to in-depth understanding of dataset structure and analysis techniques.
 - EuXFEL Data Analysis group provides:
@@ -36,28 +36,26 @@
     - Existing resources include Data Management Plans (DMPs) and comprehensive instrument manuals.
     - New initiative: more high-level, user-friendly documentation
 
-### **Study Objective**
+### Study Objective
 
 - Personalized, on-demand documentation of complex scientific datasets for users
 - Move from static documentation to an interactive, queryable knowledge base
   - RAG knowledge base aggregates manuals, DMPs, dataset documents, and more.
   - Enables personalized, adaptive responses to user prompts (simpler or more complex explanations).
 
-## 2025-06-05: Doctoral Camp
+## 2025-06-05: Talk by Member of Data Analysis Group
 
-Talk by Michael (DA group)
-
-### **EuXFEL Data Policy and Derived Documents**
+### EuXFEL Data Policy and Derived Documents
 
 - Data Management Plans (DMPs) include service agreements (e.g., to define data size reductions)
 - EuXFEL Data Format Specification (EXDF): structures HDF5 datasets
 
-### **EXDF Tools**
+### EXDF Tools
 
 - Support data reduction
 - Example: graph neural network that predicts file relevance for users
 
-### **DAMNIT Tool**
+### DAMNIT Tool
 
 - Allows annotation of data points (e.g., marking importance).
 - Provides data pipelines, compute jobs, and result caching.
@@ -65,13 +63,6 @@ Talk by Michael (DA group)
 ## 2025-06-24: Interview with EuXFEL Data Analysis Group Leader
 
 - Discuss focus of the study, focus of potential tool, and typical user questions
-
-## 2025-07-16: RSE Day at DESY
-
-- Connected with members of the Language Technology group at Uni Hamburg
-  - Develop a pipeline-designed package for RAG system configuration:
-    <https://github.com/uhh-hcds/encourage>
-  - Potentially valuable for the project
 
 ## 2025-07-28: Internal Brainstorming
 
@@ -84,7 +75,7 @@ Talk by Michael (DA group)
 
 - Emphasize data documentation as the core project focus.
 - A RAG tool focused on detector documentation could be suitable.
-- Consider a follow-up meeting with EuXFEL DA group leader, Walid, and Tim to define the project topic.
+- Consider a follow-up meeting with EuXFEL DA group leader to define the project topic.
 
 ## 2025-11-04: Project Focus Refinement
 
@@ -135,7 +126,7 @@ Talk by Michael (DA group)
 
 Activities:
 
-- Restructuring RQs to align with design science research
+- Refining RQs to align with design science research
 - Literature review of guidelines, especially:
   - Kontio et al. (2004, 2008) about focus groups
   - Luke et al. (2014) about mind mapping
@@ -147,7 +138,7 @@ Activities:
 ## 2026-01-15 Execution of Focus Group
 
 - 30 minutes execution
-- 16 participants (13 in person, 3 via video conference) + 1 session host
+- 16 participants + 1 session host
 
 ## 2026-01-19 Meeting with DA group leader
 
@@ -157,7 +148,7 @@ Activities:
   - Conduct interviews with instrument groups (but eventually do this already during Users’ Meeting)
   - Check EuXFEL’s Alfresco platform for company-internal documentation by instrument groups and others.
 
-## 2026-01-22 and -26 EuXFEL’s Users’ Meeting
+## 2026-01-22 and -26 EuXFEL Users' Meeting
 
 - Data workshop on the 22nd:
   - Presentations by the DA group provided further information, news, and resources regarding the data analysis processes (especially from the user perspective).
@@ -171,7 +162,7 @@ Activities:
   - Discuss results of Users' Meeting
   - Define next steps
 
-## 2026-03-04 Prototyping for Version 1 of the Tool
+## 2026-03-04 Design, Demonstration, and Evaluation of First Prototype
 
 - Objective: Create a prototype consisting of an RAG-based backend server and a Jupyter Lab + Jupyter AI frontend server. The RAG knowledge base should be focused on EXtra-data and any specific software of the FXE instrument.
 - Intermediate findings:
@@ -190,16 +181,21 @@ Activities:
   - We manually reviewed the quality of extracted requirements and synthesized themes. We found that the quality of requirements extracted by the LLMs was generally good, while many themes were overlapping.
   - We reworked the themes by extracting 16 requirements from them that were most relevant for our tool. 10 of these requirements were already stated by EuXFEL staff and users, while the other 6 requirements have a more general-purpose focus and will support the implementation of the tool.
 
-## 2026-03-29 Comparison of Candidates for the Components of the Agentic AI System
+## 2026-03-29 Evaluation of Solutions for Agentic AI System Components
 
 - Objective:
-- Intermediate findings:
+  - Evaluate a set of tools for each system component based on analyzed requirements
+  - Select best candidate per component
 
 ## 2026-04-14 Presentation of Intermediate Results for Candidates and Agentic AI System
 
 - To whom: both EuXFEL managers
 - How: 60-minute meeting
-- What? See [meeting procotol](/08-prototype-second-version/evaluation/01-meeting-euxfel-managers.md).
+- Objectives:
+  - Discuss results of literature review
+  - Discuss results of tool evaluation
+  - Discuss design of second prototype
+  - Discuss plan to evaluate second prototype
 
 ## 2026-04-20 Presentation of Second Prototype to Data Analsis Group
 

@@ -1,10 +1,13 @@
 # Summary of User Study to Evaluate Second Prototype
 
-## File Overview
+## Overview of Files
 
-// TODO
+- [Invitation message](01-invitation.md)
+- [Session preparation and instructions](02-instructions.md)
+- [Session notes template](03-session-notes-template.md)
+- [Session notes of participants](./participants/notes-01.md)
 
-## Demographics
+## Summary
 
 ### Profession
 
@@ -47,7 +50,7 @@
 - 4 Less than once per week
 - 0 Never
 
-## Use Cases
+### Use Cases
 
 - Analyze SPB data of AGIPD detector
 - Calibrate SQS data
@@ -64,7 +67,7 @@
 - Analyze time-of-flight data
 - Process crystallography data with EXtra-xwiz library
 
-## Implemented Improvements
+### Implemented Improvements
 
 | Improvement                                                                            | Participant      |
 | -------------------------------------------------------------------------------------- | ---------------- |
@@ -80,7 +83,7 @@
 | - Reporting: Agent consistently requests to report conversation to staff               | 6                |
 | - Reporting: Also enable reporting when agent has not generated code                   | 7                |
 
-## Positive Notes
+### Positive Notes
 
 | Positive                                              | Participant     |
 | ----------------------------------------------------- | --------------- |
@@ -93,7 +96,7 @@
 | - Coding: Code execution on HPC cluster possible      | 9               |
 | - Reporting: Existence of reporting feature           | 1,2,3,4,5,10    |
 
-## Open Improvement Potentials
+### Open Improvement Potentials
 
 | Improvement potential                                                                  | Participant |
 | -------------------------------------------------------------------------------------- | ----------- |
@@ -113,9 +116,9 @@
 | - Report: Add a problem-focused reporting feature                                      | 2,4,6       |
 | - Manuscript draft: feature not tested due to lacking time                             | all         |
 
-## Design Recommendations
+### Design Recommendations
 
-### System Architecture
+#### System Architecture
 
 - Decide on system architecture based on variance of user workflows.
   - Process:
@@ -147,7 +150,7 @@
     - Refer to our description for possible combinations of user interfaces, e.g., web browser + standalone agent desktop app.
     - Provide user with an overview of recommended tools for specific workflows.
 
-### General Agent Behavior
+#### General Agent Behavior
 
 - Use programmatic hooks to force the agent to adhere to behavior.
   - Problem:
@@ -180,7 +183,7 @@
   - Solution:
     - Prepare an agent config file (e.g., `kilo.jsonc` or `opencode.json`) that contains auto-approval entries for uncritical actions.
 
-### Knowledge Retrieval
+#### Knowledge Retrieval
 
 - Make available documentation agent-ready.
   - Problem:
@@ -239,7 +242,7 @@
     - Reasoning process usually leads to good results.
     - Also, small model could have lower latency than large model.
 
-### Code Generation
+#### Code Generation
 
 - Force spec-driven development.
   - Problem:
