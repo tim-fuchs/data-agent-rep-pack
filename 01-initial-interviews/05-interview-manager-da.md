@@ -1,4 +1,4 @@
-# Interview with Manager of the EuXFEL Data Analysis Group
+# Interview with Manager of the European XFEL Data Analysis Group
 
 Date: 2025-12-12
 
@@ -32,14 +32,14 @@ Date: 2025-12-12
 
 ## Planned Study
 
-- EuXFEL Users' Meeting, 2026-01-23 -30: usefulness for connecting with users?
+- European XFEL Users' Meeting, 2026-01-23 -30: usefulness for connecting with users?
   - Yes.
   - The DA manager will host a satellite meeting.
   - Register a poster and include a QR code linking to the survey.
   - Expected attendance:
-    - ~1000 participants for the full EuXFEL/DESY Users' Meeting.
+    - ~1000 participants for the full European XFEL/DESY Users' Meeting.
     - ~100 participants for the DA satellite meeting.
       - 01-23, 10:00–17:00: online meeting
-      - 01-27, 16:00–19:00: poster session at EuXFEL
+      - 01-27, 16:00–19:00: poster session at European XFEL
 - Discuss ideas with DA group:
   - 01-15, 14:00–15:00: DA group meeting — opportunity to present ideas and initial prototypes (Zulip, Jupyter, or a combination).

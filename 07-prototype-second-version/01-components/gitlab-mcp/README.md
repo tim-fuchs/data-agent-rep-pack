@@ -7,7 +7,7 @@
 
 ## Prerequisites
 
-- User account on a GitLab instance, e.g., [EuXFEL GitLab](https://git.xfel.eu)
+- User account on a GitLab instance, e.g., [European XFEL GitLab](https://git.xfel.eu)
 - AI agent tool that supports MCP, e.g., OpenCode or Kilo Code
 - [Docker Desktop](https://www.docker.com/products/docker-desktop/) (or Docker Engine + Docker Compose plugin)
 - A free local port for GitLab MCP (ideally 3002)

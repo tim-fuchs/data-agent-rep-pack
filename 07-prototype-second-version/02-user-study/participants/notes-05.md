@@ -38,7 +38,7 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Q (EuXFEL user docs): What Python version is used in the DA environment of 2024?
+- Q (European XFEL user docs): What Python version is used in the DA environment of 2024?
 - A: Found the right information in the first chunk.
 - Q (Maxwell docs): List specific maxwell hardware.
 - A: Could not find the page as it is located on a page not accessible outside the internal network.

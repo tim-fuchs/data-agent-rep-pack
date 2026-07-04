@@ -3,8 +3,8 @@
 ## Notes
 
 - Use case:
-  - Agent must connect to a remote Jupyter Lab server hosted on the HPC cluster of EuXFEL.
-  - User can start this server manually via the Jupyter Hub server operated by EuXFEL.
+  - Agent must connect to a remote Jupyter Lab server hosted on the HPC cluster of European XFEL.
+  - User can start this server manually via the Jupyter Hub server operated by European XFEL.
   - User has only limited options, to install/update any pip packages on Jupyter Lab.
 
 ## Candidates
@@ -14,7 +14,7 @@
   - What:
     - User can set a Jupyter Lab token and use it, e.g., in VS Code to connect a local Jupyter notebook file with the remote Jupyter Lab kernel.
     - User can then use VS Code and a local agentic tool to edit and execute the notebook file.
-    - EuXFEL provides (slightly outdated) [docs](https://docs.desy.de/maxwell/documentation/miscellaneous/jlab_vscode/) for this process, focused on for their Jupyter Hub/Lab server.
+    - European XFEL provides (slightly outdated) [docs](https://docs.desy.de/maxwell/documentation/miscellaneous/jlab_vscode/) for this process, focused on for their Jupyter Hub/Lab server.
 
 - **[Jupyter MCP](https://jupyter-mcp-server.datalayer.tech)**
   - Version: 0.22.1
@@ -27,7 +27,7 @@
   - Version: 0.122.0
   - What:
     - SSH access to the HPC cluster via VS Code Remote extension (`ssh $USER@max-exfl-display.desy.de`)
-    - See [docs](https://dataanalysis.pages.xfel.eu/user-documentation/offline/#getting-access) of EuXFEL Data Analysis group.
+    - See [docs](https://dataanalysis.pages.xfel.eu/user-documentation/offline/#getting-access) of European XFEL Data Analysis group.
 
 ## Requirements Analysis
 

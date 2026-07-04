@@ -36,7 +36,7 @@ Have you brought your own use case or Jupyter notebook?
 
 ## RAG Interaction (via Grounded Docs UI)
 
-- Q (EuXFEL user docs): Can you find the documentation for how to use Slurm?
+- Q (European XFEL user docs): Can you find the documentation for how to use Slurm?
 - A: Could not find the result
 - Q (Maxwell): How to use Slurm
 - A: Could not find it

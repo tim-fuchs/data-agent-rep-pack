@@ -47,7 +47,7 @@
 - Most features of AI agent tools to tweak the agent behavior boil down to prompt engineering.
 - This concerns the `AGENTS.md` file, the skills (`./agents/skills` folder), custom commands, and custom (sub-)agents.
 - These features only differ in their execution triggers.
-- In this template project, we make use of an `AGENTS.md` file and, additionally, multiple skills to adapt the agent behavior to the data analysis use case at EuXFEL.
+- In this template project, we make use of an `AGENTS.md` file and, additionally, multiple skills to adapt the agent behavior to the data analysis use case at European XFEL.
 
 - Note about the [caveman](https://github.com/JuliusBrussee/caveman) skill:
   - It can drastically reduce the length of output prompts and, therefore, also the token consumption.
@@ -56,7 +56,7 @@
     - Location of global install: `~/.agents/skills/`
     - Location of project-specific install: `<project>/.opencode/skills/`
   - Usage:
-    - `/caveman lite|full|ultra` (We recommend `lite` for the EuXFEL use case.)
+    - `/caveman lite|full|ultra` (We recommend `lite` for the European XFEL use case.)
     - Skill must be manually activated every session.
       - Small downside of OpenCode and Kilo Code in comparison to Claude Code, which can activate it automatically.
       - To automate this, we added the skill activation to the `AGENTS.md`.

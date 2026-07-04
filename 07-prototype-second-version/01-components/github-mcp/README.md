@@ -19,7 +19,7 @@
    - Go to the [GitHub Developer Settings](https://github.com/settings/developers)
    - Generate a new fine-grained token
      - Name and expiration date: whatever you prefer
-     - Repository access: Public repositories (sufficient for the EuXFEL use case)
+     - Repository access: Public repositories (sufficient for the European XFEL use case)
 
 2. In your root directory of your user, create a `github-mcp-pat` file in the (new) directory `.secrets`, and add your PAT to the file:
 

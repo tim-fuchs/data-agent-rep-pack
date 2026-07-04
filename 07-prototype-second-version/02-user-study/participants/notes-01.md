@@ -41,9 +41,9 @@ Have you brought your own use case or Jupyter notebook?
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- Q: **I am a new user at EuXFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
+- Q: **I am a new user at European XFEL. I am taking part in an experiment at SPB endstation. How to compute the summed intensity of all AGIPD datasets in a run in SPB?**
 - A:
-  - First version of code: okayish. The agent did not know about Pasha library of EuXFEL at first. Used the more generic Pool library instead.
+  - First version of code: okayish. The agent did not know about Pasha library of European XFEL at first. Used the more generic Pool library instead.
   - Second version: Looked better. Did not work though.
   - Third version: Agent fixed the bug. Solutions worked.
 

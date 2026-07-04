@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This folder provides instructions to install a Jupyter MCP server (connected to the high-performance computing cluster at EuXFEL) and configure the corresponding MCP client in an AI agent tool.
+This folder provides instructions to install a Jupyter MCP server (connected to the high-performance computing cluster at European XFEL) and configure the corresponding MCP client in an AI agent tool.
 
 ## Prerequisites
 

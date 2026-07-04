@@ -45,10 +45,10 @@ Have you brought your own use case or Jupyter notebook?
 GPT-5.4-mini:
 
 - Q: **How can I calibrate data from the eTOF in SQS?**
-- A: Answer was conceptually correct, but implemented many lines of code, representing what the EuXFEL library can do with a few lines.
+- A: Answer was conceptually correct, but implemented many lines of code, representing what the European XFEL library can do with a few lines.
 - Q/A:
-  - After re-prompting, the agent spend a lot of time by calling many MCP tools. It reused a GitHub repo from DESY FLASH (instead of EuXFEL). Answer seemed to be conceptually correct, but was not the EuXFEL version described in the SQS docs.
-  - Participant pointed the model towards the SQS docs available via the RAG mcp server. Produced code was correct but just used numpy and not the expected EuXFEL library.
+  - After re-prompting, the agent spend a lot of time by calling many MCP tools. It reused a GitHub repo from DESY FLASH (instead of European XFEL). Answer seemed to be conceptually correct, but was not the European XFEL version described in the SQS docs.
+  - Participant pointed the model towards the SQS docs available via the RAG mcp server. Produced code was correct but just used numpy and not the expected European XFEL library.
 
 Qwen3-Next-80B-A3B-Thinking:
 

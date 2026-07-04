@@ -80,7 +80,7 @@
 
 ## Reporting
 
-- Use the skill /report-conversation to send a report to the EuXFEL staff
+- Use the skill /report-conversation to send a report to the European XFEL staff
 - Which content would you have expected in the report?
 
 ## Verdict

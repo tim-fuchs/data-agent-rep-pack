@@ -2,7 +2,7 @@
 
 - New vision for the agentic AI system:
   - Users operate their favorite AI agent on their computer (Kilo Code, OpenCode, Claude Code, etc.).
-  - EuXFEL hosts various [MCP](https://modelcontextprotocol.io) servers that provide connections to Jupyter Lab, a RAG system, GitHub, GitLab, [Zulip](https://zulip.com), etc.
+  - European XFEL hosts various [MCP](https://modelcontextprotocol.io) servers that provide connections to Jupyter Lab, a RAG system, GitHub, GitLab, [Zulip](https://zulip.com), etc.
   - Users can flexibly connect their agent to the servers (plug-and-play).
 
 - Notes about best candidates:
@@ -14,29 +14,29 @@
 
 The agentic AI system shall ...
 
-| Requirement                                                      | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
-| ---------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
-| Access the high-performance computing cluster                    | X       | X     |       |     |               |
-| Optimize latency [^1]                                            | X       | X     | X     | X   | X             |
-| Not share user data with third parties [^2]                      | X       | X     | X     | X   | X             |
-| Require minimal implementation effort                            | X       | X     | X     | X   | X             |
-| Require minimal effort to replace components [^3]                | X       | X     | X     | X   | X             |
-| Interact with notebook content [^4]                              | X       | X     |       |     |               |
-| Decompose a request into verifiable goals                        |         | X     |       |     |               |
-| Request human approval to guide and improve solutions            |         | X     |       |     |               |
-| Close task with narrative summary and recommended steps          |         | X     |       |     |               |
-| Use concise language                                             |         | X     |       |     |               |
-| Retrieve up-to-date information [^5]                             |         | X     |       | X   | X             |
-| Access relevant context information within a project [^6]        |         | X     |       |     |               |
-| Provide citations, confidence levels, and verification steps     |         | X     |       |     |               |
-| Generate code optimized for high-performance computing           |         | X     |       |     |               |
-| Test code for correctness and safety risks                       |         | X     |       |     |               |
-| Request human approval for sensitive actions [^7]                |         | X     |       |     |               |
-| Adapt code style and explanations to the user's expectations     |         | X     |       |     |               |
-| Generate code documentation on project- and code-level           |         | X     |       |     |               |
-| Recommend using a version control system [^8]                    |         | X     |       |     |               |
-| Report conversations between user and agent to EuXFEL staff [^9] |         | X     | X     |     |               |
-| Assist in drafting scientific manuscripts                        |         | X     |       |     |               |
+| Requirement                                                             | Jupyter | Agent | Zulip | RAG | GitHub/GitLab |
+| ----------------------------------------------------------------------- | ------- | ----- | ----- | --- | ------------- |
+| Access the high-performance computing cluster                           | X       | X     |       |     |               |
+| Optimize latency [^1]                                                   | X       | X     | X     | X   | X             |
+| Not share user data with third parties [^2]                             | X       | X     | X     | X   | X             |
+| Require minimal implementation effort                                   | X       | X     | X     | X   | X             |
+| Require minimal effort to replace components [^3]                       | X       | X     | X     | X   | X             |
+| Interact with notebook content [^4]                                     | X       | X     |       |     |               |
+| Decompose a request into verifiable goals                               |         | X     |       |     |               |
+| Request human approval to guide and improve solutions                   |         | X     |       |     |               |
+| Close task with narrative summary and recommended steps                 |         | X     |       |     |               |
+| Use concise language                                                    |         | X     |       |     |               |
+| Retrieve up-to-date information [^5]                                    |         | X     |       | X   | X             |
+| Access relevant context information within a project [^6]               |         | X     |       |     |               |
+| Provide citations, confidence levels, and verification steps            |         | X     |       |     |               |
+| Generate code optimized for high-performance computing                  |         | X     |       |     |               |
+| Test code for correctness and safety risks                              |         | X     |       |     |               |
+| Request human approval for sensitive actions [^7]                       |         | X     |       |     |               |
+| Adapt code style and explanations to the user's expectations            |         | X     |       |     |               |
+| Generate code documentation on project- and code-level                  |         | X     |       |     |               |
+| Recommend using a version control system [^8]                           |         | X     |       |     |               |
+| Report conversations between user and agent to European XFEL staff [^9] |         | X     | X     |     |               |
+| Assist in drafting scientific manuscripts                               |         | X     |       |     |               |
 
 - [^1] E.g., streamed responses, sub-agents executed in parallel, reasoning depth adjusted to task complexity, caching of prompts and responses, token minimization, threads for multiple users
 - [^2] E.g., self-hosted LLMs possible, telemetry control, secured API access
@@ -85,8 +85,8 @@ The agentic AI system shall ...
   4. Agent reports results to user via Zulip.
 
 - Advantages:
-  - Automated logging for user and EuXFEL staff due to Zulip conversation
-  - Workflow fully integrated into EuXFEL software environment
+  - Automated logging for user and European XFEL staff due to Zulip conversation
+  - Workflow fully integrated into European XFEL software environment
 
 - Disadvantages:
   - User cannot access typical features of agentic systems such as agent modes (e.g., plan vs. build), switching between LLMs (e.g., switching to more powerful models).

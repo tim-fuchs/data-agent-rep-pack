@@ -56,7 +56,7 @@
     - Does not provide an agent out-of-the-box
     - User can add Jupyternaut agent (authored by the same developers) or common agents (OpenCode, Claude Code, etc.) to the extension.
   - Important limitation for our use case:
-    - The existing user environment is a remote Jupyter Lab server hosted on the HPC cluster of EuXFEL/DESY.
+    - The existing user environment is a remote Jupyter Lab server hosted on the HPC cluster of European XFEL/DESY.
     - A user cannot access specific configuration files on the server and also cannot install external agents (such as OpenCode) via `npx` commands.
     - A user can only install Jupyternaut via `pip`, but the agent lacks behind the server-based capabilities of OpenCode and others.
 
@@ -352,7 +352,7 @@
   - Weaknesses:
     - User must instruct the agent every session.
 
-### Report Conversations to EuXFEL Staff
+### Report Conversations to European XFEL Staff
 
 - **Kilo Code, OpenCode, goose, Roo Code**
   - Rating: +

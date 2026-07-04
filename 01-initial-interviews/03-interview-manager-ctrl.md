@@ -1,4 +1,4 @@
-# Interview with Manager of the EuXFEL Controls Group
+# Interview with Manager of the European XFEL Controls Group
 
 Date: 2025-11-11
 
@@ -11,10 +11,10 @@ Date: 2025-11-11
 ## User Needs
 
 - Development should be guided by real user needs (**additional interviews required, but not possible due to company policy**).
-- **Existing EuXFEL questionnaire data could be leveraged**:
+- **Existing European XFEL questionnaire data could be leveraged**:
   - C.C.: focuses on automation
   - M.A.: focuses on RAG support for instrument scientists
 
 ## Further Information
 
-- The tool design should **follow the [Model Context Protocol (MCP)](https://modelcontextprotocol.info) standard**, as EuXFEL is basing its RAG tool ecosystem on this standard.
+- The tool design should **follow the [Model Context Protocol (MCP)](https://modelcontextprotocol.info) standard**, as European XFEL is basing its RAG tool ecosystem on this standard.

@@ -64,7 +64,7 @@ Note: Telemetry of Grounded Docs is explicitly disabled in `docker-compose.yml` 
 }
 ```
 
-## Index EuXFEL Documentation
+## Index European XFEL Documentation
 
 - We prepared a list of resources that should be indexed by Grounded Docs.
 - Execute `sh index-docs.sh`.

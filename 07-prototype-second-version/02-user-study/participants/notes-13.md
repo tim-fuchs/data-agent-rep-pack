@@ -31,7 +31,7 @@ How often do you analyze data via Jupyter notebooks, Python, Julia, R, etc.?
 
 Have you brought your own use case or Jupyter notebook?
 
-- SPB/SFX: As a new user, I want to understand how to process crystallography data at EuXFEL with EXtra-xwiz pipeline, incl. setting up a small test run, larger runs, and checking data quality
+- SPB/SFX: As a new user, I want to understand how to process crystallography data at European XFEL with EXtra-xwiz pipeline, incl. setting up a small test run, larger runs, and checking data quality
 
 ## RAG Interaction (via Grounded Docs UI)
 

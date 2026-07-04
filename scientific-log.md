@@ -20,7 +20,7 @@
   - Integrate approaches from SE research (e.g., Treude, Maalej, Puhlfürß, Google’s Data Cards) with practices from the FAIR and RSE community.
   - Examine differences between data documentation in RSE and traditional software documentation.
 
-## 2025-06-02: Interview with EuXFEL Data Analysis Group Leader
+## 2025-06-02: Interview with European XFEL Data Analysis Group Leader
 
 - Discuss current activities and challenges related to knowledge exchange
 - Propose ideas for a study
@@ -30,7 +30,7 @@
 ### Study Context
 
 - User needs vary from basic API usage to in-depth understanding of dataset structure and analysis techniques.
-- EuXFEL Data Analysis group provides:
+- European XFEL Data Analysis group provides:
   - Alias look-up files for easier navigation in HDF5 datasets
   - Technical documentation:
     - Existing resources include Data Management Plans (DMPs) and comprehensive instrument manuals.
@@ -45,10 +45,10 @@
 
 ## 2025-06-05: Talk by Member of Data Analysis Group
 
-### EuXFEL Data Policy and Derived Documents
+### European XFEL Data Policy and Derived Documents
 
 - Data Management Plans (DMPs) include service agreements (e.g., to define data size reductions)
-- EuXFEL Data Format Specification (EXDF): structures HDF5 datasets
+- European XFEL Data Format Specification (EXDF): structures HDF5 datasets
 
 ### EXDF Tools
 
@@ -60,7 +60,7 @@
 - Allows annotation of data points (e.g., marking importance).
 - Provides data pipelines, compute jobs, and result caching.
 
-## 2025-06-24: Interview with EuXFEL Data Analysis Group Leader
+## 2025-06-24: Interview with European XFEL Data Analysis Group Leader
 
 - Discuss focus of the study, focus of potential tool, and typical user questions
 
@@ -68,34 +68,34 @@
 
 - Observation: RAGs and their configurations are well-researched.
 - Proposed focus of our study:
-  - Case study on RAG requirements engineering at EuXFEL
+  - Case study on RAG requirements engineering at European XFEL
   - Focus on input/output specifications and integration with existing tools
 
 ## 2025-09-24: Internal Brainstorming
 
 - Emphasize data documentation as the core project focus.
 - A RAG tool focused on detector documentation could be suitable.
-- Consider a follow-up meeting with EuXFEL DA group leader to define the project topic.
+- Consider a follow-up meeting with European XFEL DA group leader to define the project topic.
 
 ## 2025-11-04: Project Focus Refinement
 
 - Rather than building just a RAG for detector documentation, consider developing a tool that identifies data points with insufficient documentation.
 
-## 2025-11-11: Interview with EuXFEL Control Group Manager
+## 2025-11-11: Interview with European XFEL Control Group Manager
 
-- Discuss user needs, potential tool features, any further technical information at EuXFEL (e.g., existing source code for RAG system)
+- Discuss user needs, potential tool features, any further technical information at European XFEL (e.g., existing source code for RAG system)
 
 ## 2025-11-20: Begin of Intensive Research
 
 ### Forming First RQs
 
-- RQ1: What knowledge-related challenges do users encounter when analyzing EuXFEL datasets and working with the available documentation?
+- RQ1: What knowledge-related challenges do users encounter when analyzing European XFEL datasets and working with the available documentation?
 - RQ2: How can a data-focused AI agent effectively address the challenges?
 
 ### Begin of Domain Research
 
-- Structure and functionality of EuXFEL accelerator, instruments, and detectors
-- EuXFEL Data Analysis group:
+- Structure and functionality of European XFEL accelerator, instruments, and detectors
+- European XFEL Data Analysis group:
   - Responsibilities and activities
   - Publications (papers and posters)
   - Tools and documentation
@@ -103,7 +103,7 @@
   - RAG systems
   - Model Context Protocol
 
-## 2025-12-10: Interview with EuXFEL Controls Group Manager
+## 2025-12-10: Interview with European XFEL Controls Group Manager
 
 - Exploration of current offline data analysis process, proposed tool, and planned study
 
@@ -114,11 +114,11 @@
 - Eventually, focus on FAIR principles or other knowledge-related aspects.
 - Methodology considerations: Action research might not be the best fit (as its focus is on the process, not the artifact).
 
-## 2025-12-12: Interview with EuXFEL Data Analysis Group Manager
+## 2025-12-12: Interview with European XFEL Data Analysis Group Manager
 
 - Exploration of current offline data analysis process, proposed tool, and planned study
 
-## 2025-12-16 Registration for EuXFEL User Meeting
+## 2025-12-16 Registration for European XFEL User Meeting
 
 - Registration of poster “AI Agent Support for Data Analysis” (T. Fuchs and L. Gelisio and S. Hauf and W. Maalej)
 
@@ -146,9 +146,9 @@ Activities:
 - Discussed the Users’ Meeting poster and questionnaire
 - Further recommendations:
   - Conduct interviews with instrument groups (but eventually do this already during Users’ Meeting)
-  - Check EuXFEL’s Alfresco platform for company-internal documentation by instrument groups and others.
+  - Check European XFEL’s Alfresco platform for company-internal documentation by instrument groups and others.
 
-## 2026-01-22 and -26 EuXFEL Users' Meeting
+## 2026-01-22 and -26 European XFEL Users' Meeting
 
 - Data workshop on the 22nd:
   - Presentations by the DA group provided further information, news, and resources regarding the data analysis processes (especially from the user perspective).
@@ -166,8 +166,8 @@ Activities:
 
 - Objective: Create a prototype consisting of an RAG-based backend server and a Jupyter Lab + Jupyter AI frontend server. The RAG knowledge base should be focused on EXtra-data and any specific software of the FXE instrument.
 - Intermediate findings:
-  - We extended the `karabo-rag` project by EuXFEL. We implemented a more complex RAG pipeline for Sphinx-based documentation (for the EXtra-data library) and configured a Jupyter Lab server with a Jupyter AI extension that can query the RAG backend.
-  - We presented the prototype during a meeting with the EuXFEL data scientists to receive feedback for improving the prototype.
+  - We extended the `karabo-rag` project by European XFEL. We implemented a more complex RAG pipeline for Sphinx-based documentation (for the EXtra-data library) and configured a Jupyter Lab server with a Jupyter AI extension that can query the RAG backend.
+  - We presented the prototype during a meeting with the European XFEL data scientists to receive feedback for improving the prototype.
 
 ## 2026-03-13 Rapid, Multivocal Literature Review
 
@@ -179,7 +179,7 @@ Activities:
     - From the 250 unique papers identified, 224 were relevant for analysis. From these papers, GPT 5.4 mini extracted 3062 requirements, while Minimax-M2.5 extracted 2303 requirements.
     - The subsequent thematic analysis with GPT-5.4-mini resulted in 26 themes.
   - We manually reviewed the quality of extracted requirements and synthesized themes. We found that the quality of requirements extracted by the LLMs was generally good, while many themes were overlapping.
-  - We reworked the themes by extracting 16 requirements from them that were most relevant for our tool. 10 of these requirements were already stated by EuXFEL staff and users, while the other 6 requirements have a more general-purpose focus and will support the implementation of the tool.
+  - We reworked the themes by extracting 16 requirements from them that were most relevant for our tool. 10 of these requirements were already stated by European XFEL staff and users, while the other 6 requirements have a more general-purpose focus and will support the implementation of the tool.
 
 ## 2026-03-29 Evaluation of Solutions for Agentic AI System Components
 
@@ -189,7 +189,7 @@ Activities:
 
 ## 2026-04-14 Presentation of Intermediate Results for Candidates and Agentic AI System
 
-- To whom: both EuXFEL managers
+- To whom: both European XFEL managers
 - How: 60-minute meeting
 - Objectives:
   - Discuss results of literature review

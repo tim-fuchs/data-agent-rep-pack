@@ -30,7 +30,7 @@ Date: 2026-01-15
   - Python libraries by Data Analysis, e.g., EXtra-data, [EXtra-xwiz](https://doi.org/10.3390/cryst13111533)
   - Instrument-specific tools, e.g., SCS toolbox
   - Community tools, e.g., CrystFEL
-  - EuXFEL tools to collect and visualize experiment metadata:
+  - European XFEL tools to collect and visualize experiment metadata:
     - [myMdC](https://doi.org/10.18429/JACOW-ICALEPCS2025-THCR005)
     - [myLog](https://doi.org/10.18429/JACOW-ICALEPCS2025-THMG013)
       - Customized Zulip messenger with streams (proposals) and channels (Data Analysis, etc.)
@@ -82,7 +82,7 @@ Date: 2026-01-15
            - Others need help and appreciate our template notebooks.
          - Template options:
            - None
-           - From Data Analysis group, specific to one type of experiment at EuXFEL
+           - From Data Analysis group, specific to one type of experiment at European XFEL
            - User's own template
        - Libraries and environments:
          - Python libraries and environment by Data Analysis group
@@ -103,14 +103,14 @@ Date: 2026-01-15
 
 - Documentation by Data Analysis group
   - General docs
-    - [DA webpage of EuXFEL website](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html)
+    - [DA webpage of European XFEL website](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html)
     - [User documentation](https://dataanalysis.pages.xfel.eu/user-documentation/)
     - Docs of software libraries, e.g.:
       - [EXtra](https://extra.readthedocs.io/en/latest/)
       - [EXtra-data](https://extra-data.readthedocs.io)
       - [EXtra-geom](https://extra-geom.readthedocs.io/en/latest/)
       - [DAMNIT](https://damnit.readthedocs.io/)
-    - [GitLab](https://git.xfel.eu) and [GitHub](https://github.com/European-XFEL) repositories of EuXFEL
+    - [GitLab](https://git.xfel.eu) and [GitHub](https://github.com/European-XFEL) repositories of European XFEL
     - [Offline calibration website](https://calibration.pages.xfel.eu/pycalibration/)
       - Not written for users and thus likely not interesting from them
       - But public and eventually still relevant for AI system
@@ -120,7 +120,7 @@ Date: 2026-01-15
 - Documentation by instrument groups
   - Instrument-specific docs, e.g., [SCS](https://scs.pages.xfel.eu/documentation/index.html) and [SCS Toolbox](https://scs.pages.xfel.eu/toolbox/index.html) (but docs of instruments vary in detail)
   - Technique-oriented documentation by DA (currently available for [FXE](https://dataanalysis.pages.xfel.eu/techniques-docs/fxe/) and [SQS](https://dataanalysis.pages.xfel.eu/techniques-docs/sqs/))
-  - Technical reports on EuXFEL website, e.g, for [SPB/SFX](https://www.xfel.eu/facility/instruments/spb_sfx/documentation/index_eng.html)
+  - Technical reports on European XFEL website, e.g, for [SPB/SFX](https://www.xfel.eu/facility/instruments/spb_sfx/documentation/index_eng.html)
 - [Maxwell documentation](https://docs.desy.de/maxwell/documentation)
 - Publications by Data Analysis and instrument groups
   - E.g. [EXtra-xwiz paper](https://doi.org/10.3390/cryst13111533) contains tutorial section
@@ -131,14 +131,14 @@ Date: 2026-01-15
   - What are knowledge-related challenges during offline data analysis (e.g., documentation, communication and support, clarity of tool features, requirements of users):
     - For users?
     - For DA members?
-    - For other EuXFEL members, e.g., instruments groups?
+    - For other European XFEL members, e.g., instruments groups?
   - What are the biggest challenges at the moment?
 
 - Challenges of users:
   - In general: The range of user experience and variety of requirements are much larger than in other domains.
     - E.g., experiments at telescopes are more structured.
   - Initially unclear objectives for data analysis
-  - Contractual constrainsts: limited support by EuXFEL during offline data analysis phase
+  - Contractual constrainsts: limited support by European XFEL during offline data analysis phase
     - We cannot debug 1000 lines of user code.
     - But we can support with the obvious things.
   - Mismatched expectations regarding complexity of data analysis process

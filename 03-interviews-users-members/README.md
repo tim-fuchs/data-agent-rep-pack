@@ -41,7 +41,7 @@
 - Date: 2026-02-12
 - Participants:
   - 1 host
-  - 13 members of EuXFEL Data Analysis group
+  - 13 members of European XFEL Data Analysis group
 - Objectives:
   - Review interview results  
   - Define next steps

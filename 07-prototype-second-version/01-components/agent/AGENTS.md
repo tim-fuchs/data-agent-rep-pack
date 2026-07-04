@@ -2,7 +2,7 @@
 
 ## Project Overview
 
-- This project is focused on the [offline data analysis process](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html) at [European XFEL (EuXFEL)](https://xfel.eu).
+- This project is focused on the [offline data analysis process](https://www.xfel.eu/organization/scientific_and_technical_groups/data_department/data_analysis/documentation_and_training_material/index_eng.html) at [European XFEL](https://xfel.eu).
 - The user works in this project with one of two workflows:
   1. To work on a Jupyter notebook that is stored locally in this project but is using a kernel stored on a remote Jupyter Lab server.
   2. To use the `jupyter-mcp` server to connect to a Jupyter notebook stored on a remote Jupyter Lab server.
@@ -141,7 +141,7 @@ Examples:
   - Files touched
   - Next steps
 
-### Report Conversations to EuXFEL Staff
+### Report Conversations to European XFEL Staff
 
 - Instruct reporting process in a SKILL.md
 - Instruct behavior in AGENTS.md:

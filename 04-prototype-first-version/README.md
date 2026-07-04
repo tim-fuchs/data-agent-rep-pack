@@ -6,7 +6,7 @@
   - We cannot provide the source code for the first prototype, as it relies heavily on an internal system that is not (yet) intended for release.
   - We do not consider this a threat to the validy of our study. We consider the first prototype a "throwaway" from which we derived new design objectives for the second prototype. The second prototype is [available in this repository](/07-prototype-second-version/README.md).
 - RAG backend: `karabo-rag`
-  - Based on [EuXFEL Karabo RAG project](https://git.xfel.eu/llm/karabo-rag) (EuXFEL account required for access)
+  - Based on [European XFEL Karabo RAG project](https://git.xfel.eu/llm/karabo-rag) (European XFEL account required for access)
   - Vector database: Qdrant
   - Exposes an API handler that a frontend can consume and that supports multi-turn chat conversations
   - Exposes another API to manage document ingestions
@@ -15,7 +15,7 @@
     - Document embedding: text-embedding-large (OpenAI)
   - Knowledge base: [EXtra-data](https://extra-data.readthedocs.io/en/latest/index.html)
 - Agent frontend: [Jupyter AI v2](https://jupyter-ai.readthedocs.io/en/v2/)
-  - Extension that we installed via `pip` on the remote Jupyter Lab server hosted on the EuXFEL HPC cluster
+  - Extension that we installed via `pip` on the remote Jupyter Lab server hosted on the European XFEL HPC cluster
   - Provides a pre-built *Jupyternaut* agent persona
   - Does not support multi-agent workflows, including an agent loop.
   - Is preconfigured to connect to the agent endpoint
@@ -24,10 +24,10 @@
 ## Evaluation with Data Analysis Group
 
 - Date: 2025-03-19
-- Setting: Meeting with 12 members of the EuXFEL Data Analysis group
+- Setting: Meeting with 12 members of the European XFEL Data Analysis group
 - What are your first positive/negative thoughts on the demo? What would be important improvement potentials for the next prototype version?
 - **Good:**
-  - Jupyter AI interface is straightforward. Configure an EuXFEL persona and eventually add custom commands.
+  - Jupyter AI interface is straightforward. Configure an European XFEL persona and eventually add custom commands.
   - The LLM responses in the side panel are formatted correctly with Markdown and code cells.
 - **Negative:**
   - The LLM responses of the cell magic should be executable code cells with inline code comments instead of plain text output.
@@ -47,8 +47,8 @@
 - **Further notes:**
   - Check out **Grounded Docs**, an open-source MCP server as alternative to Context7, which can provide information from various documents (text, PDFs, code, etc.) and executes semantic chunking.
   - If the agent should be deployed on the HPC cluster:
-    - Make sure it is sandboxed in a restricted environment. This could be enabled by **nono**, which uses Landlock. However, Landlock is apparently deactivated on the EuXFEL HPC.
+    - Make sure it is sandboxed in a restricted environment. This could be enabled by **nono**, which uses Landlock. However, Landlock is apparently deactivated on the European XFEL HPC.
     - Make sure that any code execution is approved by a human. An autonomously acting agent could consume a lot of capacity while working on flawed solutions.
 - **Takeaways:**
   - Ready-to-use agentic tools (like Claude Code) perform much better than our self-developed system. Many developers already use such tools on their computers. We should built on that.
-  - The main challenge lies in integrating such agentic tools into the infrastructure at EuXFEL (particularly the HPC cluster) and adapting their behavior to the use case of offline data analysis at EuXFEL.
+  - The main challenge lies in integrating such agentic tools into the infrastructure at European XFEL (particularly the HPC cluster) and adapting their behavior to the use case of offline data analysis at European XFEL.

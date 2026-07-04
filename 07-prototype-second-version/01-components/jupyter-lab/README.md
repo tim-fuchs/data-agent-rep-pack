@@ -2,7 +2,7 @@
 
 ## Purpose
 
-- EuXFEL members usually work on the [remote Jupyter Lab server](https://max-jhub.desy.de) running on the HPC cluster.
+- European XFEL members usually work on the [remote Jupyter Lab server](https://max-jhub.desy.de) running on the HPC cluster.
 - Non-members cannot access this server.
 - This project provides a Jupyter Lab server to establish a similar setup.
 - The installation process also installs libraries required for connecting Jupyter Lab with the Jupyter MCP server.

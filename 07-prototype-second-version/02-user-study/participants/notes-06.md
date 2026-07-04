@@ -41,7 +41,7 @@ Have you brought your own use case or Jupyter notebook?
 
 ## Code Generation/Explanation/Improvement (via AI agent)
 
-- Q: Do you have access to the EuXFEL example data sets and if so, which?
+- Q: Do you have access to the European XFEL example data sets and if so, which?
 - A: No, as Kilo Code did not have direct access to Maxwell
 - Q: Reuse the proposal in extra.ipynb to check its data sources. AGIPD will be one of them. Create the per-pixel, per memory ...
 - A: Wanted to create an internal Python package that could not access extra-data.
@@ -96,7 +96,7 @@ What features do you miss:
 ### Implemented Improvements Before Starting the Session
 
 - Converted rules in AGENTS.md to Kilo Code-supported rule files in `.kilo/rules`.
-- Added EuXFEL website and [offline calibration](https://calibration.pages.xfel.eu/pycalibration/) to RAG system.
+- Added European XFEL website and [offline calibration](https://calibration.pages.xfel.eu/pycalibration/) to RAG system.
 
 ### Technical Details
 

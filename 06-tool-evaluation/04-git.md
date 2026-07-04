@@ -103,12 +103,12 @@
   - Strengths:
     - Not relevant
   - Weaknesses:
-    - Access to the EuXFEL GitLab server is not possible because the GitLab server neither has [GitLab Duo nor experimental tools enabled](https://docs.gitlab.com/user/gitlab_duo/model_context_protocol/mcp_server_troubleshooting/#404-not-found-when-starting-the-gitlab-mcp-server). Installation requires actions by server admins.
+    - Access to the European XFEL GitLab server is not possible because the GitLab server neither has [GitLab Duo nor experimental tools enabled](https://docs.gitlab.com/user/gitlab_duo/model_context_protocol/mcp_server_troubleshooting/#404-not-found-when-starting-the-gitlab-mcp-server). Installation requires actions by server admins.
 
 - **GitLab MCP by zereight**
   - Rating: ++
   - Strengths:
-    - Tool can access the EuXFEL GitLab server because it simply wraps the GitLab API with an MCP layer. It does not require additional server features, such as GitLab Duo.
+    - Tool can access the European XFEL GitLab server because it simply wraps the GitLab API with an MCP layer. It does not require additional server features, such as GitLab Duo.
     - Tool enables authentication via a personal access token, which works well for the desktop app of OpenCode and Kilo Code, in comparison to OAuth authentication.
     - User can simply set up a Docker container.
   - Weaknesses:

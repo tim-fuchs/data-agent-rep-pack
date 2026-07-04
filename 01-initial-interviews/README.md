@@ -1,6 +1,6 @@
 # Initial Interviews with Managers
 
-## Overview of Files
+## Summaries of Individual Interviews
 
 - [Interview 1](01-interview-manager-da.md)
 - [Interview 2](02-interview-manager-da.md)
@@ -8,7 +8,7 @@
 - [Interview 4](04-interview-manager-ctrl.md)
 - [Interview 5](05-interview-manager-da.md)
 
-## Summary
+## Summary of All Interviews
 
 ### Problem Identification and Motivation
 
@@ -62,7 +62,7 @@
   - User interface options:
     - Jupyter AI: a good option because authentication for JupyterHub is already handled, as users log in with their DESY/European XFEL accounts.
     - Zulip messenger: the chatbot could join a relevant MyLog stream, for example Data Analysis.
-    - EuXFEL’s internal LLM frontend called RAY: not suitable, as only staff and long-term guests have access, not regular users.
+    - European XFEL’s internal LLM frontend called RAY: not suitable, as only staff and long-term guests have access, not regular users.
   - System constraints:
     - The system should always cite the sources it used to generate a response to the user prompt.
     - The system should support MCP to be compatible with the existing system.

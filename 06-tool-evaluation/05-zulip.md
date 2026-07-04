@@ -12,7 +12,7 @@
 
 ## Requirements Analysis
 
-### Report Conversations to EuXFEL Staff
+### Report Conversations to European XFEL Staff
 
 - **ZulipChat MCP**
   - Rating: ++

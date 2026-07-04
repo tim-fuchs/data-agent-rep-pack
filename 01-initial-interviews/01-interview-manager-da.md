@@ -1,4 +1,4 @@
-# Interview with Manager of the EuXFEL Data Analysis Group
+# Interview with Manager of the European XFEL Data Analysis Group
 
 Date: 2025-06-02
 

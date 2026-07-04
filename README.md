@@ -2,7 +2,7 @@
 
 ## Artifact Summary
 
-This repository contains the replication package for the paper "From Overload to Insights: How AI Agents Can Support Scientists in Analyzing Complex Data," submitted to the *[42nd IEEE International Conference on Software Maintenance and Evolution (ICSME'26)](https://conf.researchr.org/home/icsme-2026)*.  
+This repository contains the replication package for the paper "From Overload to Insights: How AI Agents Can Support Scientists in Analyzing Complex Data," accepted at the *[42nd IEEE International Conference on Software Maintenance and Evolution (ICSME'26)](https://conf.researchr.org/details/icsme-2026/icsme-2026-industry-track/1/From-Overload-to-Insights-How-AI-Agents-Can-Support-Scientists-in-Analyzing-Complex-)*.  
 
 The purpose of the package is to facilitate the verification and reproduction of the study results.
 It provides artifacts for all seven research activities.
@@ -41,7 +41,7 @@ BibTeX:
 
 ## Description of Artifact Components
 
-Folders containing artifacts from research activities (please follow the links for detailed descriptions):
+The folders contain the artifacts of the research activities (please follow the links for detailed descriptions):
 
 - [Initial interviews with managers](./01-initial-interviews/README.md)
 - [Focus group with Data Analysis group](./02-focus-group/README.md)
@@ -54,29 +54,29 @@ Folders containing artifacts from research activities (please follow the links f
 Miscellaneous:
 
 - [Scientific log](scientific-log.md): chronological report of events related to this study
-- [Assets](./assets/prototype.png): files embedded in this and other Markdown files of this package
-- [Licenses](./LICENSES/CC-BY-4.0.md): license files of this package
+- [Assets](./assets/prototype.png): files embedded in this and other Markdown files of this replication package
+- [Licenses](./LICENSES/CC-BY-4.0.md): license files of this replication package
 - [Gitignore](.gitignore): file that lists anything that should be ignored by versioning system
 
 ## System Requirements
 
-- [VS Code](https://code.visualstudio.com) (to open any files and to start any systems via the built-in terminal)
+- [VS Code](https://code.visualstudio.com) (to open any files and to start any relevant software via built-in terminal)
 - VS Code extensions:
   - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) (to set up second prototype)
-  - [Excel](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-excel) (to open `.xlsx` overview file of literature review)
-  - [Edit CSV](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) (to display content of `.csv` literature review files in a table)
-- [Python](https://www.python.org/downloads/) (to run Python scripts of literature review. We recommend version 3.14.5.)
+  - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) (to open `.xlsx` overview file of literature review)
+  - [Edit CSV](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) (to display content of `.csv` literature review files in tables)
+- [Python](https://www.python.org/downloads/) (To run Python scripts of literature review. We recommend version 3.14.5.)
 - [Docker](https://www.docker.com) (to set up second prototype)
 - Any web browser (to view `.html` files)
 
 ## Installation
 
-- Installation processes are required to repeat the steps of the [literature review](./05-rapid-literature-review/README.md) and to set up the [second prototype](./07-prototype-second-version/README.md).
-- Follow the documentation in both subfolders.
+- You must conduct installation procedures to repeat the steps of the [literature review](./05-rapid-literature-review/README.md) and to set up the [second prototype](./07-prototype-second-version/README.md).
+- Follow the documentation in both folders.
 
 ## Usage
 
-- Follow the documentation in the subfolders to review the detailed artifacts of each research activity.
+- Follow the documentation in the folders to review the detailed artifacts of each research activity.
 - Read the scientific log to review the events of this study in chronological order.
 
 ## Revisions
