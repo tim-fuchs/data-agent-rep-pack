@@ -90,9 +90,10 @@ Miscellaneous:
 
 ## Revisions
 
-| Version | Note           |
-| ------- | -------------- |
-| 0.1.0   | Initial upload |
+| Version | Note                              |
+| ------- | --------------------------------- |
+| 0.2.0   | add Zenodo DOI and paper abstract |
+| 0.1.0   | Initial upload                    |
 
 ## Licenses
 
