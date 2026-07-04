@@ -92,7 +92,7 @@ Miscellaneous:
 
 | Version | Note                              |
 | ------- | --------------------------------- |
-| 0.2.0   | add Zenodo DOI and paper abstract |
+| 0.2.0   | Add Zenodo DOI and paper abstract |
 | 0.1.0   | Initial upload                    |
 
 ## Licenses
