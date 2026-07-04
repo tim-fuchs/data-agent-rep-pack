@@ -44,7 +44,7 @@ BibTeX:
   month     = sep,
   year      = 2026,
   publisher = {Zenodo},
-  doi       = {}, // TODO add DOI
+  doi       = {10.5281/zenodo.21187439},
 }
 ```
 
