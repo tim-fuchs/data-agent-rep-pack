@@ -11,11 +11,20 @@ Fig. 1 displays the second prototype created and evaluated during the study.
 ![Fig1](assets/prototype.png)
 *Fig. 1. Data analysis in Visual Studio Code with Kilo Code agent, agent customization files, and remote Jupyter kernel from HPC cluster of European XFEL*
 
+## Paper Abstract
+
+Scientists at the European XFEL conduct experiments that generate very large and complex datasets.
+The subsequent data analysis is challenging as scientists must combine their domain expertise with facility- and software-specific knowledge scattered across documentation, tools, and support channels.
+To address this problem, we designed and evaluated an agentic artificial intelligence (AI) system tailored to the scientists’ needs and integrated with the European XFEL high-performance computing environment.
+Using a design science research approach, we conducted a rapid literature review, a systematic evaluation of 16 AI tools, multiple interviews, a focus group, and a user study with experts at European XFEL to develop and evaluate two prototypes.
+Our study identifies key knowledge challenges in scientific data analysis, derives requirements for an AI agent that supports knowledge retrieval and code generation, and proposes design recommendations for a specialized system that is adaptable to the evolving AI tool landscape.
+Our findings provide guidance for developing maintainable AI support in highly specialized scientific environments.
+
 ## References
 
-This replication package will be available on [Zenodo](/). // TODO add link
+This replication package is available on [Zenodo](https://doi.org/10.5281/zenodo.21187439).
 
-The published paper will be available on [IEEE Xplore](/). // TODO add link
+The published paper will be available on [IEEE Xplore](/) and the preprint on [arXiv](/). // TODO add Xplore and arXiv links
 
 ## Authors
 
