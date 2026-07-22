@@ -13,18 +13,18 @@ Fig. 1 displays the second prototype created and evaluated during the study.
 
 ## Paper Abstract
 
-Scientists at the European XFEL conduct experiments that generate very large and complex datasets.
+Scientists at European XFEL conduct experiments that generate very large and complex datasets.
 The subsequent data analysis is challenging as scientists must combine their domain expertise with facility- and software-specific knowledge scattered across documentation, tools, and support channels.
-To address this problem, we designed and evaluated an agentic artificial intelligence (AI) system tailored to the scientists’ needs and integrated with the European XFEL high-performance computing environment.
+To address this problem, we designed and evaluated an agentic artificial intelligence (AI) system tailored to the scientists' needs and integrated with the high-performance computing environment of European XFEL.
 Using a design science research approach, we conducted a rapid literature review, a systematic evaluation of 16 AI tools, multiple interviews, a focus group, and a user study with experts at European XFEL to develop and evaluate two prototypes.
-Our study identifies key knowledge challenges in scientific data analysis, derives requirements for an AI agent that supports knowledge retrieval and code generation, and proposes design recommendations for a specialized system that is adaptable to the evolving AI tool landscape.
-Our findings provide guidance for developing maintainable AI support in highly specialized scientific environments.
+Our study identifies key knowledge challenges in scientific data analysis, derives requirements for an AI agent that supports knowledge retrieval and source code generation, and proposes design recommendations for a specialized system adaptable to the evolving AI tool landscape.
+These findings provide guidance for developing maintainable AI support in highly specialized scientific environments.
 
 ## References
 
 This replication package is available on [Zenodo](https://doi.org/10.5281/zenodo.21187439).
 
-The published paper will be available on [IEEE Xplore](/) and the preprint on [arXiv](/). // TODO add Xplore and arXiv links
+The published paper will be available on [IEEE Xplore](/) and the preprint on [arXiv](https://doi.org/10.48550/arXiv.2607.16845). // TODO add Xplore link
 
 ## Authors
 
@@ -69,14 +69,14 @@ Miscellaneous:
 
 ## System Requirements
 
-- [VS Code](https://code.visualstudio.com) (to open any files and to start any relevant software via built-in terminal)
+- [VS Code](https://code.visualstudio.com) (To open any files and to start any relevant software via built-in terminal.)
 - VS Code extensions:
-  - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) (to set up second prototype)
-  - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) (to open `.xlsx` overview file of literature review)
-  - [Edit CSV](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) (to display content of `.csv` literature review files in tables)
+  - [Jupyter](https://marketplace.visualstudio.com/items?itemName=ms-toolsai.jupyter) (To set up second prototype.)
+  - [Office Viewer](https://marketplace.visualstudio.com/items?itemName=cweijan.vscode-office) (To open `.xlsx` overview file of literature review. Alternative to Microsoft Excel.)
+  - [Edit CSV](https://marketplace.visualstudio.com/items?itemName=janisdd.vscode-edit-csv) (To display content of `.csv` literature review files in tables. Alternative to Microsoft Excel.)
 - [Python](https://www.python.org/downloads/) (To run Python scripts of literature review. We recommend version 3.14.5.)
-- [Docker](https://www.docker.com) (to set up second prototype)
-- Any web browser (to view `.html` files)
+- [Docker](https://www.docker.com) (To set up second prototype.)
+- Any web browser (To view `.html` files.)
 
 ## Installation
 
@@ -90,10 +90,11 @@ Miscellaneous:
 
 ## Revisions
 
-| Version | Note                              |
-| ------- | --------------------------------- |
-| 0.2.0   | Add Zenodo DOI and paper abstract |
-| 0.1.0   | Initial upload                    |
+| Version | Note                                                    |
+| ------- | ------------------------------------------------------- |
+| 0.3.0   | Add arXiv DOI. Update abstract and system requirements. |
+| 0.2.0   | Add Zenodo DOI and paper abstract                       |
+| 0.1.0   | Initial upload                                          |
 
 ## Licenses
 
